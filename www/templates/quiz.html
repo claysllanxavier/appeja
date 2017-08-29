@@ -1,0 +1,40 @@
+<ion-view view-title="Quiz">
+  <ion-content ng-class="{expanded:isExpanded}">
+    <div ng-hide="pergunta.pergunta" class="item card-item">
+      <br><br><br>
+      <div class="card dark-bg ink ink-dark">
+        <div class="item item-text-wrap">
+          <center> <h1> Você já respondeu todas as perguntas deste Quiz</h1> </center>
+        </div>
+      </div>
+      <div class="card light-bg ink ink-dark">
+        <div class="item item-text-wrap">
+          <center> <h2> Você acertou {{pergunta.qtdacertos}} de {{pergunta.qtdperguntas}} pergunta(s).</h2> </center>
+        </div>
+      </div>
+      <button ng-click="refazer()" class="button button-full button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1">Refazer</button>
+    </div>
+    <div ng-show="pergunta.pergunta">
+      <div class="list card light-bg">
+        <div class="item item-body">
+          <h3><strong>{{pergunta.pergunta}}</strong></h3>
+        </div>
+      </div>
+      <div class="list card light-bg">
+        <div class="item item-body">
+          <div class = "list">
+            <ion-radio ng-repeat="resposta in pergunta.respostas"
+            ng-value="resposta"
+            ng-model="data.respostaUsuario">
+            {{ resposta }}
+          </ion-radio>
+        </div>
+      </div>
+
+    </div>
+    <div class="padding">
+      <button ng-click="envia()" class="button button-full button-balanced ink" data-ink-color="#9DEAFF" data-ink-opacity="1">Enviar</button>
+    </div>
+  </div>
+</ion-content>
+</ion-view>

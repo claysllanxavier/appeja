@@ -1,0 +1,16 @@
+<ion-view view-title="Vídeos">
+  <ion-content ng-class="{expanded:$scope.isExpanded}">
+    <div class="list padding">
+      <div ng-repeat="video in videos">
+        <divclass="card light-bg">
+        <div class="item">
+          <iframe width="320" height="215" ng-src="{{trustSrc(video.url)}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="item item-body">
+          <strong><h2>{{video.nome}}</h2></strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+</ion-view>

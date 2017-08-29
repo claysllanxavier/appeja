@@ -1,0 +1,15 @@
+<ion-view view-title="Conteúdos">
+  <ion-content ng-class="{expanded:isExpanded}">
+    <ion-list>
+      <div ng-repeat="conteudo in conteudos">
+        <div class="card stable-light ink ink-dark" ng-click="chamaVideos(conteudo._id)">
+          <div class="item">
+            <h2>{{conteudo.conteudo}}</h2>
+          </div>
+          <div class="item item-body">
+            <p>{{conteudo.informacao}}</p>
+          </div>
+        </div>
+      </ion-list>
+    </ion-content>
+  </ion-view>

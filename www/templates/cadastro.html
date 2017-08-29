@@ -1,0 +1,23 @@
+<ion-view view-title="Login" align-title="left">
+  <ion-content style="background: url(img/back.jpg) center; background-size: cover;">
+    <div class="hero no-header flat">
+      <div class="content">
+        <div class="app-icon"></div>
+        <h1 style="color:#515151;">Quiz4Math</h1>
+      </div>
+    </div>
+    <div class="list">
+      <form name="formulario">
+        <ion-md-input required placeholder="Nome" type="text" ng-model="usuario.nome"></ion-md-input>
+        <ion-md-input required placeholder="Email" type="email" ng-model="usuario.email"></ion-md-input>
+        <ion-md-input required placeholder="Escola" type="text" ng-model="usuario.escola"></ion-md-input>
+        <ion-md-input required placeholder="Senha" type="password" ng-model="usuario.senha"></ion-md-input>
+        <ion-md-input required placeholder="Confirmar Senha" type="password" ng-model="usuario.confSenha"></ion-md-input>
+        <div class="button-bar social-login">
+          <button ui-sref="app.login" class="button  button-energized ink">Voltar</button>
+          <button ng-click="salvaUsuario(usuario)" class="button  button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

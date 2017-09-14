@@ -87,18 +87,22 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('LoginCtrl', function($scope, $http, $rootScope, $timeout, $location, $stateParams, ionicMaterialInk, $ionicPopup,Hostname) {
+.controller('LoginCtrl', function($scope, $http, $rootScope, $timeout, $location, $stateParams, ionicMaterialInk, $ionicPopup, Hostname, $ionicLoading) {
   $scope.$parent.clearFabs();
   $timeout(function() {
     $scope.$parent.hideHeader();
   }, 0);
   ionicMaterialInk.displayEffect();
   $scope.login = function (usuario){
+    $ionicLoading.show({
+           template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+       });
     if(angular.isObject(usuario) && !angular.isUndefined(usuario.email) && !angular.isUndefined(usuario.senha)){
       $http.post(Hostname.url+'/api/usuario',{data : usuario},{headers: {'Content-Type': 'application/json'}})
       .then(function mySuccess(data) {
         $location.path("/app/inicio");
         $rootScope.usuario = data;
+        $ionicLoading.hide();
       }, function myError(response) {
         $ionicPopup.alert({
           title: 'ERRO',
@@ -108,6 +112,7 @@ angular.module('starter.controllers', [])
           ionicMaterialInk.displayEffect();
         }, 0);
       });
+      $ionicLoading.hide();
     }
     else{
       $ionicPopup.alert({
@@ -117,11 +122,12 @@ angular.module('starter.controllers', [])
       $timeout(function() {
         ionicMaterialInk.displayEffect();
       }, 0);
+      $ionicLoading.hide();
     }
   }
 })
 
-.controller('CadastroCtrl', function($scope, $http, $timeout, $location, $stateParams, ionicMaterialInk,  $ionicPopup,Hostname) {
+.controller('CadastroCtrl', function($scope, $http, $timeout, $location, $stateParams, ionicMaterialInk,  $ionicPopup,Hostname, $ionicLoading) {
   $scope.$parent.clearFabs();
   $timeout(function() {
     $scope.$parent.hideHeader();
@@ -132,6 +138,9 @@ angular.module('starter.controllers', [])
     if(angular.isObject(usuario) && !angular.isUndefined(usuario.nome) && !angular.isUndefined(usuario.email)&& !angular.isUndefined(usuario.escola)&& !angular.isUndefined(usuario.senha)){
       if(usuario.senha === usuario.confSenha){
         delete usuario.confSenha;
+        $ionicLoading.show({
+           template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+       });
         $http.post(Hostname.url+'/api/usuarios',{data : usuario},{headers: {'Content-Type': 'application/json'}})
         .then(function mySuccess(response) {
           $ionicPopup.alert({
@@ -141,6 +150,7 @@ angular.module('starter.controllers', [])
           $timeout(function() {
             ionicMaterialInk.displayEffect();
           }, 0);
+          $ionicLoading.hide();
           $location.path("/login");
         }, function myError(response) {
           $ionicPopup.alert({
@@ -150,6 +160,7 @@ angular.module('starter.controllers', [])
           $timeout(function() {
             ionicMaterialInk.displayEffect();
           }, 0);
+          $ionicLoading.hide();
         });
       }else{
         $ionicPopup.alert({
@@ -159,6 +170,7 @@ angular.module('starter.controllers', [])
         $timeout(function() {
           ionicMaterialInk.displayEffect();
         }, 0);
+        $ionicLoading.hide();
       }
     }else{
       $ionicPopup.alert({
@@ -168,6 +180,7 @@ angular.module('starter.controllers', [])
       $timeout(function() {
         ionicMaterialInk.displayEffect();
       }, 0);
+      $ionicLoading.hide();
     }
   }
 })

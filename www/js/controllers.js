@@ -1,3 +1,4 @@
+
 /* global angular, document, window */
 'use strict';
 
@@ -442,7 +443,7 @@ angular.module('starter.controllers', [])
   }
 })
 .service('Hostname', function() {
-  return {url : 'http://apieja.azurewebsites.net'};
+  return {url : 'https://apieja.herokuapp.com'};
 })
 
 

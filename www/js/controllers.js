@@ -429,7 +429,7 @@ angular.module('starter.controllers', [])
   }
 })
 .service('Hostname', function() {
-  return {url : 'http://apieja.us-3.evennode.com'};
+  return {url : 'http://apieja.azurewebsites.net'};
 })
 
 

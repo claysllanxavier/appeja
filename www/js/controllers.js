@@ -134,14 +134,14 @@ angular.module('starter.controllers', [])
     $scope.$parent.hideHeader();
   }, 0);
   ionicMaterialInk.displayEffect();
-
+  
   $scope.salvaUsuario = function (usuario){
+    $ionicLoading.show({
+       template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+   });
     if(angular.isObject(usuario) && !angular.isUndefined(usuario.nome) && !angular.isUndefined(usuario.email)&& !angular.isUndefined(usuario.escola)&& !angular.isUndefined(usuario.senha)){
       if(usuario.senha === usuario.confSenha){
         delete usuario.confSenha;
-        $ionicLoading.show({
-           template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
-       });
         $http.post(Hostname.url+'/api/usuarios',{data : usuario},{headers: {'Content-Type': 'application/json'}})
         .then(function mySuccess(response) {
           $ionicPopup.alert({

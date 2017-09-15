@@ -267,7 +267,7 @@ angular.module('starter.controllers', [])
   ionicMaterialInk.displayEffect();
 
   var idconteudo = quizServico.get();
-  var idusuario = $rootScope.usuario.data[0]._id;
+  var idusuario = $rootScope.usuario.data._id;
 
   buscaPergunta();
   $scope.perguntas = {};
@@ -386,7 +386,7 @@ angular.module('starter.controllers', [])
 
   $scope.conteudos = [];
 
-  var idusuario = $rootScope.usuario.data[0]._id;
+  var idusuario = $rootScope.usuario.data._id;
 
   $http.get(Hostname.url+"/api/conteudo/"+idusuario)
   .then(function(response) {
@@ -443,7 +443,7 @@ angular.module('starter.controllers', [])
   }
 })
 .service('Hostname', function() {
-  return {url : 'http://apieja.azurewebsites.net'};
+  return {url : 'https://apieja.azurewebsites.net'};
 })
 
 

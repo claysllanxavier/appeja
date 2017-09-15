@@ -443,7 +443,7 @@ angular.module('starter.controllers', [])
   }
 })
 .service('Hostname', function() {
-  return {url : 'https://apieja.herokuapp.com'};
+  return {url : 'http://apieja.azurewebsites.net'};
 })
 
 

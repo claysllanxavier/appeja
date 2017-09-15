@@ -1,19 +1,21 @@
 <ion-view view-title="Login" align-title="left">
-  <ion-content style="background: url(img/back.jpg) center; background-size: cover;">
-    <div class="list">
-      <div class="app-icon"></div>
-      <center><h1 style="color:#515151;">Quiz4Math</h1></center>
-      <form name="formulario">
+  <form name="formulario">
+    <ion-content style="background: url(img/back.jpg) center; background-size: cover;">
+      <div class="list">
+        <div class="app-icon"></div>
+        <center><h1 style="color:#515151;">Quiz4Math</h1></center>
         <ion-md-input required placeholder="Nome" type="text" ng-model="usuario.nome"></ion-md-input>
         <ion-md-input required placeholder="Email" type="email" ng-model="usuario.email"></ion-md-input>
         <ion-md-input required placeholder="Escola" type="text" ng-model="usuario.escola"></ion-md-input>
         <ion-md-input required placeholder="Senha" type="password" ng-model="usuario.senha"></ion-md-input>
         <ion-md-input required placeholder="Confirmar Senha" type="password" ng-model="usuario.confSenha"></ion-md-input>
-        <div class="button-bar social-login">
-          <button ui-sref="app.login" class="button  button-energized ink">Voltar</button>
-          <button ng-click="salvaUsuario(usuario)" class="button  button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1">Cadastrar</button>
-        </div>
-      </form>
-    </div>
-  </ion-content>
+      </div>
+    </ion-content>
+    <ion-toolbar class="hide-on-keyboard-open">
+      <div class="button-bar social-login">
+        <button ui-sref="app.login" class="button button-energized ink">Voltar</button>
+        <button ng-click="salvaUsuario(usuario)" class="button button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1">Cadastrar</button>
+      </div>
+    </ion-toolbar>
+  </form>
 </ion-view>

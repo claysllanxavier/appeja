@@ -1,23 +1,24 @@
 <ion-view view-title="Login" align-title="left">
   <ion-content style="background: url(img/back.jpg) center; background-size: cover;">
-    <div class="hero no-header flat">
-      <div class="content">
-        <div class="app-icon"></div>
-        <h1 style="color:#515151;">Quiz4Math</h1>
+    <form ng-cloak name="loginForm">
+      <div class="hero no-header flat">
+        <div class="content">
+          <div class="app-icon"></div>
+          <h1 style="color:#515151;">Quiz4Math</h1>
+        </div>
       </div>
-    </div>
-    <div class="list">
-      <ion-md-input placeholder="Email" highlight-color="balanced" type="email" ng-model="usuario.email" required></ion-md-input>
-      <ion-md-input placeholder="Senha" highlight-color="energized" type="password" ng-model="usuario.senha" required></ion-md-input>
-    </div>
-    <div class="padding">
-      <button ng-click="login(usuario)" class="button button-full button-assertive ink">Login</button>
-      <center>
-        <p>OU</p>
-        <button ui-sref="app.cadastro" class="button  button-dark">
-          Criar uma conta
-        </button>
-      </center>
-    </div>
-  </ion-content>
-</ion-view>
+      <div class="list">
+        <ion-md-input placeholder="Email" highlight-color="balanced" type="email" ng-model="usuario.email" required></ion-md-input>
+        <ion-md-input placeholder="Senha" highlight-color="energized" type="password" ng-model="usuario.senha" required></ion-md-input>
+      </div>
+      <div class="padding">
+        <button class="button button-full button-assertive ink"  ng-click="login(usuario)" ng-disabled="loginForm.$invalid">Login</button>
+        <center>
+          <p>OU</p>
+          <button ui-sref="app.cadastro" class="button  button-dark">
+            Criar uma conta
+          </button>
+        </center>
+      </div>
+    </ion-content>
+  </ion-view>

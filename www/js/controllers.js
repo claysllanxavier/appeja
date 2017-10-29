@@ -88,43 +88,40 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('LoginCtrl', function($scope, $http, $rootScope, $timeout, $location, $stateParams, ionicMaterialInk, $ionicPopup, Hostname, $ionicLoading) {
+.controller('LoginCtrl', function($scope, $http, $rootScope, $timeout, $location, $stateParams, ionicMaterialInk, $ionicPopup, Hostname, $ionicLoading, AuthService) {
   $scope.$parent.clearFabs();
   $timeout(function() {
     $scope.$parent.hideHeader();
   }, 0);
   ionicMaterialInk.displayEffect();
-  $scope.login = function (usuario){
+  $scope.show = function() {
     $ionicLoading.show({
-           template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
-       });
-    if(angular.isObject(usuario) && !angular.isUndefined(usuario.email) && !angular.isUndefined(usuario.senha)){
-      $http.post(Hostname.url+'/api/usuario',{data : usuario},{headers: {'Content-Type': 'application/json'}})
-      .then(function mySuccess(data) {
-        $location.path("/app/inicio");
-        $rootScope.usuario = data;
-        $ionicLoading.hide();
-      }, function myError(response) {
-        $ionicPopup.alert({
-          title: 'ERRO',
-          template: 'Usuário ou senha incorretos.'
-        });
-        $timeout(function() {
-          ionicMaterialInk.displayEffect();
-        }, 0);
-      });
-      $ionicLoading.hide();
-    }
-    else{
+      template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+    });
+  };
+
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
+
+  $scope.login = function (usuario){
+    $scope.show($ionicLoading);
+    $http.post(Hostname.url+'/api/login',{data : usuario},{headers: {'Content-Type': 'application/json'}})
+    .success(function(data) {
+      AuthService.setToken(data.token)
+      $location.path("/app/inicio");
+      $rootScope.usuario = data;
+    })
+    .error(function() {
       $ionicPopup.alert({
-        title: 'ERRO',
-        template: 'Alguma coisa está errada. Refaça a operação!'
+        title: 'Falha no Login',
+        template: 'Usuário ou senha incorretos.'
       });
-      $timeout(function() {
-        ionicMaterialInk.displayEffect();
-      }, 0);
-      $ionicLoading.hide();
-    }
+    })
+    .finally(function($ionicLoading) {
+      // On both cases hide the loading
+      $scope.hide($ionicLoading);
+    });
   }
 })
 
@@ -134,59 +131,51 @@ angular.module('starter.controllers', [])
     $scope.$parent.hideHeader();
   }, 0);
   ionicMaterialInk.displayEffect();
-  
-  $scope.salvaUsuario = function (usuario){
+
+  $scope.show = function() {
     $ionicLoading.show({
-       template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
-   });
-    if(angular.isObject(usuario) && !angular.isUndefined(usuario.nome) && !angular.isUndefined(usuario.email)&& !angular.isUndefined(usuario.escola)&& !angular.isUndefined(usuario.senha)){
-      if(usuario.senha === usuario.confSenha){
-        delete usuario.confSenha;
-        $http.post(Hostname.url+'/api/usuarios',{data : usuario},{headers: {'Content-Type': 'application/json'}})
-        .then(function mySuccess(response) {
-          $ionicPopup.alert({
-            title: 'SUCESSO',
-            template: 'Usuário cadastrado com sucesso.'
-          });
-          $timeout(function() {
-            ionicMaterialInk.displayEffect();
-          }, 0);
-          $ionicLoading.hide();
-          $location.path("/login");
-        }, function myError(response) {
-          $ionicPopup.alert({
-            title: 'ERRO',
-            template: 'Alguma coisa está errada. Refaça a operação!'
-          });
-          $timeout(function() {
-            ionicMaterialInk.displayEffect();
-          }, 0);
-          $ionicLoading.hide();
+      template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+    });
+  };
+
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
+
+
+  $scope.salvaUsuario = function (usuario){
+    $scope.show($ionicLoading);
+    if(usuario.senha === usuario.confSenha){
+      delete usuario.confSenha;
+      $http.post(Hostname.url+'/api/usuario',{data : usuario},{headers: {'Content-Type': 'application/json'}})
+      .success(function() {
+        $ionicPopup.alert({
+          title: 'SUCESSO',
+          template: 'Usuário cadastrado com sucesso.'
         });
-      }else{
+        $location.path("/login");
+      })
+      .error(function() {
         $ionicPopup.alert({
           title: 'ERRO',
-          template: 'As senhas não conferem. Favor corrigir.'
+          template: 'Alguma coisa está errada. Refaça a operação!'
         });
-        $timeout(function() {
-          ionicMaterialInk.displayEffect();
-        }, 0);
-        $ionicLoading.hide();
-      }
+      })
+      .finally(function($ionicLoading) {
+        // On both cases hide the loading
+        $scope.hide($ionicLoading);
+      });
     }else{
+      $ionicLoading.hide();
       $ionicPopup.alert({
         title: 'ERRO',
-        template: 'Alguma coisa está errada. Refaça a operação!'
+        template: 'As senhas não conferem. Favor corrigir.'
       });
-      $timeout(function() {
-        ionicMaterialInk.displayEffect();
-      }, 0);
-      $ionicLoading.hide();
     }
   }
 })
 
-.controller('VideosCtrl', function($scope, $http, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, videoServico, $sce, Hostname) {
+.controller('VideosCtrl', function($scope, $http, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk,  $sce, Hostname) {
   // Set Header
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
@@ -210,7 +199,7 @@ angular.module('starter.controllers', [])
   // Set Ink
   ionicMaterialInk.displayEffect();
 
-  var idconteudo = videoServico.get();
+  var idconteudo = $stateParams.id;
 
   $scope.trustSrc = function(src) {
     return $sce.trustAsResourceUrl(src);
@@ -218,7 +207,7 @@ angular.module('starter.controllers', [])
 
   $scope.videos = [];
 
-  $http.get(Hostname.url+"/api/conteudo/videos/"+idconteudo)
+  $http.get(Hostname.url+"/api/conteudo/"+idconteudo+"/video")
   .then(function(response) {
     $scope.videos = response.data.videos;
   });
@@ -250,7 +239,7 @@ angular.module('starter.controllers', [])
   ionicMaterialInk.displayEffect();
 })
 
-.controller('QuizCtrl', function($scope, $http, $rootScope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicPopup, $location, Hostname, quizServico) {
+.controller('QuizCtrl', function($scope, $http, $rootScope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicPopup, $location, Hostname) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = true;
@@ -266,17 +255,20 @@ angular.module('starter.controllers', [])
   // Activate ink for controller
   ionicMaterialInk.displayEffect();
 
-  var idconteudo = quizServico.get();
-  var idusuario = $rootScope.usuario.data._id;
+  var idconteudo = $stateParams.id;
+  var idusuario = $rootScope.usuario._id;
 
+  $scope.pergunta ={
+    qtdacertos:0,
+    qtdperguntas:0
+  }
   buscaPergunta();
-  $scope.perguntas = {};
   $scope.data = {
     respostaUsuario: 'ng'
   };
 
   function buscaPergunta(){
-    $http.get(Hostname.url+"/api/conteudo/"+idconteudo+"/pergunta/"+idusuario)
+    $http.get(Hostname.url+"/api/usuario/"+idusuario+"/conteudo/"+ idconteudo)
     .then(function(response) {
       $scope.pergunta = response.data;
     });
@@ -288,7 +280,7 @@ angular.module('starter.controllers', [])
     $scope.data.acertou = $scope.pergunta.respostaCerta == $scope.data.respostaUsuario;
     $scope.data.idusuario = idusuario;
     var dados = $scope.data;
-    $http.post(Hostname.url+'/api/pergunta',{data : dados},{headers: {'Content-Type': 'application/json'}})
+    $http.post(Hostname.url+'/api/resposta',{data : dados},{headers: {'Content-Type': 'application/json'}})
     .then(function mySuccess(response) {
       if($scope.pergunta.respostaCerta == $scope.data.respostaUsuario){
         $ionicPopup.alert({
@@ -310,7 +302,6 @@ angular.module('starter.controllers', [])
         }, 0);
         buscaPergunta();
       }
-      $scope.count++;
     }, function myError(response) {
       $ionicPopup.alert({
         title: 'ERRO',
@@ -337,7 +328,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ConteudoCtrl', function($scope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, videoServico, Hostname) {
+.controller('ConteudoCtrl', function($scope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, Hostname) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = true;
@@ -356,18 +347,17 @@ angular.module('starter.controllers', [])
 
   $scope.conteudos = [];
 
-  $http.get(Hostname.url+"/api/conteudos")
+  $http.get(Hostname.url+"/api/conteudo")
   .then(function(response) {
     $scope.conteudos = response.data;
   });
 
   $scope.chamaVideos = function (id){
-    videoServico.set(id);
-    $location.path("/app/videos");
+    $location.path("/app/videos/" + id);
   }
 })
 
-.controller('ConteudoQuizCtrl', function($scope, $rootScope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, quizServico, Hostname) {
+.controller('ConteudoQuizCtrl', function($scope, $rootScope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, Hostname) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = true;
@@ -386,20 +376,19 @@ angular.module('starter.controllers', [])
 
   $scope.conteudos = [];
 
-  var idusuario = $rootScope.usuario.data._id;
+  var idusuario = $rootScope.usuario._id;
 
-  $http.get(Hostname.url+"/api/conteudo/"+idusuario)
+  $http.get(Hostname.url+"/api/conteudo-usuario/"+idusuario)
   .then(function(response) {
     $scope.conteudos = response.data;
   });
 
   $scope.chamaQuiz = function (id){
-    quizServico.set(id);
-    $location.path("/app/quiz");
+    $location.path("/app/quiz/"+id);
   }
 })
 
-.controller('SobreCtrl', function($scope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, videoServico) {
+.controller('SobreCtrl', function($scope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = true;
@@ -416,35 +405,62 @@ angular.module('starter.controllers', [])
     selector: '.animate-fade-slide-in .item'
   });
 })
-.service('videoServico', function() {
-  var savedData = {}
-  function set(data) {
-    savedData = data;
-  }
-  function get() {
-    return savedData;
-  }
-  return {
-    set: set,
-    get: get
-  }
-})
-.service('quizServico', function() {
-  var savedData = {}
-  function set(data) {
-    savedData = data;
-  }
-  function get() {
-    return savedData;
-  }
-  return {
-    set: set,
-    get: get
+.controller('LogoutCtrl', function($scope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, AuthService) {
+  $scope.$parent.showHeader();
+  $scope.$parent.clearFabs();
+  $scope.isExpanded = true;
+  $scope.$parent.setExpanded(true);
+  $scope.$parent.setHeaderFab(false);
+
+  // Activate ink for controller
+  ionicMaterialInk.displayEffect();
+
+  ionicMaterialMotion.pushDown({
+    selector: '.push-down'
+  });
+  ionicMaterialMotion.fadeSlideInRight({
+    selector: '.animate-fade-slide-in .item'
+  });
+  logout();
+
+  function logout () {
+    delete window.localStorage.token
+    $location.path("/app/login");
   }
 })
 .service('Hostname', function() {
-  return {url : 'https://apieja.azurewebsites.net'};
+  return {url : 'http://172.19.0.2:8000'};
 })
+.factory('AuthService', function ($q) {
+  return {
+    getToken: function () {
+      return window.localStorage.token
+    },
+    setToken: function (token) {
+      window.localStorage.token = token
+    },
+    logout: function () {
+      delete window.localStorage.token
+      $q.when()
+    }
+  }
+})
+.config(function ($httpProvider) {
+  $httpProvider.interceptors.push('AuthInterceptor')
+})
+.factory('AuthInterceptor', function ($location, AuthService, $q, $window) {
+  return {
+    request: function (config) {
+      config.headers = config.headers || {}
 
+      if (AuthService.getToken()) {
+        config.headers['x-access-token'] = AuthService.getToken()
+      }
 
-;
+      return config
+    },
+    responseError: function (response) {
+      return $q.reject(response)
+    }
+  }
+})

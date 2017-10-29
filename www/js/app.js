@@ -5,7 +5,6 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'ionMdInput'])
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -19,7 +18,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
     }
   });
 })
-
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
   // Turn off caching for demo simplicity's sake
@@ -38,7 +36,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
   })
 
   .state('app.quiz', {
-    url: '/quiz',
+    url: '/quiz/:id',
     views: {
       'menuContent': {
         templateUrl: 'templates/quiz.html',
@@ -127,13 +125,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
       }
     }
   })
-  
+
   .state('app.videos', {
-    url: '/videos',
+    url: '/videos/:id',
     views: {
       'menuContent': {
         templateUrl: 'templates/videos.html',
         controller: 'VideosCtrl'
+      },
+      'fabContent': {
+        template: ''
+      }
+    }
+  })
+  .state('app.logout', {
+    url: '/logout',
+    views: {
+      'menuContent': {
+        template: '',
+        controller: 'LogoutCtrl'
       },
       'fabContent': {
         template: ''

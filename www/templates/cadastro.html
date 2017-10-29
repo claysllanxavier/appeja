@@ -10,8 +10,8 @@
         <ion-md-input required placeholder="Senha" type="password" ng-model="usuario.senha"></ion-md-input>
         <ion-md-input required placeholder="Confirmar Senha" type="password" ng-model="usuario.confSenha"></ion-md-input>
         <div class="button-bar social-login hide-on-keyboard-open">
-          <button ui-sref="app.login" class="button  button-energized ink">Voltar</button>
-          <button ng-click="salvaUsuario(usuario)" class="button  button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1">Cadastrar</button>
+          <!--  <button ui-sref="app.login" class="button  button-energized ink">Voltar</button> -->
+          <button ng-click="salvaUsuario(usuario)" class="button  button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-disabled="formulario.$invalid">Cadastrar</button>
         </div>
       </form>
     </div>

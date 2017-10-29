@@ -18,10 +18,34 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
     }
   });
 })
+.run(function($ionicPlatform, $ionicPopup) {
+  $ionicPlatform.ready(function() {
+
+    // Check for network connection
+    if(window.Connection) {
+      if(navigator.connection.type == Connection.NONE) {
+        $ionicPopup.confirm({
+          title: 'Sem conexão com a internet',
+          content: 'Desculpe, nenhuma conexão foi indentificada. Por favor reconecte seu celular e tente novamente.'
+        })
+        .then(function(result) {
+          if(!result) {
+            ionic.Platform.exitApp();
+          }
+        });
+      }
+    }
+
+  });
+})
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
   // Turn off caching for demo simplicity's sake
-  $ionicConfigProvider.views.maxCache(0);
+  $ionicConfigProvider.views.maxCache(5);
+
+  // Enable Native Scrolling on Android
+  $ionicConfigProvider.platform.android.scrolling.jsScrolling(false);
+
 
   /*
   // Turn off back button text

@@ -134,6 +134,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
       'fabContent': {
         template: ''
       }
+    },
+    onEnter: function($state, AuthService){
+      if(!AuthService.isLoggedIn()){
+        $state.go('app.login');
+      }
     }
   })
 
@@ -177,5 +182,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
   ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/login');
+  $urlRouterProvider.otherwise('/app/inicio');
 });

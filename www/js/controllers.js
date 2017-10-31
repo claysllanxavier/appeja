@@ -132,6 +132,7 @@ angular.module('starter.controllers', [])
   }, 0);
   ionicMaterialInk.displayEffect();
 
+
   $scope.show = function() {
     $ionicLoading.show({
       template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
@@ -214,7 +215,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('InicioCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
+.controller('InicioCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, AuthService) {
   // Set Header
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
@@ -442,6 +443,9 @@ angular.module('starter.controllers', [])
     logout: function () {
       delete window.localStorage.token
       $q.when()
+    },
+    isLoggedIn: function () {
+       return window.localStorage.token ? true : false;
     }
   }
 })

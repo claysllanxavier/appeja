@@ -20,8 +20,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
 })
 .run(function($ionicPlatform, $ionicPopup) {
   $ionicPlatform.ready(function() {
-
-    // Check for network connection
     if(window.Connection) {
       if(navigator.connection.type == Connection.NONE) {
         $ionicPopup.confirm({
@@ -35,7 +33,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         });
       }
     }
-
   });
 })
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
@@ -52,7 +49,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
   $ionicConfigProvider.backButton.previousTitleText(false);
   */
 
-  $stateProvider.state('app', {
+  $stateProvider
+
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
+
+  .state('cadastro', {
+    url: '/cadastro',
+    templateUrl: 'templates/cadastro.html',
+    controller: 'CadastroCtrl'
+  })
+
+
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -98,32 +110,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
     }
   })
 
-  .state('app.login', {
-    url: '/login',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/login.html',
-        controller: 'LoginCtrl'
-      },
-      'fabContent': {
-        template: ''
-      }
-    }
-  })
-
-  .state('app.cadastro', {
-    url: '/cadastro',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/cadastro.html',
-        controller: 'CadastroCtrl'
-      },
-      'fabContent': {
-        template: ''
-      }
-    }
-  })
-
   .state('app.inicio', {
     url: '/inicio',
     views: {
@@ -137,7 +123,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
     },
     onEnter: function($state, AuthService){
       if(!AuthService.isLoggedIn()){
-        $state.go('app.login');
+        $state.go('login');
       }
     }
   })

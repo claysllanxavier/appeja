@@ -89,11 +89,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('LoginCtrl', function($scope, $http, $rootScope, $timeout, $location, $stateParams, ionicMaterialInk, $ionicPopup, Hostname, $ionicLoading, AuthService) {
-  $scope.$parent.clearFabs();
-  $timeout(function() {
-    $scope.$parent.hideHeader();
-  }, 0);
-  ionicMaterialInk.displayEffect();
   $scope.show = function() {
     $ionicLoading.show({
       template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
@@ -126,13 +121,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('CadastroCtrl', function($scope, $http, $timeout, $location, $stateParams, ionicMaterialInk,  $ionicPopup,Hostname, $ionicLoading) {
-  $scope.$parent.clearFabs();
-  $timeout(function() {
-    $scope.$parent.hideHeader();
-  }, 0);
-  ionicMaterialInk.displayEffect();
-
-
   $scope.show = function() {
     $ionicLoading.show({
       template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
@@ -212,7 +200,13 @@ angular.module('starter.controllers', [])
   .then(function(response) {
     $scope.videos = response.data.videos;
   });
-
+  $scope.doRefresh = function() {
+    $http.get(Hostname.url+"/api/conteudo/"+idconteudo+"/video")
+    .then(function(response) {
+      $scope.videos = response.data.videos;
+      $scope.$broadcast('scroll.refreshComplete');
+    });
+  }
 })
 
 .controller('InicioCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, AuthService) {
@@ -348,6 +342,7 @@ angular.module('starter.controllers', [])
 
   $scope.conteudos = [];
 
+
   $http.get(Hostname.url+"/api/conteudo")
   .then(function(response) {
     $scope.conteudos = response.data;
@@ -355,6 +350,13 @@ angular.module('starter.controllers', [])
 
   $scope.chamaVideos = function (id){
     $location.path("/app/videos/" + id);
+  }
+  $scope.doRefresh = function() {
+    $http.get(Hostname.url+"/api/conteudo")
+    .then(function(response) {
+      $scope.conteudos = response.data;
+      $scope.$broadcast('scroll.refreshComplete');
+    });
   }
 })
 
@@ -386,6 +388,13 @@ angular.module('starter.controllers', [])
 
   $scope.chamaQuiz = function (id){
     $location.path("/app/quiz/"+id);
+  }
+  $scope.doRefresh = function() {
+    $http.get(Hostname.url+"/api/conteudo-usuario/"+idusuario)
+    .then(function(response) {
+      $scope.conteudos = response.data;
+      $scope.$broadcast('scroll.refreshComplete');
+    });
   }
 })
 
@@ -426,7 +435,7 @@ angular.module('starter.controllers', [])
 
   function logout () {
     delete window.localStorage.token
-    $location.path("/app/login");
+    $location.path("/login");
   }
 })
 .service('Hostname', function() {
@@ -445,7 +454,7 @@ angular.module('starter.controllers', [])
       $q.when()
     },
     isLoggedIn: function () {
-       return window.localStorage.token ? true : false;
+      return window.localStorage.token ? true : false;
     }
   }
 })

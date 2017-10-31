@@ -1,0 +1,2339 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'ionic' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'ionic', null ]
+5 verbose cache add name=undefined spec="ionic" args=["ionic",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'ionic',
+6 verbose parsed url   path: 'ionic',
+6 verbose parsed url   href: 'ionic' }
+7 silly lockFile 00d10074-ionic ionic
+8 verbose lock ionic /root/.npm/00d10074-ionic.lock
+9 silly lockFile 00d10074-ionic ionic
+10 silly lockFile 00d10074-ionic ionic
+11 verbose addNamed [ 'ionic', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 966fc04a-ionic ionic@
+14 verbose lock ionic@ /root/.npm/966fc04a-ionic.lock
+15 silly addNameRange { name: 'ionic', range: '*', hasData: false }
+16 verbose url raw ionic
+17 verbose url resolving [ 'https://registry.npmjs.org/', './ionic' ]
+18 verbose url resolved https://registry.npmjs.org/ionic
+19 info trying registry request attempt 1 at 15:24:53
+20 http GET https://registry.npmjs.org/ionic
+21 http 200 https://registry.npmjs.org/ionic
+22 silly registry.get cb [ 200,
+22 silly registry.get   { server: 'nginx/1.10.3',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'last-modified': 'Mon, 30 Oct 2017 22:54:19 GMT',
+22 silly registry.get     etag: '"59f7ad9b-1d3745"',
+22 silly registry.get     'cache-control': 'max-age=300',
+22 silly registry.get     'content-length': '1914693',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     date: 'Tue, 31 Oct 2017 15:24:54 GMT',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     age: '0',
+22 silly registry.get     connection: 'keep-alive',
+22 silly registry.get     'x-served-by': 'cache-gru17135-GRU',
+22 silly registry.get     'x-cache': 'MISS',
+22 silly registry.get     'x-cache-hits': '0',
+22 silly registry.get     'x-timer': 'S1509463494.863526,VS0,VE239',
+22 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+23 silly addNameRange number 2 { name: 'ionic', range: '*', hasData: true }
+24 silly addNameRange versions [ 'ionic',
+24 silly addNameRange   [ '0.9.6',
+24 silly addNameRange     '0.9.8',
+24 silly addNameRange     '0.9.9',
+24 silly addNameRange     '0.9.10',
+24 silly addNameRange     '0.9.11',
+24 silly addNameRange     '0.9.12',
+24 silly addNameRange     '0.9.13',
+24 silly addNameRange     '0.9.14',
+24 silly addNameRange     '0.9.15',
+24 silly addNameRange     '0.9.16',
+24 silly addNameRange     '1.0.0-beta.1',
+24 silly addNameRange     '1.0.0-beta',
+24 silly addNameRange     '1.0.1-beta',
+24 silly addNameRange     '1.0.3-beta',
+24 silly addNameRange     '1.0.4',
+24 silly addNameRange     '1.0.5',
+24 silly addNameRange     '1.0.6',
+24 silly addNameRange     '1.0.7',
+24 silly addNameRange     '1.0.8',
+24 silly addNameRange     '1.0.9',
+24 silly addNameRange     '1.0.10',
+24 silly addNameRange     '1.0.11',
+24 silly addNameRange     '1.0.12',
+24 silly addNameRange     '1.0.13',
+24 silly addNameRange     '1.0.14',
+24 silly addNameRange     '1.0.15',
+24 silly addNameRange     '1.0.16',
+24 silly addNameRange     '1.0.17',
+24 silly addNameRange     '1.1.0-beta1',
+24 silly addNameRange     '1.1.0-beta2',
+24 silly addNameRange     '1.1.0-beta3',
+24 silly addNameRange     '1.1.0-beta4',
+24 silly addNameRange     '1.1.0-beta5',
+24 silly addNameRange     '1.1.0-beta6',
+24 silly addNameRange     '1.1.0',
+24 silly addNameRange     '1.1.1-beta1',
+24 silly addNameRange     '1.1.1-beta2',
+24 silly addNameRange     '1.1.1-beta3',
+24 silly addNameRange     '1.1.1',
+24 silly addNameRange     '1.1.3',
+24 silly addNameRange     '1.1.4',
+24 silly addNameRange     '1.1.5-beta1',
+24 silly addNameRange     '1.1.5-beta2',
+24 silly addNameRange     '1.1.5-beta3',
+24 silly addNameRange     '1.1.5-beta4',
+24 silly addNameRange     '1.1.5-beta5',
+24 silly addNameRange     '1.1.5',
+24 silly addNameRange     '1.1.6',
+24 silly addNameRange     '1.1.7-beta1',
+24 silly addNameRange     '1.1.7',
+24 silly addNameRange     '1.1.8-beta1',
+24 silly addNameRange     '1.1.8-beta2',
+24 silly addNameRange     '1.1.8-beta3',
+24 silly addNameRange     '1.1.8-beta4',
+24 silly addNameRange     '1.1.8-beta5',
+24 silly addNameRange     '1.1.8',
+24 silly addNameRange     '1.1.9-beta1',
+24 silly addNameRange     '1.1.9',
+24 silly addNameRange     '1.1.10',
+24 silly addNameRange     '1.1.11-beta1',
+24 silly addNameRange     '1.1.11-beta2',
+24 silly addNameRange     '1.1.11',
+24 silly addNameRange     '1.1.12-beta1',
+24 silly addNameRange     '1.1.12-beta2',
+24 silly addNameRange     '1.1.12-beta3',
+24 silly addNameRange     '1.1.12',
+24 silly addNameRange     '1.1.13',
+24 silly addNameRange     '1.1.14-beta1',
+24 silly addNameRange     '1.1.14-beta2',
+24 silly addNameRange     '1.1.14-beta3',
+24 silly addNameRange     '1.2.0-beta1',
+24 silly addNameRange     '1.2.0',
+24 silly addNameRange     '1.2.1-beta1',
+24 silly addNameRange     '1.2.1-beta2',
+24 silly addNameRange     '1.2.1-beta3',
+24 silly addNameRange     '1.2.1-beta4',
+24 silly addNameRange     '1.2.1',
+24 silly addNameRange     '1.2.2',
+24 silly addNameRange     '1.2.3-beta1',
+24 silly addNameRange     '1.2.3-beta2',
+24 silly addNameRange     '1.2.3-beta3',
+24 silly addNameRange     '1.2.3',
+24 silly addNameRange     '1.2.4-beta1',
+24 silly addNameRange     '1.2.4-beta2',
+24 silly addNameRange     '1.2.4-beta3',
+24 silly addNameRange     '1.2.4',
+24 silly addNameRange     '1.2.5-beta1',
+24 silly addNameRange     '1.2.5-beta2',
+24 silly addNameRange     '1.2.5-beta3',
+24 silly addNameRange     '1.2.5',
+24 silly addNameRange     '1.2.6-beta1',
+24 silly addNameRange     '1.2.6-beta2',
+24 silly addNameRange     '1.2.6-beta3',
+24 silly addNameRange     '1.2.6',
+24 silly addNameRange     '1.2.7',
+24 silly addNameRange     '1.2.8-beta1',
+24 silly addNameRange     '1.2.8-beta2',
+24 silly addNameRange     '1.2.8',
+24 silly addNameRange     '1.2.9',
+24 silly addNameRange     '1.2.10',
+24 silly addNameRange     '1.2.11',
+24 silly addNameRange     '1.2.12',
+24 silly addNameRange     '1.2.13',
+24 silly addNameRange     '1.2.14-beta1',
+24 silly addNameRange     '1.2.14-beta2',
+24 silly addNameRange     '1.2.14-beta3',
+24 silly addNameRange     '1.2.14-beta4',
+24 silly addNameRange     '1.2.14-beta5',
+24 silly addNameRange     '1.2.14-beta6',
+24 silly addNameRange     '1.2.14',
+24 silly addNameRange     '1.3.0-beta1',
+24 silly addNameRange     '1.3.0',
+24 silly addNameRange     '1.3.1',
+24 silly addNameRange     '1.3.2',
+24 silly addNameRange     '1.3.3',
+24 silly addNameRange     '1.3.4',
+24 silly addNameRange     '1.3.5',
+24 silly addNameRange     '1.3.6',
+24 silly addNameRange     '1.3.7',
+24 silly addNameRange     '1.3.8',
+24 silly addNameRange     '1.3.9',
+24 silly addNameRange     '1.3.10',
+24 silly addNameRange     '1.4.0-alpha.1',
+24 silly addNameRange     '1.3.11',
+24 silly addNameRange     '1.3.1-1.alpha.0',
+24 silly addNameRange     '1.4.0-alpha.2',
+24 silly addNameRange     '1.3.12',
+24 silly addNameRange     '1.3.12-beta.1',
+24 silly addNameRange     '1.3.12-beta.2',
+24 silly addNameRange     '1.3.13-beta.0',
+24 silly addNameRange     '1.3.1-3.beta.1',
+24 silly addNameRange     '1.3.1-3.beta.2',
+24 silly addNameRange     '1.3.13',
+24 silly addNameRange     '1.3.1-3.beta.4',
+24 silly addNameRange     '1.3.14-beta',
+24 silly addNameRange     '1.3.14-beta.1',
+24 silly addNameRange     '1.4.0-alpha.3',
+24 silly addNameRange     '1.3.14',
+24 silly addNameRange     '1.4.0-alpha.4',
+24 silly addNameRange     '1.4.0-alpha.5',
+24 silly addNameRange     '1.3.15-beta.0',
+24 silly addNameRange     '1.3.15-beta.1',
+24 silly addNameRange     '1.3.15-beta.2',
+24 silly addNameRange     '1.3.15-beta.3',
+24 silly addNameRange     '1.3.15-beta.4',
+24 silly addNameRange     '1.3.15',
+24 silly addNameRange     '1.3.16',
+24 silly addNameRange     '1.4.0-alpha.6',
+24 silly addNameRange     '1.3.17-beta.0',
+24 silly addNameRange     '1.3.17-beta.1',
+24 silly addNameRange     '1.3.17-beta.2',
+24 silly addNameRange     '1.3.17-beta.3',
+24 silly addNameRange     '1.3.1-7.beta.4',
+24 silly addNameRange     '1.3.17',
+24 silly addNameRange     '1.3.18-beta.0',
+24 silly addNameRange     '1.3.18-beta.1',
+24 silly addNameRange     '1.3.18-beta.2',
+24 silly addNameRange     '1.3.18-beta.3',
+24 silly addNameRange     '1.3.18',
+24 silly addNameRange     '1.3.19-beta.0',
+24 silly addNameRange     '1.3.19-beta.1',
+24 silly addNameRange     '1.3.19-beta.2',
+24 silly addNameRange     '1.3.19-beta.3',
+24 silly addNameRange     '1.3.19-beta.4',
+24 silly addNameRange     '1.3.19',
+24 silly addNameRange     '1.3.20',
+24 silly addNameRange     '1.4.1-beta.0',
+24 silly addNameRange     '1.4.0-beta.1',
+24 silly addNameRange     '1.4.0-beta.2',
+24 silly addNameRange     '1.4.0-beta.3',
+24 silly addNameRange     '1.4.0-beta.5',
+24 silly addNameRange     '1.4.0-beta.6',
+24 silly addNameRange     '1.4.0-beta.7',
+24 silly addNameRange     '1.3.21-beta.0',
+24 silly addNameRange     '1.3.21-beta.1',
+24 silly addNameRange     '1.3.21',
+24 silly addNameRange     '1.3.22',
+24 silly addNameRange     '1.4.0-beta.8',
+24 silly addNameRange     '1.4.0-beta.9',
+24 silly addNameRange     '1.4.0-beta.10',
+24 silly addNameRange     '1.4.0-beta.11',
+24 silly addNameRange     '1.4.0-beta.12',
+24 silly addNameRange     '1.4.0-beta.13',
+24 silly addNameRange     '1.4.0-beta.14',
+24 silly addNameRange     '1.4.0-beta.15',
+24 silly addNameRange     '1.4.0-beta.16',
+24 silly addNameRange     '1.4.0-beta.17',
+24 silly addNameRange     '1.4.0-beta.18',
+24 silly addNameRange     '1.4.0',
+24 silly addNameRange     '1.4.1',
+24 silly addNameRange     '1.4.2',
+24 silly addNameRange     '1.4.3',
+24 silly addNameRange     '1.4.4-beta.0',
+24 silly addNameRange     '1.4.4-beta.2',
+24 silly addNameRange     '1.4.4',
+24 silly addNameRange     '1.4.5-beta.0',
+24 silly addNameRange     '1.4.5-beta.1',
+24 silly addNameRange     '1.4.5-beta.2',
+24 silly addNameRange     '1.4.5-beta.3',
+24 silly addNameRange     '1.4.5',
+24 silly addNameRange     '1.4.6-beta.0',
+24 silly addNameRange     '1.4.6',
+24 silly addNameRange     '1.4.7',
+24 silly addNameRange     '1.4.8',
+24 silly addNameRange     '1.5.0-beta.0',
+24 silly addNameRange     '1.5.0-beta.1',
+24 silly addNameRange     '1.5.0',
+24 silly addNameRange     '1.5.1-beta.0',
+24 silly addNameRange     '1.5.1-beta.1',
+24 silly addNameRange     '1.5.1-beta.2',
+24 silly addNameRange     '1.5.1-beta.3',
+24 silly addNameRange     '1.5.1-beta.4',
+24 silly addNameRange     '1.5.1',
+24 silly addNameRange     '1.5.2',
+24 silly addNameRange     '1.5.3',
+24 silly addNameRange     '1.5.4',
+24 silly addNameRange     '1.5.5',
+24 silly addNameRange     '1.6.0-beta.1',
+24 silly addNameRange     '1.6.0',
+24 silly addNameRange     '1.6.1',
+24 silly addNameRange     '1.6.2-beta.0',
+24 silly addNameRange     '1.6.2-beta.1',
+24 silly addNameRange     '1.6.2-beta.2',
+24 silly addNameRange     '1.6.2',
+24 silly addNameRange     '1.6.3-beta.0',
+24 silly addNameRange     '1.6.3-beta.1',
+24 silly addNameRange     '1.6.3',
+24 silly addNameRange     '1.6.4-beta.0',
+24 silly addNameRange     '1.6.4-beta.1',
+24 silly addNameRange     '1.6.4',
+24 silly addNameRange     '1.7.0-beta.0',
+24 silly addNameRange     '1.7.0-beta.1',
+24 silly addNameRange     '1.7.0-beta.2',
+24 silly addNameRange     '1.7.0-beta.3',
+24 silly addNameRange     '2.0.0-alpha.1',
+24 silly addNameRange     '2.0.0-alpha.3',
+24 silly addNameRange     '1.7.0-beta.4',
+24 silly addNameRange     '1.6.5-testing.0',
+24 silly addNameRange     '1.6.5-testing.1',
+24 silly addNameRange     '1.6.5-testing.2',
+24 silly addNameRange     '1.6.5-testing.3',
+24 silly addNameRange     '1.6.5',
+24 silly addNameRange     '2.0.0-alpha.4',
+24 silly addNameRange     '1.7.0-beta.5',
+24 silly addNameRange     '1.7.0-beta.6',
+24 silly addNameRange     '1.7.0',
+24 silly addNameRange     '2.0.0-alpha.5',
+24 silly addNameRange     '2.0.0-alpha.6',
+24 silly addNameRange     '1.7.1',
+24 silly addNameRange     '2.0.0-alpha.7',
+24 silly addNameRange     '2.0.0-alpha.8',
+24 silly addNameRange     '1.7.2',
+24 silly addNameRange     '1.7.3',
+24 silly addNameRange     '1.7.4',
+24 silly addNameRange     '1.7.5',
+24 silly addNameRange     '1.7.6',
+24 silly addNameRange     '1.7.7-beta.0',
+24 silly addNameRange     '2.0.0-alpha.9',
+24 silly addNameRange     '1.7.7',
+24 silly addNameRange     '2.0.0-alpha.10',
+24 silly addNameRange     '2.0.0-alpha.11',
+24 silly addNameRange     '2.0.0-alpha.12',
+24 silly addNameRange     '2.0.0-alpha.13',
+24 silly addNameRange     '2.0.0-alpha.14',
+24 silly addNameRange     '2.0.0-alpha.15',
+24 silly addNameRange     '2.0.0-alpha.16',
+24 silly addNameRange     '2.0.0-alpha.17',
+24 silly addNameRange     '2.0.0-alpha.18',
+24 silly addNameRange     '1.7.8-beta.0',
+24 silly addNameRange     '1.7.8-beta.1',
+24 silly addNameRange     '1.7.8-beta.2',
+24 silly addNameRange     '1.7.8-beta.3',
+24 silly addNameRange     '1.7.8',
+24 silly addNameRange     '2.0.0-alpha.19',
+24 silly addNameRange     '2.0.0-alpha.20',
+24 silly addNameRange     '2.0.0-alpha.21',
+24 silly addNameRange     '2.0.0-alpha.22',
+24 silly addNameRange     '2.0.0-alpha.23',
+24 silly addNameRange     '1.7.9',
+24 silly addNameRange     '1.7.10',
+24 silly addNameRange     '2.0.0-alpha.24',
+24 silly addNameRange     '2.0.0-alpha.25',
+24 silly addNameRange     '2.0.0-beta.1',
+24 silly addNameRange     '1.7.11',
+24 silly addNameRange     '2.0.0-beta.2',
+24 silly addNameRange     '2.0.0-beta.3',
+24 silly addNameRange     '2.0.0-beta.4',
+24 silly addNameRange     '2.0.0-beta.5',
+24 silly addNameRange     '2.0.0-beta.6',
+24 silly addNameRange     '2.0.0-beta.7',
+24 silly addNameRange     '2.0.0-beta.8',
+24 silly addNameRange     '2.0.0-beta.9',
+24 silly addNameRange     '2.0.0-beta.10',
+24 silly addNameRange     '2.0.0-beta.11',
+24 silly addNameRange     '1.7.12',
+24 silly addNameRange     '2.0.0-beta.12',
+24 silly addNameRange     '2.0.0-beta.13',
+24 silly addNameRange     '2.0.0-beta.14',
+24 silly addNameRange     '2.0.0-beta.15',
+24 silly addNameRange     '2.0.0-beta.16',
+24 silly addNameRange     '2.0.0-beta.17',
+24 silly addNameRange     '1.7.13',
+24 silly addNameRange     '1.7.14',
+24 silly addNameRange     '2.0.0-beta.18',
+24 silly addNameRange     '2.0.0-beta.19',
+24 silly addNameRange     '2.0.0-beta.20',
+24 silly addNameRange     '2.0.0-beta.21',
+24 silly addNameRange     '2.0.0-beta.22',
+24 silly addNameRange     '2.0.0-beta.23',
+24 silly addNameRange     '2.0.0-beta.24',
+24 silly addNameRange     '2.0.0-beta.25',
+24 silly addNameRange     '1.7.15-beta.0',
+24 silly addNameRange     '1.7.15-beta.1',
+24 silly addNameRange     '1.7.15-beta.2',
+24 silly addNameRange     '1.7.15-beta.3',
+24 silly addNameRange     '1.7.15',
+24 silly addNameRange     '2.0.0-beta.26',
+24 silly addNameRange     '2.0.0-beta.27',
+24 silly addNameRange     '2.0.0-beta.28',
+24 silly addNameRange     '2.0.0-beta.29',
+24 silly addNameRange     '2.0.0-beta.30',
+24 silly addNameRange     '2.0.0-beta.31',
+24 silly addNameRange     '1.7.16',
+24 silly addNameRange     '2.0.0-beta.32',
+24 silly addNameRange     '2.0.0-beta.33',
+24 silly addNameRange     '2.0.0-beta.34',
+24 silly addNameRange     '2.0.0-beta.35',
+24 silly addNameRange     '2.0.0-beta.36',
+24 silly addNameRange     '2.0.0-beta.37',
+24 silly addNameRange     '2.0.0',
+24 silly addNameRange     '2.1.0-beta.0',
+24 silly addNameRange     '2.1.0-beta.1',
+24 silly addNameRange     '2.1.0-beta.2',
+24 silly addNameRange     '2.1.0-beta.3',
+24 silly addNameRange     '2.1.0',
+24 silly addNameRange     '2.1.1',
+24 silly addNameRange     '2.1.2',
+24 silly addNameRange     '2.1.3',
+24 silly addNameRange     '2.1.4',
+24 silly addNameRange     '2.1.5',
+24 silly addNameRange     '2.1.6',
+24 silly addNameRange     '2.1.7',
+24 silly addNameRange     '2.1.8',
+24 silly addNameRange     '2.1.9',
+24 silly addNameRange     '2.1.10',
+24 silly addNameRange     '2.1.11',
+24 silly addNameRange     '2.1.12',
+24 silly addNameRange     '2.1.13',
+24 silly addNameRange     '2.1.14',
+24 silly addNameRange     '2.1.15',
+24 silly addNameRange     '2.1.16',
+24 silly addNameRange     '2.1.17',
+24 silly addNameRange     '2.1.17-201612131445',
+24 silly addNameRange     '2.1.17-201612131736',
+24 silly addNameRange     '2.1.17-201612131919',
+24 silly addNameRange     '2.1.17-201612191658',
+24 silly addNameRange     '2.1.17-201612201942',
+24 silly addNameRange     '2.1.17-201612202039',
+24 silly addNameRange     '2.1.17-201612220455',
+24 silly addNameRange     '2.1.18',
+24 silly addNameRange     '2.1.18-201701110338',
+24 silly addNameRange     '2.2.0',
+24 silly addNameRange     '2.2.1',
+24 silly addNameRange     '3.0.0-alpha.12e4141f',
+24 silly addNameRange     '3.0.0-alpha.b0ea99a9',
+24 silly addNameRange     '3.0.0-alpha.76eb8ad1',
+24 silly addNameRange     '3.0.0-alpha.1b3573c8',
+24 silly addNameRange     '3.0.0-alpha.63f24da1',
+24 silly addNameRange     '3.0.0-alpha.11ae7639',
+24 silly addNameRange     '3.0.0-alpha.8875ac08',
+24 silly addNameRange     '3.0.0-alpha.c90de7f8',
+24 silly addNameRange     '3.0.0-alpha.ddfcd38a',
+24 silly addNameRange     '3.0.0-alpha.6a2e9ddb',
+24 silly addNameRange     '3.0.0-alpha.139ef8a6',
+24 silly addNameRange     '3.0.0-alpha.22dc0bf8',
+24 silly addNameRange     '3.0.0-alpha.100',
+24 silly addNameRange     '3.0.0-alpha.101',
+24 silly addNameRange     '3.0.0-alpha.102',
+24 silly addNameRange     '3.0.0-alpha.103',
+24 silly addNameRange     '3.0.0-alpha.104',
+24 silly addNameRange     '3.0.0-alpha.105',
+24 silly addNameRange     '3.0.0-alpha.106',
+24 silly addNameRange     '3.0.0-alpha.107',
+24 silly addNameRange     '3.0.0-beta.1',
+24 silly addNameRange     '3.0.0-beta.2',
+24 silly addNameRange     '3.0.0-beta.3',
+24 silly addNameRange     '3.0.0-beta.4',
+24 silly addNameRange     '3.0.0-beta.5',
+24 silly addNameRange     '2.2.2',
+24 silly addNameRange     '3.0.0-beta.5-alpha.c9d454fd',
+24 silly addNameRange     '3.0.0-beta.6',
+24 silly addNameRange     '3.0.0-beta7',
+24 silly addNameRange     '3.0.0-beta7-alpha.d32d569c',
+24 silly addNameRange     '2.2.3',
+24 silly addNameRange     '3.0.0-beta7-alpha.950ade14',
+24 silly addNameRange     '3.0.0-beta7-alpha.508ecf09',
+24 silly addNameRange     '3.0.0-beta7-alpha.8701e30b',
+24 silly addNameRange     '3.0.0-beta7-alpha.9ae0c955',
+24 silly addNameRange     '3.0.0-beta7-alpha.696ae026',
+24 silly addNameRange     '3.0.0-beta7-alpha.fcb9df21',
+24 silly addNameRange     '3.0.0-beta7-alpha.ec7cdd04',
+24 silly addNameRange     '3.0.0-beta7-alpha.9e9fa3cd',
+24 silly addNameRange     '3.0.0-beta7-alpha.9186169f',
+24 silly addNameRange     '3.0.0-beta7-alpha.a436fb3b',
+24 silly addNameRange     '3.0.0-beta7-alpha.9a45162d',
+24 silly addNameRange     '3.0.0-beta7-alpha.82baf627',
+24 silly addNameRange     '3.0.0-beta7-alpha.5db25ede',
+24 silly addNameRange     '3.0.0-beta7-alpha.2c85eb7d',
+24 silly addNameRange     '3.0.0-beta7-alpha.317a5b89',
+24 silly addNameRange     '3.0.0-beta8',
+24 silly addNameRange     '3.0.0-beta8-alpha.9279cbab',
+24 silly addNameRange     '3.0.0-beta8-alpha.65a481d0',
+24 silly addNameRange     '3.0.0-beta8-alpha.161a488d',
+24 silly addNameRange     '3.0.0-beta8-alpha.621136f8',
+24 silly addNameRange     '3.0.0-beta8-alpha.13802933',
+24 silly addNameRange     '3.0.0-beta8-alpha.24407e3a',
+24 silly addNameRange     '3.0.0-beta8-alpha.cec30e7d',
+24 silly addNameRange     '3.0.0-beta8-alpha.93e26403',
+24 silly addNameRange     '3.0.0-beta8-alpha.a824465e',
+24 silly addNameRange     '3.0.0-beta8-alpha.1bdfe1b5',
+24 silly addNameRange     '3.0.0-beta9',
+24 silly addNameRange     '3.0.0-beta9-alpha.cc333d6e',
+24 silly addNameRange     '3.0.0-beta9-alpha.c10bff9a',
+24 silly addNameRange     '3.0.0-beta9-alpha.9a8116f6',
+24 silly addNameRange     '3.0.0-beta9-alpha.5107a661',
+24 silly addNameRange     '3.0.0-beta10',
+24 silly addNameRange     '3.0.0-beta10-alpha.c521c12e',
+24 silly addNameRange     '3.0.0-beta10-alpha.30356571',
+24 silly addNameRange     '3.0.0-beta10-alpha.62502c0c',
+24 silly addNameRange     '3.0.0-beta10-alpha.fd1544a0',
+24 silly addNameRange     '3.0.0-beta10-alpha.f557b556',
+24 silly addNameRange     '3.0.0-beta10-alpha.7df862ad',
+24 silly addNameRange     '3.0.0-rc.0',
+24 silly addNameRange     '3.0.0-rc.0-alpha.1bc04186',
+24 silly addNameRange     '3.0.0-rc.0-alpha.b7f97e5d',
+24 silly addNameRange     '3.0.0-rc.0-alpha.5262b4d9',
+24 silly addNameRange     '3.0.0-rc.0-alpha.9f2c9fb4',
+24 silly addNameRange     '3.0.0-rc.0-alpha.80160283',
+24 silly addNameRange     '3.0.0-rc.0-alpha.50bdcf62',
+24 silly addNameRange     '3.0.0-rc.0-alpha.3155e3f1',
+24 silly addNameRange     '3.0.0-rc.0-alpha.cf4a4a07',
+24 silly addNameRange     '3.0.0-rc.0-alpha.b8fd4002',
+24 silly addNameRange     '3.0.0-rc.0-alpha.9201f531',
+24 silly addNameRange     '3.0.0-rc.0-alpha.deb53b99',
+24 silly addNameRange     '3.0.0-rc.0-alpha.8595235d',
+24 silly addNameRange     '3.0.0-rc.0-alpha.9763c377',
+24 silly addNameRange     '3.0.0-rc.0-alpha.f61f7c3e',
+24 silly addNameRange     '3.0.0-rc.1',
+24 silly addNameRange     '3.0.0-rc.1-alpha.b5a79be6',
+24 silly addNameRange     '3.0.0-rc.1-alpha.2d3be68b',
+24 silly addNameRange     '3.0.0-rc.1-alpha.93226be6',
+24 silly addNameRange     '3.0.0-rc.1-alpha.f2507505',
+24 silly addNameRange     '3.0.0-rc.1-alpha.2bb303a6',
+24 silly addNameRange     '3.0.0-rc.1-alpha.7c322585',
+24 silly addNameRange     '3.0.0-rc.1-alpha.73405c8f',
+24 silly addNameRange     '3.0.0-rc.1-alpha.267ff06e',
+24 silly addNameRange     '3.0.0-rc.1-alpha.66f7a07d',
+24 silly addNameRange     '3.0.0-rc.1-alpha.62022768',
+24 silly addNameRange     '3.0.0-rc.1-alpha.4e9bd53a',
+24 silly addNameRange     '3.0.0-rc.1-alpha.f73920b9',
+24 silly addNameRange     '3.0.0-rc.1-alpha.42f83eca',
+24 silly addNameRange     '3.0.0-rc.1-alpha.9a1af396',
+24 silly addNameRange     '3.0.0-rc.2',
+24 silly addNameRange     '3.0.0-rc.2-alpha.f5850eb3',
+24 silly addNameRange     '3.0.0-rc.2-alpha.db56afb0',
+24 silly addNameRange     '3.0.0-rc.2-alpha.9bcb09b3',
+24 silly addNameRange     '3.0.0-rc.2-alpha.dec1e86f',
+24 silly addNameRange     '3.0.0-rc.2-alpha.7870209c',
+24 silly addNameRange     '3.0.0-rc.2-alpha.ed9d2b16',
+24 silly addNameRange     '3.0.0-rc.2-alpha.dfaa6be0',
+24 silly addNameRange     '3.0.0',
+24 silly addNameRange     '3.0.0-alpha.3307486d',
+24 silly addNameRange     '3.0.0-alpha.88f599cb',
+24 silly addNameRange     '3.0.0-alpha.04749d5e',
+24 silly addNameRange     '3.0.0-alpha.a7fb5aee',
+24 silly addNameRange     '3.0.0-alpha.cd529fae',
+24 silly addNameRange     '3.0.0-alpha.1897baa2',
+24 silly addNameRange     '3.0.0-alpha.be5e9db9',
+24 silly addNameRange     '3.0.0-alpha.0ac81249',
+24 silly addNameRange     '3.0.0-alpha.bd26a5a5',
+24 silly addNameRange     '3.0.0-alpha.256503ea',
+24 silly addNameRange     '3.0.0-alpha.1559049c',
+24 silly addNameRange     '3.0.0-alpha.8fcb0a8d',
+24 silly addNameRange     '3.0.0-alpha.78b33db6',
+24 silly addNameRange     '3.0.0-alpha.c8f4e7e8',
+24 silly addNameRange     '3.0.0-alpha.54936cde',
+24 silly addNameRange     '3.0.0-alpha.f02f7234',
+24 silly addNameRange     '3.0.0-alpha.7cf891bc',
+24 silly addNameRange     '3.0.0-alpha.f2ecbc05',
+24 silly addNameRange     '3.0.0-alpha.9fdbda6b',
+24 silly addNameRange     '3.0.0-alpha.2cc25b1f',
+24 silly addNameRange     '3.0.0-alpha.001e53a0',
+24 silly addNameRange     '3.0.0-alpha.3bea5304',
+24 silly addNameRange     '3.0.0-alpha.84cfb4e9',
+24 silly addNameRange     '3.0.0-alpha.6335afd8',
+24 silly addNameRange     '3.0.0-alpha.be89cb1a',
+24 silly addNameRange     '3.0.0-alpha.5178832e',
+24 silly addNameRange     '3.0.0-alpha.74f2f69e',
+24 silly addNameRange     '3.0.0-alpha.df127ee9',
+24 silly addNameRange     '3.0.0-alpha.b1b757b3',
+24 silly addNameRange     '3.0.0-alpha.7cc2e042',
+24 silly addNameRange     '3.1.0',
+24 silly addNameRange     '3.1.0-alpha.728d8915',
+24 silly addNameRange     '3.1.0-alpha.f29cc510',
+24 silly addNameRange     '3.1.1',
+24 silly addNameRange     '3.1.1-alpha.a12a4ea0',
+24 silly addNameRange     '3.1.1-alpha.a2de9837',
+24 silly addNameRange     '3.1.2',
+24 silly addNameRange     '3.1.2-alpha.89f6a886',
+24 silly addNameRange     '3.1.2-alpha.86d8c9ab',
+24 silly addNameRange     '3.1.2-alpha.474b2964',
+24 silly addNameRange     '3.1.2-alpha.1966a0cd',
+24 silly addNameRange     '3.1.2-alpha.2f78a2ac',
+24 silly addNameRange     '3.1.2-alpha.df0500d8',
+24 silly addNameRange     '3.1.2-alpha.e35b6c7a',
+24 silly addNameRange     '3.1.2-alpha.aaa8e51f',
+24 silly addNameRange     '3.1.2-alpha.d8d26e46',
+24 silly addNameRange     '3.1.2-alpha.e8a42459',
+24 silly addNameRange     '3.1.2-alpha.0fbfccd4',
+24 silly addNameRange     '3.1.2-alpha.8677e8ff',
+24 silly addNameRange     '3.1.2-alpha.5755ae61',
+24 silly addNameRange     '3.1.2-alpha.7637b63f',
+24 silly addNameRange     '3.1.2-alpha.27aebcae',
+24 silly addNameRange     '3.1.2-alpha.a620a741',
+24 silly addNameRange     '3.1.2-alpha.aaed58fe',
+24 silly addNameRange     '3.1.2-alpha.5d984bd3',
+24 silly addNameRange     '3.1.2-alpha.cd32bdfa',
+24 silly addNameRange     '3.1.2-alpha.fbcfc761',
+24 silly addNameRange     '3.1.2-alpha.09e7ba0c',
+24 silly addNameRange     '3.1.2-alpha.221702c3',
+24 silly addNameRange     '3.1.2-alpha.e8a48ef8',
+24 silly addNameRange     '3.1.2-alpha.7f218f1e',
+24 silly addNameRange     '3.1.2-alpha.8573ff20',
+24 silly addNameRange     '3.2.0',
+24 silly addNameRange     '3.2.0-alpha.e4848b45',
+24 silly addNameRange     '3.2.0-alpha.94db9255',
+24 silly addNameRange     '3.2.0-alpha.4aa54028',
+24 silly addNameRange     '3.2.0-alpha.f2cd537a',
+24 silly addNameRange     '3.2.0-alpha.771a2424',
+24 silly addNameRange     '3.2.0-alpha.cb43ec30',
+24 silly addNameRange     '3.2.0-alpha.a7d3454e',
+24 silly addNameRange     '3.2.0-alpha.55004475',
+24 silly addNameRange     '3.2.0-alpha.1191cde4',
+24 silly addNameRange     '3.2.0-alpha.256f5327',
+24 silly addNameRange     '3.2.0-alpha.6473815d',
+24 silly addNameRange     '3.2.0-alpha.4a752559',
+24 silly addNameRange     '3.2.0-alpha.b543ac49',
+24 silly addNameRange     '3.2.0-alpha.c4eedf56',
+24 silly addNameRange     '3.2.0-alpha.85528262',
+24 silly addNameRange     '3.3.0',
+24 silly addNameRange     '3.3.0-alpha.4be0cd6a',
+24 silly addNameRange     '3.3.0-alpha.e4917330',
+24 silly addNameRange     '3.3.0-alpha.3a135e99',
+24 silly addNameRange     '3.3.0-alpha.0817eb1b',
+24 silly addNameRange     '3.3.0-alpha.02b6c45f',
+24 silly addNameRange     '3.3.0-alpha.88789d8d',
+24 silly addNameRange     '3.3.0-alpha.11a38467',
+24 silly addNameRange     '3.3.0-alpha.fe2fd11c',
+24 silly addNameRange     '3.3.0-alpha.6953e719',
+24 silly addNameRange     '3.3.0-alpha.c0a4f220',
+24 silly addNameRange     '3.3.0-alpha.5b52d01c',
+24 silly addNameRange     '3.3.0-alpha.e34fc346',
+24 silly addNameRange     '3.3.0-alpha.0fdbae8c',
+24 silly addNameRange     '3.3.0-alpha.e3378136',
+24 silly addNameRange     '3.3.0-alpha.ba34a861',
+24 silly addNameRange     '3.3.0-alpha.1060df23',
+24 silly addNameRange     '3.4.0',
+24 silly addNameRange     '3.4.0-alpha.46cae538',
+24 silly addNameRange     '3.4.0-alpha.ce6c1296',
+24 silly addNameRange     '3.4.0-alpha.9e3fee08',
+24 silly addNameRange     '3.4.0-alpha.2e48420c',
+24 silly addNameRange     '3.4.0-alpha.81a18efb',
+24 silly addNameRange     '3.4.0-alpha.158bdbaa',
+24 silly addNameRange     '3.4.0-alpha.e838a5d7',
+24 silly addNameRange     '3.5.0-alpha.9f3b5763',
+24 silly addNameRange     '3.5.0-alpha.584ae753',
+24 silly addNameRange     '3.5.0-alpha.965af07a',
+24 silly addNameRange     '3.5.0',
+24 silly addNameRange     '3.6.0-alpha.7154d42e',
+24 silly addNameRange     '3.6.0-alpha.c502e94c',
+24 silly addNameRange     '3.6.0-alpha.18371e18',
+24 silly addNameRange     '3.6.0-alpha.6bff50a2',
+24 silly addNameRange     '3.6.0-alpha.b9b49059',
+24 silly addNameRange     '3.6.0-alpha.b11499dc',
+24 silly addNameRange     '3.6.0-pro.531f60a1',
+24 silly addNameRange     '3.6.0-alpha.1b7049bb',
+24 silly addNameRange     '3.6.0-pro.4b58f416',
+24 silly addNameRange     '3.6.0-alpha.5dcf250b',
+24 silly addNameRange     '3.6.0-alpha.37170327',
+24 silly addNameRange     '3.6.0-alpha.868bd4cc',
+24 silly addNameRange     '3.6.0-alpha.5e63bb44',
+24 silly addNameRange     '3.6.0-alpha.243f20d0',
+24 silly addNameRange     '3.6.0-daemon.e17209b2',
+24 silly addNameRange     '3.6.0-daemon.772b0a37',
+24 silly addNameRange     '3.6.0-pro.7639fbf7',
+24 silly addNameRange     '3.6.0-pro.7bb2aa94',
+24 silly addNameRange     '3.6.0-pro.e0ab64f9',
+24 silly addNameRange     '3.6.0-pro.f7ffd63d',
+24 silly addNameRange     '3.6.0-pro.3b5f5874',
+24 silly addNameRange     '3.6.0-pro.29f9aa31',
+24 silly addNameRange     '3.6.0-pro.f3419325',
+24 silly addNameRange     '3.6.0-pro.adbed8fc',
+24 silly addNameRange     '3.6.0-pro.60271e5b',
+24 silly addNameRange     '3.6.0-pro.051ef140',
+24 silly addNameRange     '3.6.0-pro.733aa2e2',
+24 silly addNameRange     '3.6.0-pro.04a72b8e',
+24 silly addNameRange     '3.6.0-pro.6a81a551',
+24 silly addNameRange     '3.6.0-pro.dfbcbea9',
+24 silly addNameRange     '3.6.0-pro.38c4520b',
+24 silly addNameRange     '3.6.0-pro.b1f2a52c',
+24 silly addNameRange     '3.6.0-pro.c732e5f4',
+24 silly addNameRange     '3.6.0-alpha.36dc2f70',
+24 silly addNameRange     '3.6.0-alpha.d4537e5d',
+24 silly addNameRange     '3.6.0-alpha.27cdcfd6',
+24 silly addNameRange     '3.6.0-alpha.2098819c',
+24 silly addNameRange     '3.6.0-alpha.a562b3c7',
+24 silly addNameRange     '3.6.0-alpha.b9074460',
+24 silly addNameRange     '3.6.0-alpha.22543634',
+24 silly addNameRange     '3.6.0-alpha.1a24f237',
+24 silly addNameRange     '3.6.0-alpha.97b1db8f',
+24 silly addNameRange     '3.6.0-alpha.205dd9c3',
+24 silly addNameRange     '3.6.0-alpha.07d2c7f5',
+24 silly addNameRange     '3.6.0-alpha.bfa36021',
+24 silly addNameRange     '3.6.0-alpha.327baed6',
+24 silly addNameRange     '3.6.0-alpha.17d60bac',
+24 silly addNameRange     '3.6.0-alpha.8c718a65',
+24 silly addNameRange     '3.6.0-alpha.4323e35f',
+24 silly addNameRange     '3.6.0',
+24 silly addNameRange     '3.7.0-alpha.33309f58',
+24 silly addNameRange     '3.7.0-alpha.3adfcb63',
+24 silly addNameRange     '3.7.0-alpha.34095a41',
+24 silly addNameRange     '3.7.0-alpha.f8c9ca50',
+24 silly addNameRange     '3.7.0-alpha.1f885fa6',
+24 silly addNameRange     '3.7.0-alpha.3abb0d6b',
+24 silly addNameRange     '3.7.0-alpha.b36edaa4',
+24 silly addNameRange     '3.7.0-alpha.a6a804c4',
+24 silly addNameRange     '3.7.0-alpha.e8a74d07',
+24 silly addNameRange     '3.7.0-alpha.99e29f1f',
+24 silly addNameRange     '3.7.0-alpha.93bbc88d',
+24 silly addNameRange     '3.7.0-alpha.b8ec8eca',
+24 silly addNameRange     '3.7.0-alpha.dd5445cc',
+24 silly addNameRange     '3.7.0-alpha.ecd2eb87',
+24 silly addNameRange     '3.7.0',
+24 silly addNameRange     '3.8.0-alpha.2d87e649',
+24 silly addNameRange     '3.8.0-alpha.35fa3b5c',
+24 silly addNameRange     '3.8.0-alpha.8967c501',
+24 silly addNameRange     '3.8.0-alpha.e0467336',
+24 silly addNameRange     '3.8.0-alpha.d695c89f',
+24 silly addNameRange     '3.8.0-alpha.ce14ec7c',
+24 silly addNameRange     '3.8.0-testing.f84938cc',
+24 silly addNameRange     '3.8.0-testing.fc57fc77',
+24 silly addNameRange     '3.8.0-alpha.93effbfa',
+24 silly addNameRange     '3.8.0-testing.bc580410',
+24 silly addNameRange     '3.8.0-testing.15a83d68',
+24 silly addNameRange     '3.8.0-alpha.1d0f21c3',
+24 silly addNameRange     '3.8.0-alpha.de55fb7b',
+24 silly addNameRange     '3.8.0-alpha.bfc843c8',
+24 silly addNameRange     '3.8.0-alpha.9f740e0e',
+24 silly addNameRange     '3.8.0-alpha.a2020412',
+24 silly addNameRange     '3.8.0-alpha.7eb58ee5',
+24 silly addNameRange     '3.8.0-alpha.c09792cc',
+24 silly addNameRange     '3.8.0-alpha.053e614f',
+24 silly addNameRange     '3.8.0-alpha.5e7466fa',
+24 silly addNameRange     '3.8.0-alpha.36757456',
+24 silly addNameRange     '3.8.0-alpha.3dca7af1',
+24 silly addNameRange     '3.8.0-alpha.f2b7650a',
+24 silly addNameRange     '3.8.0-alpha.02f2574d',
+24 silly addNameRange     '3.8.0-alpha.d7fe31df',
+24 silly addNameRange     '3.8.0-alpha.89853cad',
+24 silly addNameRange     '3.8.0-alpha.4eeea0a7',
+24 silly addNameRange     '3.8.0-alpha.d89ac098',
+24 silly addNameRange     '3.8.0-alpha.27a0c171',
+24 silly addNameRange     '3.8.0',
+24 silly addNameRange     '3.9.0-alpha.25631718',
+24 silly addNameRange     '3.9.0-alpha.5664a3bd',
+24 silly addNameRange     '3.9.0-alpha.f08f22b9',
+24 silly addNameRange     '3.8.1',
+24 silly addNameRange     '3.9.0-alpha.0af0a057',
+24 silly addNameRange     '3.9.0-alpha.80ac51c3',
+24 silly addNameRange     '3.9.0-alpha.0a5ce809',
+24 silly addNameRange     '3.9.0-alpha.f7a37c36',
+24 silly addNameRange     '3.9.0',
+24 silly addNameRange     '3.10.0-alpha.e70e024b',
+24 silly addNameRange     '3.10.0-alpha.7f8ffc11',
+24 silly addNameRange     '3.10.0-alpha.14c36137',
+24 silly addNameRange     '3.10.0-alpha.ea07da95',
+24 silly addNameRange     '3.10.0-alpha.e32f9c1b',
+24 silly addNameRange     '3.9.1',
+24 silly addNameRange     '3.10.0-alpha.168597f1',
+24 silly addNameRange     '3.10.0-alpha.5377f7ea',
+24 silly addNameRange     '3.10.0-alpha.37f9c5a6',
+24 silly addNameRange     '3.9.2',
+24 silly addNameRange     '3.10.0-alpha.e130da17',
+24 silly addNameRange     '3.10.0-alpha.3a447a5e',
+24 silly addNameRange     '3.10.0-alpha.ca6e0ef3',
+24 silly addNameRange     '3.10.0-alpha.69661358',
+24 silly addNameRange     '3.10.0-alpha.91c1be14',
+24 silly addNameRange     '3.10.0-alpha.706680d5',
+24 silly addNameRange     '3.10.0-alpha.b9cee01b',
+24 silly addNameRange     '3.10.0-alpha.47286cb5',
+24 silly addNameRange     '3.10.0-alpha.c8b4d11f',
+24 silly addNameRange     '3.10.0-alpha.5763a38f',
+24 silly addNameRange     '3.10.0-alpha.ae1f7f12',
+24 silly addNameRange     '3.10.0-alpha.967da6cf',
+24 silly addNameRange     '3.10.0-alpha.e4c91ce1',
+24 silly addNameRange     '3.10.0-alpha.0b92c514',
+24 silly addNameRange     '3.10.0-alpha.231710ec',
+24 silly addNameRange     '3.10.0-alpha.c0696f37',
+24 silly addNameRange     '3.10.0-alpha.50a8923a',
+24 silly addNameRange     '3.10.0-alpha.b34c24dc',
+24 silly addNameRange     '3.10.0-alpha.7903281b',
+24 silly addNameRange     '3.10.0-alpha.0fd94185',
+24 silly addNameRange     '3.10.0-alpha.d90cdb82',
+24 silly addNameRange     '3.10.0-alpha.f10931c3',
+24 silly addNameRange     '3.10.0',
+24 silly addNameRange     '3.11.0-alpha.af755101',
+24 silly addNameRange     '3.11.0-alpha.3453ed9f',
+24 silly addNameRange     '3.10.1',
+24 silly addNameRange     '3.11.0-alpha.3beff359',
+24 silly addNameRange     '3.11.0-alpha.d10602f6',
+24 silly addNameRange     '3.10.2',
+24 silly addNameRange     '3.11.0-alpha.e059cd77',
+24 silly addNameRange     '3.11.0-alpha.45e565ae',
+24 silly addNameRange     '3.10.3',
+24 silly addNameRange     '3.11.0-alpha.a3b3e2fa',
+24 silly addNameRange     '3.11.0-alpha.6978de1c',
+24 silly addNameRange     '3.11.0-alpha.a5d03c39',
+24 silly addNameRange     '3.11.0-alpha.124702a8',
+24 silly addNameRange     '3.11.0-alpha.fe072159',
+24 silly addNameRange     '3.11.0-alpha.f2170bc9',
+24 silly addNameRange     '3.11.0-alpha.3801fdfb',
+24 silly addNameRange     '3.11.0-alpha.c0ffaccf',
+24 silly addNameRange     '3.11.0-alpha.f2795409',
+24 silly addNameRange     '3.11.0-alpha.4835cd9a',
+24 silly addNameRange     '3.11.0-alpha.4031bd7f',
+24 silly addNameRange     '3.11.0',
+24 silly addNameRange     '3.12.0-alpha.4be8a40f',
+24 silly addNameRange     '3.12.0-alpha.4d2f3b62',
+24 silly addNameRange     '3.12.0-alpha.efbbe002',
+24 silly addNameRange     '3.12.0',
+24 silly addNameRange     '3.13.0-alpha.68073bb6',
+24 silly addNameRange     '3.13.0-alpha.3f0aab64',
+24 silly addNameRange     '3.13.0-alpha.77ac7d71',
+24 silly addNameRange     '3.13.0-alpha.a2ba645a',
+24 silly addNameRange     '3.13.0-alpha.36fd2f37',
+24 silly addNameRange     '3.13.0-alpha.1ff22482',
+24 silly addNameRange     '3.13.0-alpha.31225b9a',
+24 silly addNameRange     '3.13.0',
+24 silly addNameRange     '3.14.0-alpha.fdc67024',
+24 silly addNameRange     '3.14.0-alpha.9bb9ad17',
+24 silly addNameRange     '3.13.1',
+24 silly addNameRange     '3.14.0-alpha.a96f36b4',
+24 silly addNameRange     '3.14.0-alpha.93870940',
+24 silly addNameRange     '3.13.2',
+24 silly addNameRange     '3.14.0-alpha.65f41660',
+24 silly addNameRange     '3.14.0-alpha.6dd871da',
+24 silly addNameRange     '3.14.0-alpha.477a4cbf',
+24 silly addNameRange     '3.14.0-alpha.f48ad234',
+24 silly addNameRange     '3.14.0-alpha.5d730984',
+24 silly addNameRange     '3.14.0-alpha.a3d1be6c',
+24 silly addNameRange     '3.14.0',
+24 silly addNameRange     '3.15.0-alpha.1a89fa2a',
+24 silly addNameRange     '3.15.0-alpha.7975cd89',
+24 silly addNameRange     '3.15.0-alpha.da35a83a',
+24 silly addNameRange     '3.15.0',
+24 silly addNameRange     '3.16.0-alpha.b3faeab0',
+24 silly addNameRange     '3.16.0-alpha.066ff224',
+24 silly addNameRange     '3.15.1',
+24 silly addNameRange     '3.16.0-alpha.33f09d33',
+24 silly addNameRange     '3.16.0-alpha.25bbda55',
+24 silly addNameRange     '3.15.2',
+24 silly addNameRange     '3.16.0-alpha.932c5465',
+24 silly addNameRange     '3.16.0-alpha.aebe2ff4',
+24 silly addNameRange     '3.16.0-alpha.fb4e38e9' ] ]
+25 verbose addNamed [ 'ionic', '3.15.2' ]
+26 verbose addNamed [ '3.15.2', '3.15.2' ]
+27 silly lockFile e2671e8b-ionic-3-15-2 ionic@3.15.2
+28 verbose lock ionic@3.15.2 /root/.npm/e2671e8b-ionic-3-15-2.lock
+29 silly lockFile 2a97fa89-npmjs-org-ionic-ionic-3-15-2-tgz https://registry.npmjs.org/ionic/-/ionic-3.15.2.tgz
+30 verbose lock https://registry.npmjs.org/ionic/-/ionic-3.15.2.tgz /root/.npm/2a97fa89-npmjs-org-ionic-ionic-3-15-2-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/ionic/-/ionic-3.15.2.tgz',
+31 verbose addRemoteTarball   'b5455fc1a3cefab236262c8c4515787827be75e5' ]
+32 info retry fetch attempt 1 at 15:24:55
+33 verbose fetch to= /root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/tmp.tgz
+34 http GET https://registry.npmjs.org/ionic/-/ionic-3.15.2.tgz
+35 http 200 https://registry.npmjs.org/ionic/-/ionic-3.15.2.tgz
+36 verbose tar unpack /root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/tmp.tgz
+37 silly lockFile 42989ee9-495907-0-992394034517929-package tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package
+38 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package /root/.npm/42989ee9-495907-0-992394034517929-package.lock
+39 silly lockFile b4983988-495907-0-992394034517929-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/tmp.tgz
+40 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/tmp.tgz /root/.npm/b4983988-495907-0-992394034517929-tmp-tgz.lock
+41 silly gunzTarPerm modes [ '755', '644' ]
+42 silly gunzTarPerm extractEntry package.json
+43 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+44 silly gunzTarPerm extractEntry CHANGELOG.md
+45 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+46 silly gunzTarPerm extractEntry README.md
+47 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+48 silly gunzTarPerm extractEntry bin/ionic
+49 silly gunzTarPerm extractEntry dist/commands/build.d.ts
+50 silly gunzTarPerm modified mode [ 'dist/commands/build.d.ts', 436, 420 ]
+51 silly gunzTarPerm extractEntry dist/commands/build.js
+52 silly gunzTarPerm modified mode [ 'dist/commands/build.js', 436, 420 ]
+53 silly gunzTarPerm extractEntry dist/commands/config/get.d.ts
+54 silly gunzTarPerm modified mode [ 'dist/commands/config/get.d.ts', 436, 420 ]
+55 silly gunzTarPerm extractEntry dist/commands/config/get.js
+56 silly gunzTarPerm modified mode [ 'dist/commands/config/get.js', 436, 420 ]
+57 silly gunzTarPerm extractEntry dist/commands/config/index.d.ts
+58 silly gunzTarPerm modified mode [ 'dist/commands/config/index.d.ts', 436, 420 ]
+59 silly gunzTarPerm extractEntry dist/commands/config/index.js
+60 silly gunzTarPerm modified mode [ 'dist/commands/config/index.js', 436, 420 ]
+61 silly gunzTarPerm extractEntry dist/commands/config/set.d.ts
+62 silly gunzTarPerm modified mode [ 'dist/commands/config/set.d.ts', 436, 420 ]
+63 silly gunzTarPerm extractEntry dist/commands/config/set.js
+64 silly gunzTarPerm modified mode [ 'dist/commands/config/set.js', 436, 420 ]
+65 silly gunzTarPerm extractEntry dist/commands/cordova/base.d.ts
+66 silly gunzTarPerm modified mode [ 'dist/commands/cordova/base.d.ts', 436, 420 ]
+67 silly gunzTarPerm extractEntry dist/commands/cordova/base.js
+68 silly gunzTarPerm modified mode [ 'dist/commands/cordova/base.js', 436, 420 ]
+69 silly gunzTarPerm extractEntry dist/commands/cordova/build.d.ts
+70 silly gunzTarPerm modified mode [ 'dist/commands/cordova/build.d.ts', 436, 420 ]
+71 silly gunzTarPerm extractEntry dist/commands/cordova/build.js
+72 silly gunzTarPerm modified mode [ 'dist/commands/cordova/build.js', 436, 420 ]
+73 silly gunzTarPerm extractEntry dist/commands/cordova/compile.d.ts
+74 silly gunzTarPerm modified mode [ 'dist/commands/cordova/compile.d.ts', 436, 420 ]
+75 silly gunzTarPerm extractEntry dist/commands/cordova/compile.js
+76 silly gunzTarPerm modified mode [ 'dist/commands/cordova/compile.js', 436, 420 ]
+77 silly gunzTarPerm extractEntry dist/commands/cordova/emulate.d.ts
+78 silly gunzTarPerm modified mode [ 'dist/commands/cordova/emulate.d.ts', 436, 420 ]
+79 silly gunzTarPerm extractEntry dist/commands/cordova/emulate.js
+80 silly gunzTarPerm modified mode [ 'dist/commands/cordova/emulate.js', 436, 420 ]
+81 silly gunzTarPerm extractEntry dist/commands/cordova/index.d.ts
+82 silly gunzTarPerm modified mode [ 'dist/commands/cordova/index.d.ts', 436, 420 ]
+83 silly gunzTarPerm extractEntry dist/commands/cordova/index.js
+84 silly gunzTarPerm modified mode [ 'dist/commands/cordova/index.js', 436, 420 ]
+85 silly gunzTarPerm extractEntry dist/commands/cordova/platform.d.ts
+86 silly gunzTarPerm modified mode [ 'dist/commands/cordova/platform.d.ts', 436, 420 ]
+87 silly gunzTarPerm extractEntry dist/commands/cordova/platform.js
+88 silly gunzTarPerm modified mode [ 'dist/commands/cordova/platform.js', 436, 420 ]
+89 silly gunzTarPerm extractEntry dist/commands/cordova/plugin.d.ts
+90 silly gunzTarPerm modified mode [ 'dist/commands/cordova/plugin.d.ts', 436, 420 ]
+91 silly gunzTarPerm extractEntry dist/commands/cordova/plugin.js
+92 silly gunzTarPerm modified mode [ 'dist/commands/cordova/plugin.js', 436, 420 ]
+93 silly gunzTarPerm extractEntry dist/commands/cordova/prepare.d.ts
+94 silly gunzTarPerm modified mode [ 'dist/commands/cordova/prepare.d.ts', 436, 420 ]
+95 silly gunzTarPerm extractEntry dist/commands/cordova/prepare.js
+96 silly gunzTarPerm modified mode [ 'dist/commands/cordova/prepare.js', 436, 420 ]
+97 silly gunzTarPerm extractEntry dist/commands/cordova/requirements.d.ts
+98 silly gunzTarPerm modified mode [ 'dist/commands/cordova/requirements.d.ts', 436, 420 ]
+99 silly gunzTarPerm extractEntry dist/commands/cordova/requirements.js
+100 silly gunzTarPerm modified mode [ 'dist/commands/cordova/requirements.js', 436, 420 ]
+101 silly gunzTarPerm extractEntry dist/commands/cordova/resources.d.ts
+102 silly gunzTarPerm modified mode [ 'dist/commands/cordova/resources.d.ts', 436, 420 ]
+103 silly gunzTarPerm extractEntry dist/commands/cordova/resources.js
+104 silly gunzTarPerm modified mode [ 'dist/commands/cordova/resources.js', 436, 420 ]
+105 silly gunzTarPerm extractEntry dist/commands/cordova/run.d.ts
+106 silly gunzTarPerm modified mode [ 'dist/commands/cordova/run.d.ts', 436, 420 ]
+107 silly gunzTarPerm extractEntry dist/commands/cordova/run.js
+108 silly gunzTarPerm modified mode [ 'dist/commands/cordova/run.js', 436, 420 ]
+109 silly gunzTarPerm extractEntry dist/commands/daemon.d.ts
+110 silly gunzTarPerm modified mode [ 'dist/commands/daemon.d.ts', 436, 420 ]
+111 silly gunzTarPerm extractEntry dist/commands/daemon.js
+112 silly gunzTarPerm modified mode [ 'dist/commands/daemon.js', 436, 420 ]
+113 silly gunzTarPerm extractEntry dist/commands/docs.d.ts
+114 silly gunzTarPerm modified mode [ 'dist/commands/docs.d.ts', 436, 420 ]
+115 silly gunzTarPerm extractEntry dist/commands/docs.js
+116 silly gunzTarPerm modified mode [ 'dist/commands/docs.js', 436, 420 ]
+117 silly gunzTarPerm extractEntry dist/commands/doctor/check.d.ts
+118 silly gunzTarPerm modified mode [ 'dist/commands/doctor/check.d.ts', 436, 420 ]
+119 silly gunzTarPerm extractEntry dist/commands/doctor/check.js
+120 silly gunzTarPerm modified mode [ 'dist/commands/doctor/check.js', 436, 420 ]
+121 silly gunzTarPerm extractEntry dist/commands/doctor/ignore.d.ts
+122 silly gunzTarPerm modified mode [ 'dist/commands/doctor/ignore.d.ts', 436, 420 ]
+123 silly gunzTarPerm extractEntry dist/commands/doctor/ignore.js
+124 silly gunzTarPerm modified mode [ 'dist/commands/doctor/ignore.js', 436, 420 ]
+125 silly gunzTarPerm extractEntry dist/commands/doctor/index.d.ts
+126 silly gunzTarPerm modified mode [ 'dist/commands/doctor/index.d.ts', 436, 420 ]
+127 silly gunzTarPerm extractEntry dist/commands/doctor/index.js
+128 silly gunzTarPerm modified mode [ 'dist/commands/doctor/index.js', 436, 420 ]
+129 silly gunzTarPerm extractEntry dist/commands/doctor/list.d.ts
+130 silly gunzTarPerm modified mode [ 'dist/commands/doctor/list.d.ts', 436, 420 ]
+131 silly gunzTarPerm extractEntry dist/commands/doctor/list.js
+132 silly gunzTarPerm modified mode [ 'dist/commands/doctor/list.js', 436, 420 ]
+133 silly gunzTarPerm extractEntry dist/commands/generate.d.ts
+134 silly gunzTarPerm modified mode [ 'dist/commands/generate.d.ts', 436, 420 ]
+135 silly gunzTarPerm extractEntry dist/commands/generate.js
+136 silly gunzTarPerm modified mode [ 'dist/commands/generate.js', 436, 420 ]
+137 silly gunzTarPerm extractEntry dist/commands/git/clone.d.ts
+138 silly gunzTarPerm modified mode [ 'dist/commands/git/clone.d.ts', 436, 420 ]
+139 silly gunzTarPerm extractEntry dist/commands/git/clone.js
+140 silly gunzTarPerm modified mode [ 'dist/commands/git/clone.js', 436, 420 ]
+141 silly gunzTarPerm extractEntry dist/commands/git/index.d.ts
+142 silly gunzTarPerm modified mode [ 'dist/commands/git/index.d.ts', 436, 420 ]
+143 silly gunzTarPerm extractEntry dist/commands/git/index.js
+144 silly gunzTarPerm modified mode [ 'dist/commands/git/index.js', 436, 420 ]
+145 silly gunzTarPerm extractEntry dist/commands/git/remote.d.ts
+146 silly gunzTarPerm modified mode [ 'dist/commands/git/remote.d.ts', 436, 420 ]
+147 silly gunzTarPerm extractEntry dist/commands/git/remote.js
+148 silly gunzTarPerm modified mode [ 'dist/commands/git/remote.js', 436, 420 ]
+149 silly gunzTarPerm extractEntry dist/commands/help.d.ts
+150 silly gunzTarPerm modified mode [ 'dist/commands/help.d.ts', 436, 420 ]
+151 silly gunzTarPerm extractEntry dist/commands/help.js
+152 silly gunzTarPerm modified mode [ 'dist/commands/help.js', 436, 420 ]
+153 silly gunzTarPerm extractEntry dist/commands/index.d.ts
+154 silly gunzTarPerm modified mode [ 'dist/commands/index.d.ts', 436, 420 ]
+155 silly gunzTarPerm extractEntry dist/commands/index.js
+156 silly gunzTarPerm modified mode [ 'dist/commands/index.js', 436, 420 ]
+157 silly gunzTarPerm extractEntry dist/commands/info.d.ts
+158 silly gunzTarPerm modified mode [ 'dist/commands/info.d.ts', 436, 420 ]
+159 silly gunzTarPerm extractEntry dist/commands/info.js
+160 silly gunzTarPerm modified mode [ 'dist/commands/info.js', 436, 420 ]
+161 silly gunzTarPerm extractEntry dist/commands/ionitron.d.ts
+162 silly gunzTarPerm modified mode [ 'dist/commands/ionitron.d.ts', 436, 420 ]
+163 silly gunzTarPerm extractEntry dist/commands/ionitron.js
+164 silly gunzTarPerm modified mode [ 'dist/commands/ionitron.js', 436, 420 ]
+165 silly gunzTarPerm extractEntry dist/commands/link.d.ts
+166 silly gunzTarPerm modified mode [ 'dist/commands/link.d.ts', 436, 420 ]
+167 silly gunzTarPerm extractEntry dist/commands/link.js
+168 silly gunzTarPerm modified mode [ 'dist/commands/link.js', 436, 420 ]
+169 silly gunzTarPerm extractEntry dist/commands/login.d.ts
+170 silly gunzTarPerm modified mode [ 'dist/commands/login.d.ts', 436, 420 ]
+171 silly gunzTarPerm extractEntry dist/commands/login.js
+172 silly gunzTarPerm modified mode [ 'dist/commands/login.js', 436, 420 ]
+173 silly gunzTarPerm extractEntry dist/commands/logout.d.ts
+174 silly gunzTarPerm modified mode [ 'dist/commands/logout.d.ts', 436, 420 ]
+175 silly gunzTarPerm extractEntry dist/commands/logout.js
+176 silly gunzTarPerm modified mode [ 'dist/commands/logout.js', 436, 420 ]
+177 silly gunzTarPerm extractEntry dist/commands/monitoring/index.d.ts
+178 silly gunzTarPerm modified mode [ 'dist/commands/monitoring/index.d.ts', 436, 420 ]
+179 silly gunzTarPerm extractEntry dist/commands/monitoring/index.js
+180 silly gunzTarPerm modified mode [ 'dist/commands/monitoring/index.js', 436, 420 ]
+181 silly gunzTarPerm extractEntry dist/commands/monitoring/syncmaps.d.ts
+182 silly gunzTarPerm modified mode [ 'dist/commands/monitoring/syncmaps.d.ts', 436, 420 ]
+183 silly gunzTarPerm extractEntry dist/commands/monitoring/syncmaps.js
+184 silly gunzTarPerm modified mode [ 'dist/commands/monitoring/syncmaps.js', 436, 420 ]
+185 silly gunzTarPerm extractEntry dist/commands/package/build.d.ts
+186 silly gunzTarPerm modified mode [ 'dist/commands/package/build.d.ts', 436, 420 ]
+187 silly gunzTarPerm extractEntry dist/commands/package/build.js
+188 silly gunzTarPerm modified mode [ 'dist/commands/package/build.js', 436, 420 ]
+189 silly gunzTarPerm extractEntry dist/commands/package/common.d.ts
+190 silly gunzTarPerm modified mode [ 'dist/commands/package/common.d.ts', 436, 420 ]
+191 silly gunzTarPerm extractEntry dist/commands/package/common.js
+192 silly gunzTarPerm modified mode [ 'dist/commands/package/common.js', 436, 420 ]
+193 silly gunzTarPerm extractEntry dist/commands/package/download.d.ts
+194 silly gunzTarPerm modified mode [ 'dist/commands/package/download.d.ts', 436, 420 ]
+195 silly gunzTarPerm extractEntry dist/commands/package/download.js
+196 silly gunzTarPerm modified mode [ 'dist/commands/package/download.js', 436, 420 ]
+197 silly gunzTarPerm extractEntry dist/commands/package/index.d.ts
+198 silly gunzTarPerm modified mode [ 'dist/commands/package/index.d.ts', 436, 420 ]
+199 silly gunzTarPerm extractEntry dist/commands/package/index.js
+200 silly gunzTarPerm modified mode [ 'dist/commands/package/index.js', 436, 420 ]
+201 silly gunzTarPerm extractEntry dist/commands/package/info.d.ts
+202 silly gunzTarPerm modified mode [ 'dist/commands/package/info.d.ts', 436, 420 ]
+203 silly gunzTarPerm extractEntry dist/commands/package/info.js
+204 silly gunzTarPerm modified mode [ 'dist/commands/package/info.js', 436, 420 ]
+205 silly gunzTarPerm extractEntry dist/commands/package/list.d.ts
+206 silly gunzTarPerm modified mode [ 'dist/commands/package/list.d.ts', 436, 420 ]
+207 silly gunzTarPerm extractEntry dist/commands/package/list.js
+208 silly gunzTarPerm modified mode [ 'dist/commands/package/list.js', 436, 420 ]
+209 silly gunzTarPerm extractEntry dist/commands/serve.d.ts
+210 silly gunzTarPerm modified mode [ 'dist/commands/serve.d.ts', 436, 420 ]
+211 silly gunzTarPerm extractEntry dist/commands/serve.js
+212 silly gunzTarPerm modified mode [ 'dist/commands/serve.js', 436, 420 ]
+213 silly gunzTarPerm extractEntry dist/commands/share.d.ts
+214 silly gunzTarPerm modified mode [ 'dist/commands/share.d.ts', 436, 420 ]
+215 silly gunzTarPerm extractEntry dist/commands/share.js
+216 silly gunzTarPerm modified mode [ 'dist/commands/share.js', 436, 420 ]
+217 silly gunzTarPerm extractEntry dist/commands/signup.d.ts
+218 silly gunzTarPerm modified mode [ 'dist/commands/signup.d.ts', 436, 420 ]
+219 silly gunzTarPerm extractEntry dist/commands/signup.js
+220 silly gunzTarPerm modified mode [ 'dist/commands/signup.js', 436, 420 ]
+221 silly gunzTarPerm extractEntry dist/commands/ssh/add.d.ts
+222 silly gunzTarPerm modified mode [ 'dist/commands/ssh/add.d.ts', 436, 420 ]
+223 silly gunzTarPerm extractEntry dist/commands/ssh/add.js
+224 silly gunzTarPerm modified mode [ 'dist/commands/ssh/add.js', 436, 420 ]
+225 silly gunzTarPerm extractEntry dist/commands/ssh/base.d.ts
+226 silly gunzTarPerm modified mode [ 'dist/commands/ssh/base.d.ts', 436, 420 ]
+227 silly gunzTarPerm extractEntry dist/commands/ssh/base.js
+228 silly gunzTarPerm modified mode [ 'dist/commands/ssh/base.js', 436, 420 ]
+229 silly gunzTarPerm extractEntry dist/commands/ssh/delete.d.ts
+230 silly gunzTarPerm modified mode [ 'dist/commands/ssh/delete.d.ts', 436, 420 ]
+231 silly gunzTarPerm extractEntry dist/commands/ssh/delete.js
+232 silly gunzTarPerm modified mode [ 'dist/commands/ssh/delete.js', 436, 420 ]
+233 silly gunzTarPerm extractEntry dist/commands/ssh/generate.d.ts
+234 silly gunzTarPerm modified mode [ 'dist/commands/ssh/generate.d.ts', 436, 420 ]
+235 silly gunzTarPerm extractEntry dist/commands/ssh/generate.js
+236 silly gunzTarPerm modified mode [ 'dist/commands/ssh/generate.js', 436, 420 ]
+237 silly gunzTarPerm extractEntry dist/commands/ssh/index.d.ts
+238 silly gunzTarPerm modified mode [ 'dist/commands/ssh/index.d.ts', 436, 420 ]
+239 silly gunzTarPerm extractEntry dist/commands/ssh/index.js
+240 silly gunzTarPerm modified mode [ 'dist/commands/ssh/index.js', 436, 420 ]
+241 silly gunzTarPerm extractEntry dist/commands/ssh/list.d.ts
+242 silly gunzTarPerm modified mode [ 'dist/commands/ssh/list.d.ts', 436, 420 ]
+243 silly gunzTarPerm extractEntry dist/commands/ssh/list.js
+244 silly gunzTarPerm modified mode [ 'dist/commands/ssh/list.js', 436, 420 ]
+245 silly gunzTarPerm extractEntry dist/commands/ssh/setup.d.ts
+246 silly gunzTarPerm modified mode [ 'dist/commands/ssh/setup.d.ts', 436, 420 ]
+247 silly gunzTarPerm extractEntry dist/commands/ssh/setup.js
+248 silly gunzTarPerm modified mode [ 'dist/commands/ssh/setup.js', 436, 420 ]
+249 silly gunzTarPerm extractEntry dist/commands/ssh/use.d.ts
+250 silly gunzTarPerm modified mode [ 'dist/commands/ssh/use.d.ts', 436, 420 ]
+251 silly gunzTarPerm extractEntry dist/commands/ssh/use.js
+252 silly gunzTarPerm modified mode [ 'dist/commands/ssh/use.js', 436, 420 ]
+253 silly gunzTarPerm extractEntry dist/commands/start.d.ts
+254 silly gunzTarPerm modified mode [ 'dist/commands/start.d.ts', 436, 420 ]
+255 silly gunzTarPerm extractEntry dist/commands/start.js
+256 silly gunzTarPerm modified mode [ 'dist/commands/start.js', 436, 420 ]
+257 silly gunzTarPerm extractEntry dist/commands/state.d.ts
+258 silly gunzTarPerm modified mode [ 'dist/commands/state.d.ts', 436, 420 ]
+259 silly gunzTarPerm extractEntry dist/commands/state.js
+260 silly gunzTarPerm modified mode [ 'dist/commands/state.js', 436, 420 ]
+261 silly gunzTarPerm extractEntry dist/commands/telemetry.d.ts
+262 silly gunzTarPerm modified mode [ 'dist/commands/telemetry.d.ts', 436, 420 ]
+263 silly gunzTarPerm extractEntry dist/commands/telemetry.js
+264 silly gunzTarPerm modified mode [ 'dist/commands/telemetry.js', 436, 420 ]
+265 silly gunzTarPerm extractEntry dist/commands/upload.d.ts
+266 silly gunzTarPerm modified mode [ 'dist/commands/upload.d.ts', 436, 420 ]
+267 silly gunzTarPerm extractEntry dist/commands/upload.js
+268 silly gunzTarPerm modified mode [ 'dist/commands/upload.js', 436, 420 ]
+269 silly gunzTarPerm extractEntry dist/commands/version.d.ts
+270 silly gunzTarPerm modified mode [ 'dist/commands/version.d.ts', 436, 420 ]
+271 silly gunzTarPerm extractEntry dist/commands/version.js
+272 silly gunzTarPerm modified mode [ 'dist/commands/version.js', 436, 420 ]
+273 silly gunzTarPerm extractEntry dist/index.d.ts
+274 silly gunzTarPerm modified mode [ 'dist/index.d.ts', 436, 420 ]
+275 silly gunzTarPerm extractEntry dist/index.js
+276 silly gunzTarPerm modified mode [ 'dist/index.js', 436, 420 ]
+277 silly lockFile 42989ee9-495907-0-992394034517929-package tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package
+278 silly lockFile 42989ee9-495907-0-992394034517929-package tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package
+279 silly lockFile b4983988-495907-0-992394034517929-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/tmp.tgz
+280 silly lockFile b4983988-495907-0-992394034517929-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/tmp.tgz
+281 verbose tar pack [ '/root/.npm/ionic/3.15.2/package.tgz',
+281 verbose tar pack   '/root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package' ]
+282 verbose tarball /root/.npm/ionic/3.15.2/package.tgz
+283 verbose folder /root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package
+284 silly lockFile 42989ee9-495907-0-992394034517929-package tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package
+285 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package /root/.npm/42989ee9-495907-0-992394034517929-package.lock
+286 silly lockFile 1f40e9c1-oot-npm-ionic-3-15-2-package-tgz tar:///root/.npm/ionic/3.15.2/package.tgz
+287 verbose lock tar:///root/.npm/ionic/3.15.2/package.tgz /root/.npm/1f40e9c1-oot-npm-ionic-3-15-2-package-tgz.lock
+288 silly lockFile 42989ee9-495907-0-992394034517929-package tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package
+289 silly lockFile 42989ee9-495907-0-992394034517929-package tar:///root/tmp/npm-54-9LOfOQhh/1509463495907-0.992394034517929/package
+290 silly lockFile 1f40e9c1-oot-npm-ionic-3-15-2-package-tgz tar:///root/.npm/ionic/3.15.2/package.tgz
+291 silly lockFile 1f40e9c1-oot-npm-ionic-3-15-2-package-tgz tar:///root/.npm/ionic/3.15.2/package.tgz
+292 silly lockFile e92245a9-root-npm-ionic-3-15-2-package /root/.npm/ionic/3.15.2/package
+293 verbose lock /root/.npm/ionic/3.15.2/package /root/.npm/e92245a9-root-npm-ionic-3-15-2-package.lock
+294 silly lockFile e92245a9-root-npm-ionic-3-15-2-package /root/.npm/ionic/3.15.2/package
+295 silly lockFile e92245a9-root-npm-ionic-3-15-2-package /root/.npm/ionic/3.15.2/package
+296 verbose tar unpack /root/.npm/ionic/3.15.2/package.tgz
+297 silly lockFile 4a6118ca-ar-root-npm-ionic-3-15-2-package tar:///root/.npm/ionic/3.15.2/package
+298 verbose lock tar:///root/.npm/ionic/3.15.2/package /root/.npm/4a6118ca-ar-root-npm-ionic-3-15-2-package.lock
+299 silly lockFile 1f40e9c1-oot-npm-ionic-3-15-2-package-tgz tar:///root/.npm/ionic/3.15.2/package.tgz
+300 verbose lock tar:///root/.npm/ionic/3.15.2/package.tgz /root/.npm/1f40e9c1-oot-npm-ionic-3-15-2-package-tgz.lock
+301 silly gunzTarPerm modes [ '755', '644' ]
+302 silly gunzTarPerm extractEntry package.json
+303 silly gunzTarPerm extractEntry README.md
+304 silly gunzTarPerm extractEntry bin/ionic
+305 silly gunzTarPerm extractEntry dist/index.js
+306 silly gunzTarPerm extractEntry dist/commands/version.js
+307 silly gunzTarPerm extractEntry dist/commands/info.js
+308 silly gunzTarPerm extractEntry dist/commands/ionitron.js
+309 silly gunzTarPerm extractEntry dist/commands/link.js
+310 silly gunzTarPerm extractEntry dist/commands/index.js
+311 silly gunzTarPerm extractEntry dist/commands/login.js
+312 silly gunzTarPerm extractEntry dist/commands/logout.js
+313 silly gunzTarPerm extractEntry dist/commands/serve.js
+314 silly gunzTarPerm extractEntry dist/commands/share.js
+315 silly gunzTarPerm extractEntry dist/commands/signup.js
+316 silly gunzTarPerm extractEntry dist/commands/help.js
+317 silly gunzTarPerm extractEntry dist/commands/start.js
+318 silly gunzTarPerm extractEntry dist/commands/generate.js
+319 silly gunzTarPerm extractEntry dist/commands/state.js
+320 silly gunzTarPerm extractEntry dist/commands/docs.js
+321 silly gunzTarPerm extractEntry dist/commands/telemetry.js
+322 silly gunzTarPerm extractEntry dist/commands/daemon.js
+323 silly gunzTarPerm extractEntry dist/commands/upload.js
+324 silly gunzTarPerm extractEntry dist/commands/build.js
+325 silly gunzTarPerm extractEntry dist/commands/config/get.js
+326 silly gunzTarPerm extractEntry dist/commands/config/index.js
+327 silly gunzTarPerm extractEntry dist/commands/config/set.js
+328 silly gunzTarPerm extractEntry dist/commands/config/get.d.ts
+329 silly gunzTarPerm extractEntry dist/commands/config/index.d.ts
+330 silly gunzTarPerm extractEntry dist/commands/config/set.d.ts
+331 silly gunzTarPerm extractEntry dist/commands/link.d.ts
+332 silly gunzTarPerm extractEntry dist/commands/doctor/check.js
+333 silly gunzTarPerm extractEntry dist/commands/doctor/ignore.js
+334 silly gunzTarPerm extractEntry dist/commands/doctor/index.js
+335 silly gunzTarPerm extractEntry dist/commands/doctor/list.js
+336 silly gunzTarPerm extractEntry dist/commands/doctor/check.d.ts
+337 silly gunzTarPerm extractEntry dist/commands/doctor/ignore.d.ts
+338 silly gunzTarPerm extractEntry dist/commands/doctor/index.d.ts
+339 silly gunzTarPerm extractEntry dist/commands/doctor/list.d.ts
+340 silly gunzTarPerm extractEntry dist/commands/generate.d.ts
+341 silly gunzTarPerm extractEntry dist/commands/cordova/run.js
+342 silly gunzTarPerm extractEntry dist/commands/cordova/resources.js
+343 silly gunzTarPerm extractEntry dist/commands/cordova/build.js
+344 silly gunzTarPerm extractEntry dist/commands/cordova/requirements.js
+345 silly gunzTarPerm extractEntry dist/commands/cordova/compile.js
+346 silly gunzTarPerm extractEntry dist/commands/cordova/prepare.js
+347 silly gunzTarPerm extractEntry dist/commands/cordova/emulate.js
+348 silly gunzTarPerm extractEntry dist/commands/cordova/plugin.js
+349 silly gunzTarPerm extractEntry dist/commands/cordova/index.js
+350 silly gunzTarPerm extractEntry dist/commands/cordova/base.js
+351 silly gunzTarPerm extractEntry dist/commands/cordova/platform.js
+352 silly gunzTarPerm extractEntry dist/commands/cordova/requirements.d.ts
+353 silly gunzTarPerm extractEntry dist/commands/cordova/platform.d.ts
+354 silly gunzTarPerm extractEntry dist/commands/cordova/index.d.ts
+355 silly gunzTarPerm extractEntry dist/commands/cordova/prepare.d.ts
+356 silly gunzTarPerm extractEntry dist/commands/cordova/emulate.d.ts
+357 silly gunzTarPerm extractEntry dist/commands/cordova/plugin.d.ts
+358 silly gunzTarPerm extractEntry dist/commands/cordova/compile.d.ts
+359 silly gunzTarPerm extractEntry dist/commands/cordova/resources.d.ts
+360 silly gunzTarPerm extractEntry dist/commands/cordova/build.d.ts
+361 silly gunzTarPerm extractEntry dist/commands/cordova/run.d.ts
+362 silly gunzTarPerm extractEntry dist/commands/cordova/base.d.ts
+363 silly gunzTarPerm extractEntry dist/commands/logout.d.ts
+364 silly gunzTarPerm extractEntry dist/commands/git/clone.js
+365 silly gunzTarPerm extractEntry dist/commands/git/index.js
+366 silly gunzTarPerm extractEntry dist/commands/git/remote.js
+367 silly gunzTarPerm extractEntry dist/commands/git/clone.d.ts
+368 silly gunzTarPerm extractEntry dist/commands/git/index.d.ts
+369 silly gunzTarPerm extractEntry dist/commands/git/remote.d.ts
+370 silly gunzTarPerm extractEntry dist/commands/monitoring/index.js
+371 silly gunzTarPerm extractEntry dist/commands/monitoring/syncmaps.js
+372 silly gunzTarPerm extractEntry dist/commands/monitoring/index.d.ts
+373 silly gunzTarPerm extractEntry dist/commands/monitoring/syncmaps.d.ts
+374 silly gunzTarPerm extractEntry dist/commands/package/list.js
+375 silly gunzTarPerm extractEntry dist/commands/package/common.js
+376 silly gunzTarPerm extractEntry dist/commands/package/download.js
+377 silly gunzTarPerm extractEntry dist/commands/package/build.js
+378 silly gunzTarPerm extractEntry dist/commands/package/index.js
+379 silly gunzTarPerm extractEntry dist/commands/package/info.js
+380 silly gunzTarPerm extractEntry dist/commands/package/build.d.ts
+381 silly gunzTarPerm extractEntry dist/commands/package/download.d.ts
+382 silly gunzTarPerm extractEntry dist/commands/package/info.d.ts
+383 silly gunzTarPerm extractEntry dist/commands/package/common.d.ts
+384 silly gunzTarPerm extractEntry dist/commands/package/list.d.ts
+385 silly gunzTarPerm extractEntry dist/commands/package/index.d.ts
+386 silly gunzTarPerm extractEntry dist/commands/serve.d.ts
+387 silly gunzTarPerm extractEntry dist/commands/help.d.ts
+388 silly gunzTarPerm extractEntry dist/commands/share.d.ts
+389 silly gunzTarPerm extractEntry dist/commands/daemon.d.ts
+390 silly gunzTarPerm extractEntry dist/commands/signup.d.ts
+391 silly gunzTarPerm extractEntry dist/commands/index.d.ts
+392 silly gunzTarPerm extractEntry dist/commands/ssh/use.js
+393 silly gunzTarPerm extractEntry dist/commands/ssh/base.js
+394 silly gunzTarPerm extractEntry dist/commands/ssh/delete.js
+395 silly gunzTarPerm extractEntry dist/commands/ssh/generate.js
+396 silly gunzTarPerm extractEntry dist/commands/ssh/add.js
+397 silly gunzTarPerm extractEntry dist/commands/ssh/index.js
+398 silly gunzTarPerm extractEntry dist/commands/ssh/list.js
+399 silly gunzTarPerm extractEntry dist/commands/ssh/setup.js
+400 silly gunzTarPerm extractEntry dist/commands/ssh/delete.d.ts
+401 silly gunzTarPerm extractEntry dist/commands/ssh/base.d.ts
+402 silly gunzTarPerm extractEntry dist/commands/ssh/list.d.ts
+403 silly gunzTarPerm extractEntry dist/commands/ssh/generate.d.ts
+404 silly gunzTarPerm extractEntry dist/commands/ssh/setup.d.ts
+405 silly gunzTarPerm extractEntry dist/commands/ssh/add.d.ts
+406 silly gunzTarPerm extractEntry dist/commands/ssh/use.d.ts
+407 silly gunzTarPerm extractEntry dist/commands/ssh/index.d.ts
+408 silly gunzTarPerm extractEntry dist/commands/start.d.ts
+409 silly gunzTarPerm extractEntry dist/commands/build.d.ts
+410 silly gunzTarPerm extractEntry dist/commands/state.d.ts
+411 silly gunzTarPerm extractEntry dist/commands/info.d.ts
+412 silly gunzTarPerm extractEntry dist/commands/telemetry.d.ts
+413 silly gunzTarPerm extractEntry dist/commands/docs.d.ts
+414 silly gunzTarPerm extractEntry dist/commands/upload.d.ts
+415 silly gunzTarPerm extractEntry dist/commands/ionitron.d.ts
+416 silly gunzTarPerm extractEntry dist/commands/version.d.ts
+417 silly gunzTarPerm extractEntry dist/commands/login.d.ts
+418 silly gunzTarPerm extractEntry dist/index.d.ts
+419 silly lockFile 4a6118ca-ar-root-npm-ionic-3-15-2-package tar:///root/.npm/ionic/3.15.2/package
+420 silly lockFile 4a6118ca-ar-root-npm-ionic-3-15-2-package tar:///root/.npm/ionic/3.15.2/package
+421 silly lockFile 1f40e9c1-oot-npm-ionic-3-15-2-package-tgz tar:///root/.npm/ionic/3.15.2/package.tgz
+422 silly lockFile 1f40e9c1-oot-npm-ionic-3-15-2-package-tgz tar:///root/.npm/ionic/3.15.2/package.tgz
+423 verbose chmod /root/.npm/ionic/3.15.2/package.tgz 644
+424 verbose chown /root/.npm/ionic/3.15.2/package.tgz [ 0, 0 ]
+425 silly lockFile 2a97fa89-npmjs-org-ionic-ionic-3-15-2-tgz https://registry.npmjs.org/ionic/-/ionic-3.15.2.tgz
+426 silly lockFile 2a97fa89-npmjs-org-ionic-ionic-3-15-2-tgz https://registry.npmjs.org/ionic/-/ionic-3.15.2.tgz
+427 silly lockFile e2671e8b-ionic-3-15-2 ionic@3.15.2
+428 silly lockFile e2671e8b-ionic-3-15-2 ionic@3.15.2
+429 silly lockFile 966fc04a-ionic ionic@
+430 silly lockFile 966fc04a-ionic ionic@
+431 silly resolved [ { name: 'ionic',
+431 silly resolved     version: '3.15.2',
+431 silly resolved     description: 'A tool for creating and developing Ionic Framework mobile apps.',
+431 silly resolved     homepage: 'http://ionicframework.com/',
+431 silly resolved     author:
+431 silly resolved      { name: 'Ionic Team',
+431 silly resolved        email: 'hi@ionic.io',
+431 silly resolved        url: 'http://ionic.io' },
+431 silly resolved     bin: { ionic: './bin/ionic' },
+431 silly resolved     engines: { node: '>=6.4.0' },
+431 silly resolved     main: './dist/index.js',
+431 silly resolved     types: './dist/index.d.ts',
+431 silly resolved     scripts:
+431 silly resolved      { clean: 'rm -rf ./dist',
+431 silly resolved        lint: 'tslint --config ../../tslint.js --project tsconfig.json --type-check',
+431 silly resolved        build: 'npm run clean && tsc',
+431 silly resolved        watch: 'tsc -w',
+431 silly resolved        test: 'jest',
+431 silly resolved        prepublishOnly: 'npm run build' },
+431 silly resolved     files: [ 'bin/', 'dist/' ],
+431 silly resolved     keywords:
+431 silly resolved      [ 'ionic',
+431 silly resolved        'ionic framework',
+431 silly resolved        'ionicframework',
+431 silly resolved        'mobile',
+431 silly resolved        'app',
+431 silly resolved        'hybrid',
+431 silly resolved        'cordova',
+431 silly resolved        'native',
+431 silly resolved        'phonegap' ],
+431 silly resolved     repository:
+431 silly resolved      { type: 'git',
+431 silly resolved        url: 'https://github.com/ionic-team/ionic-cli.git' },
+431 silly resolved     bugs: { url: 'https://github.com/ionic-team/ionic-cli/issues' },
+431 silly resolved     license: 'MIT',
+431 silly resolved     dependencies:
+431 silly resolved      { '@ionic/cli-framework': '0.0.2',
+431 silly resolved        '@ionic/cli-utils': '1.15.2',
+431 silly resolved        chalk: '^2.3.0',
+431 silly resolved        opn: '^5.1.0',
+431 silly resolved        'os-name': '^2.0.1',
+431 silly resolved        rimraf: '^2.6.2',
+431 silly resolved        semver: '^5.3.0',
+431 silly resolved        tslib: '^1.8.0' },
+431 silly resolved     devDependencies:
+431 silly resolved      { '@ionic/cli-scripts': '0.3.6',
+431 silly resolved        '@types/opn': '^3.0.28',
+431 silly resolved        '@types/rimraf': '^2.0.2' },
+431 silly resolved     jest:
+431 silly resolved      { globals: [Object],
+431 silly resolved        moduleFileExtensions: [Object],
+431 silly resolved        transform: [Object],
+431 silly resolved        testRegex: '/__tests__/.*\\.(ts|js)$' },
+431 silly resolved     readme: '# Ionic CLI\n\nThe Ionic command line interface (CLI) is your go-to tool for developing\n[Ionic][ionic-homepage] apps.\n\n**Documentation**: [https://ionicframework.com/docs/cli/][ionic-cli-docs]\n\n**Github Project**: [https://github.com/ionic-team/ionic-cli](https://github.com/ionic-team/ionic-cli)\n\n[ionic-homepage]: https://ionicframework.com\n[ionic-cli-docs]: https://ionicframework.com/docs/cli/\n',
+431 silly resolved     readmeFilename: 'README.md',
+431 silly resolved     _id: 'ionic@3.15.2',
+431 silly resolved     dist: { shasum: '5d09cd2106b284360e08a78e90fc4eb7ad4cd672' },
+431 silly resolved     _from: 'ionic@',
+431 silly resolved     _resolved: 'https://registry.npmjs.org/ionic/-/ionic-3.15.2.tgz' } ]
+432 info install ionic@3.15.2 into /usr/local/lib
+433 info installOne ionic@3.15.2
+434 warn engine ionic@3.15.2: wanted: {"node":">=6.4.0"} (current: {"node":"v0.10.25","npm":"1.3.10"})
+435 info /usr/local/lib/node_modules/ionic unbuild
+436 info preuninstall ionic@1.4.5
+437 info uninstall ionic@1.4.5
+438 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild ionic@1.4.5
+439 verbose /usr/local/bin,[object Object] binRoot
+440 info postuninstall ionic@1.4.5
+441 verbose tar unpack /root/.npm/ionic/3.15.2/package.tgz
+442 silly lockFile 49903aa3-usr-local-lib-node-modules-ionic tar:///usr/local/lib/node_modules/ionic
+443 verbose lock tar:///usr/local/lib/node_modules/ionic /root/.npm/49903aa3-usr-local-lib-node-modules-ionic.lock
+444 silly lockFile 1f40e9c1-oot-npm-ionic-3-15-2-package-tgz tar:///root/.npm/ionic/3.15.2/package.tgz
+445 verbose lock tar:///root/.npm/ionic/3.15.2/package.tgz /root/.npm/1f40e9c1-oot-npm-ionic-3-15-2-package-tgz.lock
+446 silly gunzTarPerm modes [ '755', '644' ]
+447 silly gunzTarPerm extractEntry package.json
+448 silly gunzTarPerm extractEntry README.md
+449 silly gunzTarPerm extractEntry bin/ionic
+450 silly gunzTarPerm extractEntry dist/index.js
+451 silly gunzTarPerm extractEntry dist/commands/version.js
+452 silly gunzTarPerm extractEntry dist/commands/info.js
+453 silly gunzTarPerm extractEntry dist/commands/ionitron.js
+454 silly gunzTarPerm extractEntry dist/commands/link.js
+455 silly gunzTarPerm extractEntry dist/commands/index.js
+456 silly gunzTarPerm extractEntry dist/commands/login.js
+457 silly gunzTarPerm extractEntry dist/commands/logout.js
+458 silly gunzTarPerm extractEntry dist/commands/serve.js
+459 silly gunzTarPerm extractEntry dist/commands/share.js
+460 silly gunzTarPerm extractEntry dist/commands/signup.js
+461 silly gunzTarPerm extractEntry dist/commands/help.js
+462 silly gunzTarPerm extractEntry dist/commands/start.js
+463 silly gunzTarPerm extractEntry dist/commands/generate.js
+464 silly gunzTarPerm extractEntry dist/commands/state.js
+465 silly gunzTarPerm extractEntry dist/commands/docs.js
+466 silly gunzTarPerm extractEntry dist/commands/telemetry.js
+467 silly gunzTarPerm extractEntry dist/commands/daemon.js
+468 silly gunzTarPerm extractEntry dist/commands/upload.js
+469 silly gunzTarPerm extractEntry dist/commands/build.js
+470 silly gunzTarPerm extractEntry dist/commands/config/get.js
+471 silly gunzTarPerm extractEntry dist/commands/config/index.js
+472 silly gunzTarPerm extractEntry dist/commands/config/set.js
+473 silly gunzTarPerm extractEntry dist/commands/config/get.d.ts
+474 silly gunzTarPerm extractEntry dist/commands/config/index.d.ts
+475 silly gunzTarPerm extractEntry dist/commands/config/set.d.ts
+476 silly gunzTarPerm extractEntry dist/commands/link.d.ts
+477 silly gunzTarPerm extractEntry dist/commands/doctor/check.js
+478 silly gunzTarPerm extractEntry dist/commands/doctor/ignore.js
+479 silly gunzTarPerm extractEntry dist/commands/doctor/index.js
+480 silly gunzTarPerm extractEntry dist/commands/doctor/list.js
+481 silly gunzTarPerm extractEntry dist/commands/doctor/check.d.ts
+482 silly gunzTarPerm extractEntry dist/commands/doctor/ignore.d.ts
+483 silly gunzTarPerm extractEntry dist/commands/doctor/index.d.ts
+484 silly gunzTarPerm extractEntry dist/commands/doctor/list.d.ts
+485 silly gunzTarPerm extractEntry dist/commands/generate.d.ts
+486 silly gunzTarPerm extractEntry dist/commands/cordova/run.js
+487 silly gunzTarPerm extractEntry dist/commands/cordova/resources.js
+488 silly gunzTarPerm extractEntry dist/commands/cordova/build.js
+489 silly gunzTarPerm extractEntry dist/commands/cordova/requirements.js
+490 silly gunzTarPerm extractEntry dist/commands/cordova/compile.js
+491 silly gunzTarPerm extractEntry dist/commands/cordova/prepare.js
+492 silly gunzTarPerm extractEntry dist/commands/cordova/emulate.js
+493 silly gunzTarPerm extractEntry dist/commands/cordova/plugin.js
+494 silly gunzTarPerm extractEntry dist/commands/cordova/index.js
+495 silly gunzTarPerm extractEntry dist/commands/cordova/base.js
+496 silly gunzTarPerm extractEntry dist/commands/cordova/platform.js
+497 silly gunzTarPerm extractEntry dist/commands/cordova/requirements.d.ts
+498 silly gunzTarPerm extractEntry dist/commands/cordova/platform.d.ts
+499 silly gunzTarPerm extractEntry dist/commands/cordova/index.d.ts
+500 silly gunzTarPerm extractEntry dist/commands/cordova/prepare.d.ts
+501 silly gunzTarPerm extractEntry dist/commands/cordova/emulate.d.ts
+502 silly gunzTarPerm extractEntry dist/commands/cordova/plugin.d.ts
+503 silly gunzTarPerm extractEntry dist/commands/cordova/compile.d.ts
+504 silly gunzTarPerm extractEntry dist/commands/cordova/resources.d.ts
+505 silly gunzTarPerm extractEntry dist/commands/cordova/build.d.ts
+506 silly gunzTarPerm extractEntry dist/commands/cordova/run.d.ts
+507 silly gunzTarPerm extractEntry dist/commands/cordova/base.d.ts
+508 silly gunzTarPerm extractEntry dist/commands/logout.d.ts
+509 silly gunzTarPerm extractEntry dist/commands/git/clone.js
+510 silly gunzTarPerm extractEntry dist/commands/git/index.js
+511 silly gunzTarPerm extractEntry dist/commands/git/remote.js
+512 silly gunzTarPerm extractEntry dist/commands/git/clone.d.ts
+513 silly gunzTarPerm extractEntry dist/commands/git/index.d.ts
+514 silly gunzTarPerm extractEntry dist/commands/git/remote.d.ts
+515 silly gunzTarPerm extractEntry dist/commands/monitoring/index.js
+516 silly gunzTarPerm extractEntry dist/commands/monitoring/syncmaps.js
+517 silly gunzTarPerm extractEntry dist/commands/monitoring/index.d.ts
+518 silly gunzTarPerm extractEntry dist/commands/monitoring/syncmaps.d.ts
+519 silly gunzTarPerm extractEntry dist/commands/package/list.js
+520 silly gunzTarPerm extractEntry dist/commands/package/common.js
+521 silly gunzTarPerm extractEntry dist/commands/package/download.js
+522 silly gunzTarPerm extractEntry dist/commands/package/build.js
+523 silly gunzTarPerm extractEntry dist/commands/package/index.js
+524 silly gunzTarPerm extractEntry dist/commands/package/info.js
+525 silly gunzTarPerm extractEntry dist/commands/package/build.d.ts
+526 silly gunzTarPerm extractEntry dist/commands/package/download.d.ts
+527 silly gunzTarPerm extractEntry dist/commands/package/info.d.ts
+528 silly gunzTarPerm extractEntry dist/commands/package/common.d.ts
+529 silly gunzTarPerm extractEntry dist/commands/package/list.d.ts
+530 silly gunzTarPerm extractEntry dist/commands/package/index.d.ts
+531 silly gunzTarPerm extractEntry dist/commands/serve.d.ts
+532 silly gunzTarPerm extractEntry dist/commands/help.d.ts
+533 silly gunzTarPerm extractEntry dist/commands/share.d.ts
+534 silly gunzTarPerm extractEntry dist/commands/daemon.d.ts
+535 silly gunzTarPerm extractEntry dist/commands/signup.d.ts
+536 silly gunzTarPerm extractEntry dist/commands/index.d.ts
+537 silly gunzTarPerm extractEntry dist/commands/ssh/use.js
+538 silly gunzTarPerm extractEntry dist/commands/ssh/base.js
+539 silly gunzTarPerm extractEntry dist/commands/ssh/delete.js
+540 silly gunzTarPerm extractEntry dist/commands/ssh/generate.js
+541 silly gunzTarPerm extractEntry dist/commands/ssh/add.js
+542 silly gunzTarPerm extractEntry dist/commands/ssh/index.js
+543 silly gunzTarPerm extractEntry dist/commands/ssh/list.js
+544 silly gunzTarPerm extractEntry dist/commands/ssh/setup.js
+545 silly gunzTarPerm extractEntry dist/commands/ssh/delete.d.ts
+546 silly gunzTarPerm extractEntry dist/commands/ssh/base.d.ts
+547 silly gunzTarPerm extractEntry dist/commands/ssh/list.d.ts
+548 silly gunzTarPerm extractEntry dist/commands/ssh/generate.d.ts
+549 silly gunzTarPerm extractEntry dist/commands/ssh/setup.d.ts
+550 silly gunzTarPerm extractEntry dist/commands/ssh/add.d.ts
+551 silly gunzTarPerm extractEntry dist/commands/ssh/use.d.ts
+552 silly gunzTarPerm extractEntry dist/commands/ssh/index.d.ts
+553 silly gunzTarPerm extractEntry dist/commands/start.d.ts
+554 silly gunzTarPerm extractEntry dist/commands/build.d.ts
+555 silly gunzTarPerm extractEntry dist/commands/state.d.ts
+556 silly gunzTarPerm extractEntry dist/commands/info.d.ts
+557 silly gunzTarPerm extractEntry dist/commands/telemetry.d.ts
+558 silly gunzTarPerm extractEntry dist/commands/docs.d.ts
+559 silly gunzTarPerm extractEntry dist/commands/upload.d.ts
+560 silly gunzTarPerm extractEntry dist/commands/ionitron.d.ts
+561 silly gunzTarPerm extractEntry dist/commands/version.d.ts
+562 silly gunzTarPerm extractEntry dist/commands/login.d.ts
+563 silly gunzTarPerm extractEntry dist/index.d.ts
+564 silly lockFile 49903aa3-usr-local-lib-node-modules-ionic tar:///usr/local/lib/node_modules/ionic
+565 silly lockFile 49903aa3-usr-local-lib-node-modules-ionic tar:///usr/local/lib/node_modules/ionic
+566 silly lockFile 1f40e9c1-oot-npm-ionic-3-15-2-package-tgz tar:///root/.npm/ionic/3.15.2/package.tgz
+567 silly lockFile 1f40e9c1-oot-npm-ionic-3-15-2-package-tgz tar:///root/.npm/ionic/3.15.2/package.tgz
+568 info preinstall ionic@3.15.2
+569 verbose readDependencies using package.json deps
+570 verbose readDependencies using package.json deps
+571 verbose cache add [ '@ionic/cli-utils@1.15.2', null ]
+572 verbose cache add name=undefined spec="@ionic/cli-utils@1.15.2" args=["@ionic/cli-utils@1.15.2",null]
+573 verbose parsed url { protocol: null,
+573 verbose parsed url   slashes: null,
+573 verbose parsed url   auth: null,
+573 verbose parsed url   host: null,
+573 verbose parsed url   port: null,
+573 verbose parsed url   hostname: null,
+573 verbose parsed url   hash: null,
+573 verbose parsed url   search: null,
+573 verbose parsed url   query: null,
+573 verbose parsed url   pathname: '@ionic/cli-utils@1.15.2',
+573 verbose parsed url   path: '@ionic/cli-utils@1.15.2',
+573 verbose parsed url   href: '@ionic/cli-utils@1.15.2' }
+574 verbose cache add name="" spec="ionic/cli-utils@1.15.2" args=["","ionic/cli-utils@1.15.2"]
+575 verbose parsed url { protocol: null,
+575 verbose parsed url   slashes: null,
+575 verbose parsed url   auth: null,
+575 verbose parsed url   host: null,
+575 verbose parsed url   port: null,
+575 verbose parsed url   hostname: null,
+575 verbose parsed url   hash: null,
+575 verbose parsed url   search: null,
+575 verbose parsed url   query: null,
+575 verbose parsed url   pathname: 'ionic/cli-utils@1.15.2',
+575 verbose parsed url   path: 'ionic/cli-utils@1.15.2',
+575 verbose parsed url   href: 'ionic/cli-utils@1.15.2' }
+576 verbose cache add name="ionic/cli-utils" spec="1.15.2" args=["ionic/cli-utils","1.15.2"]
+577 verbose parsed url { protocol: null,
+577 verbose parsed url   slashes: null,
+577 verbose parsed url   auth: null,
+577 verbose parsed url   host: null,
+577 verbose parsed url   port: null,
+577 verbose parsed url   hostname: null,
+577 verbose parsed url   hash: null,
+577 verbose parsed url   search: null,
+577 verbose parsed url   query: null,
+577 verbose parsed url   pathname: '1.15.2',
+577 verbose parsed url   path: '1.15.2',
+577 verbose parsed url   href: '1.15.2' }
+578 verbose addNamed [ 'ionic/cli-utils', '1.15.2' ]
+579 verbose addNamed [ '1.15.2', '1.15.2' ]
+580 silly lockFile bd94caab-ionic-cli-utils-1-15-2 ionic/cli-utils@1.15.2
+581 verbose lock ionic/cli-utils@1.15.2 /root/.npm/bd94caab-ionic-cli-utils-1-15-2.lock
+582 verbose cache add [ 'chalk@^2.3.0', null ]
+583 verbose cache add name=undefined spec="chalk@^2.3.0" args=["chalk@^2.3.0",null]
+584 verbose parsed url { protocol: null,
+584 verbose parsed url   slashes: null,
+584 verbose parsed url   auth: null,
+584 verbose parsed url   host: null,
+584 verbose parsed url   port: null,
+584 verbose parsed url   hostname: null,
+584 verbose parsed url   hash: null,
+584 verbose parsed url   search: null,
+584 verbose parsed url   query: null,
+584 verbose parsed url   pathname: 'chalk@^2.3.0',
+584 verbose parsed url   path: 'chalk@^2.3.0',
+584 verbose parsed url   href: 'chalk@^2.3.0' }
+585 verbose cache add name="chalk" spec="^2.3.0" args=["chalk","^2.3.0"]
+586 verbose parsed url { protocol: null,
+586 verbose parsed url   slashes: null,
+586 verbose parsed url   auth: null,
+586 verbose parsed url   host: null,
+586 verbose parsed url   port: null,
+586 verbose parsed url   hostname: null,
+586 verbose parsed url   hash: null,
+586 verbose parsed url   search: null,
+586 verbose parsed url   query: null,
+586 verbose parsed url   pathname: '^2.3.0',
+586 verbose parsed url   path: '^2.3.0',
+586 verbose parsed url   href: '^2.3.0' }
+587 verbose addNamed [ 'chalk', '^2.3.0' ]
+588 verbose addNamed [ null, '>=2.3.0-0 <3.0.0-0' ]
+589 silly lockFile f30e5a95-chalk-2-3-0 chalk@^2.3.0
+590 verbose lock chalk@^2.3.0 /root/.npm/f30e5a95-chalk-2-3-0.lock
+591 verbose cache add [ 'opn@^5.1.0', null ]
+592 verbose cache add name=undefined spec="opn@^5.1.0" args=["opn@^5.1.0",null]
+593 verbose parsed url { protocol: null,
+593 verbose parsed url   slashes: null,
+593 verbose parsed url   auth: null,
+593 verbose parsed url   host: null,
+593 verbose parsed url   port: null,
+593 verbose parsed url   hostname: null,
+593 verbose parsed url   hash: null,
+593 verbose parsed url   search: null,
+593 verbose parsed url   query: null,
+593 verbose parsed url   pathname: 'opn@^5.1.0',
+593 verbose parsed url   path: 'opn@^5.1.0',
+593 verbose parsed url   href: 'opn@^5.1.0' }
+594 verbose cache add name="opn" spec="^5.1.0" args=["opn","^5.1.0"]
+595 verbose parsed url { protocol: null,
+595 verbose parsed url   slashes: null,
+595 verbose parsed url   auth: null,
+595 verbose parsed url   host: null,
+595 verbose parsed url   port: null,
+595 verbose parsed url   hostname: null,
+595 verbose parsed url   hash: null,
+595 verbose parsed url   search: null,
+595 verbose parsed url   query: null,
+595 verbose parsed url   pathname: '^5.1.0',
+595 verbose parsed url   path: '^5.1.0',
+595 verbose parsed url   href: '^5.1.0' }
+596 verbose addNamed [ 'opn', '^5.1.0' ]
+597 verbose addNamed [ null, '>=5.1.0-0 <6.0.0-0' ]
+598 silly lockFile 55d37e89-opn-5-1-0 opn@^5.1.0
+599 verbose lock opn@^5.1.0 /root/.npm/55d37e89-opn-5-1-0.lock
+600 verbose cache add [ 'os-name@^2.0.1', null ]
+601 verbose cache add name=undefined spec="os-name@^2.0.1" args=["os-name@^2.0.1",null]
+602 verbose parsed url { protocol: null,
+602 verbose parsed url   slashes: null,
+602 verbose parsed url   auth: null,
+602 verbose parsed url   host: null,
+602 verbose parsed url   port: null,
+602 verbose parsed url   hostname: null,
+602 verbose parsed url   hash: null,
+602 verbose parsed url   search: null,
+602 verbose parsed url   query: null,
+602 verbose parsed url   pathname: 'os-name@^2.0.1',
+602 verbose parsed url   path: 'os-name@^2.0.1',
+602 verbose parsed url   href: 'os-name@^2.0.1' }
+603 verbose cache add name="os-name" spec="^2.0.1" args=["os-name","^2.0.1"]
+604 verbose parsed url { protocol: null,
+604 verbose parsed url   slashes: null,
+604 verbose parsed url   auth: null,
+604 verbose parsed url   host: null,
+604 verbose parsed url   port: null,
+604 verbose parsed url   hostname: null,
+604 verbose parsed url   hash: null,
+604 verbose parsed url   search: null,
+604 verbose parsed url   query: null,
+604 verbose parsed url   pathname: '^2.0.1',
+604 verbose parsed url   path: '^2.0.1',
+604 verbose parsed url   href: '^2.0.1' }
+605 verbose addNamed [ 'os-name', '^2.0.1' ]
+606 verbose addNamed [ null, '>=2.0.1-0 <3.0.0-0' ]
+607 silly lockFile 46a9326c-os-name-2-0-1 os-name@^2.0.1
+608 verbose lock os-name@^2.0.1 /root/.npm/46a9326c-os-name-2-0-1.lock
+609 verbose cache add [ 'rimraf@^2.6.2', null ]
+610 verbose cache add name=undefined spec="rimraf@^2.6.2" args=["rimraf@^2.6.2",null]
+611 verbose parsed url { protocol: null,
+611 verbose parsed url   slashes: null,
+611 verbose parsed url   auth: null,
+611 verbose parsed url   host: null,
+611 verbose parsed url   port: null,
+611 verbose parsed url   hostname: null,
+611 verbose parsed url   hash: null,
+611 verbose parsed url   search: null,
+611 verbose parsed url   query: null,
+611 verbose parsed url   pathname: 'rimraf@^2.6.2',
+611 verbose parsed url   path: 'rimraf@^2.6.2',
+611 verbose parsed url   href: 'rimraf@^2.6.2' }
+612 verbose cache add name="rimraf" spec="^2.6.2" args=["rimraf","^2.6.2"]
+613 verbose parsed url { protocol: null,
+613 verbose parsed url   slashes: null,
+613 verbose parsed url   auth: null,
+613 verbose parsed url   host: null,
+613 verbose parsed url   port: null,
+613 verbose parsed url   hostname: null,
+613 verbose parsed url   hash: null,
+613 verbose parsed url   search: null,
+613 verbose parsed url   query: null,
+613 verbose parsed url   pathname: '^2.6.2',
+613 verbose parsed url   path: '^2.6.2',
+613 verbose parsed url   href: '^2.6.2' }
+614 verbose addNamed [ 'rimraf', '^2.6.2' ]
+615 verbose addNamed [ null, '>=2.6.2-0 <3.0.0-0' ]
+616 silly lockFile 04e1f6d6-rimraf-2-6-2 rimraf@^2.6.2
+617 verbose lock rimraf@^2.6.2 /root/.npm/04e1f6d6-rimraf-2-6-2.lock
+618 silly addNameRange { name: 'chalk', range: '>=2.3.0-0 <3.0.0-0', hasData: false }
+619 verbose url raw ionic/cli-utils/1.15.2
+620 verbose url resolving [ 'https://registry.npmjs.org/', './ionic/cli-utils/1.15.2' ]
+621 verbose url resolved https://registry.npmjs.org/ionic/cli-utils/1.15.2
+622 info trying registry request attempt 1 at 15:24:57
+623 http GET https://registry.npmjs.org/ionic/cli-utils/1.15.2
+624 silly addNameRange { name: 'opn', range: '>=5.1.0-0 <6.0.0-0', hasData: false }
+625 verbose cache add [ 'semver@^5.3.0', null ]
+626 verbose cache add name=undefined spec="semver@^5.3.0" args=["semver@^5.3.0",null]
+627 verbose parsed url { protocol: null,
+627 verbose parsed url   slashes: null,
+627 verbose parsed url   auth: null,
+627 verbose parsed url   host: null,
+627 verbose parsed url   port: null,
+627 verbose parsed url   hostname: null,
+627 verbose parsed url   hash: null,
+627 verbose parsed url   search: null,
+627 verbose parsed url   query: null,
+627 verbose parsed url   pathname: 'semver@^5.3.0',
+627 verbose parsed url   path: 'semver@^5.3.0',
+627 verbose parsed url   href: 'semver@^5.3.0' }
+628 verbose cache add name="semver" spec="^5.3.0" args=["semver","^5.3.0"]
+629 verbose parsed url { protocol: null,
+629 verbose parsed url   slashes: null,
+629 verbose parsed url   auth: null,
+629 verbose parsed url   host: null,
+629 verbose parsed url   port: null,
+629 verbose parsed url   hostname: null,
+629 verbose parsed url   hash: null,
+629 verbose parsed url   search: null,
+629 verbose parsed url   query: null,
+629 verbose parsed url   pathname: '^5.3.0',
+629 verbose parsed url   path: '^5.3.0',
+629 verbose parsed url   href: '^5.3.0' }
+630 verbose addNamed [ 'semver', '^5.3.0' ]
+631 verbose addNamed [ null, '>=5.3.0-0 <6.0.0-0' ]
+632 silly lockFile bebcb816-semver-5-3-0 semver@^5.3.0
+633 verbose lock semver@^5.3.0 /root/.npm/bebcb816-semver-5-3-0.lock
+634 verbose cache add [ 'tslib@^1.8.0', null ]
+635 verbose cache add name=undefined spec="tslib@^1.8.0" args=["tslib@^1.8.0",null]
+636 verbose parsed url { protocol: null,
+636 verbose parsed url   slashes: null,
+636 verbose parsed url   auth: null,
+636 verbose parsed url   host: null,
+636 verbose parsed url   port: null,
+636 verbose parsed url   hostname: null,
+636 verbose parsed url   hash: null,
+636 verbose parsed url   search: null,
+636 verbose parsed url   query: null,
+636 verbose parsed url   pathname: 'tslib@^1.8.0',
+636 verbose parsed url   path: 'tslib@^1.8.0',
+636 verbose parsed url   href: 'tslib@^1.8.0' }
+637 verbose cache add name="tslib" spec="^1.8.0" args=["tslib","^1.8.0"]
+638 verbose parsed url { protocol: null,
+638 verbose parsed url   slashes: null,
+638 verbose parsed url   auth: null,
+638 verbose parsed url   host: null,
+638 verbose parsed url   port: null,
+638 verbose parsed url   hostname: null,
+638 verbose parsed url   hash: null,
+638 verbose parsed url   search: null,
+638 verbose parsed url   query: null,
+638 verbose parsed url   pathname: '^1.8.0',
+638 verbose parsed url   path: '^1.8.0',
+638 verbose parsed url   href: '^1.8.0' }
+639 verbose addNamed [ 'tslib', '^1.8.0' ]
+640 verbose addNamed [ null, '>=1.8.0-0 <2.0.0-0' ]
+641 silly lockFile 53010f83-tslib-1-8-0 tslib@^1.8.0
+642 verbose lock tslib@^1.8.0 /root/.npm/53010f83-tslib-1-8-0.lock
+643 verbose cache add [ '@ionic/cli-framework@0.0.2', null ]
+644 verbose cache add name=undefined spec="@ionic/cli-framework@0.0.2" args=["@ionic/cli-framework@0.0.2",null]
+645 verbose parsed url { protocol: null,
+645 verbose parsed url   slashes: null,
+645 verbose parsed url   auth: null,
+645 verbose parsed url   host: null,
+645 verbose parsed url   port: null,
+645 verbose parsed url   hostname: null,
+645 verbose parsed url   hash: null,
+645 verbose parsed url   search: null,
+645 verbose parsed url   query: null,
+645 verbose parsed url   pathname: '@ionic/cli-framework@0.0.2',
+645 verbose parsed url   path: '@ionic/cli-framework@0.0.2',
+645 verbose parsed url   href: '@ionic/cli-framework@0.0.2' }
+646 verbose cache add name="" spec="ionic/cli-framework@0.0.2" args=["","ionic/cli-framework@0.0.2"]
+647 verbose parsed url { protocol: null,
+647 verbose parsed url   slashes: null,
+647 verbose parsed url   auth: null,
+647 verbose parsed url   host: null,
+647 verbose parsed url   port: null,
+647 verbose parsed url   hostname: null,
+647 verbose parsed url   hash: null,
+647 verbose parsed url   search: null,
+647 verbose parsed url   query: null,
+647 verbose parsed url   pathname: 'ionic/cli-framework@0.0.2',
+647 verbose parsed url   path: 'ionic/cli-framework@0.0.2',
+647 verbose parsed url   href: 'ionic/cli-framework@0.0.2' }
+648 verbose cache add name="ionic/cli-framework" spec="0.0.2" args=["ionic/cli-framework","0.0.2"]
+649 verbose parsed url { protocol: null,
+649 verbose parsed url   slashes: null,
+649 verbose parsed url   auth: null,
+649 verbose parsed url   host: null,
+649 verbose parsed url   port: null,
+649 verbose parsed url   hostname: null,
+649 verbose parsed url   hash: null,
+649 verbose parsed url   search: null,
+649 verbose parsed url   query: null,
+649 verbose parsed url   pathname: '0.0.2',
+649 verbose parsed url   path: '0.0.2',
+649 verbose parsed url   href: '0.0.2' }
+650 verbose addNamed [ 'ionic/cli-framework', '0.0.2' ]
+651 verbose addNamed [ '0.0.2', '0.0.2' ]
+652 silly lockFile 741a2f55-ionic-cli-framework-0-0-2 ionic/cli-framework@0.0.2
+653 verbose lock ionic/cli-framework@0.0.2 /root/.npm/741a2f55-ionic-cli-framework-0-0-2.lock
+654 silly addNameRange { name: 'os-name', range: '>=2.0.1-0 <3.0.0-0', hasData: false }
+655 verbose url raw chalk
+656 verbose url resolving [ 'https://registry.npmjs.org/', './chalk' ]
+657 verbose url resolved https://registry.npmjs.org/chalk
+658 info trying registry request attempt 1 at 15:24:57
+659 http GET https://registry.npmjs.org/chalk
+660 silly addNameRange { name: 'rimraf', range: '>=2.6.2-0 <3.0.0-0', hasData: false }
+661 verbose url raw opn
+662 verbose url resolving [ 'https://registry.npmjs.org/', './opn' ]
+663 verbose url resolved https://registry.npmjs.org/opn
+664 info trying registry request attempt 1 at 15:24:57
+665 http GET https://registry.npmjs.org/opn
+666 verbose url raw os-name
+667 verbose url resolving [ 'https://registry.npmjs.org/', './os-name' ]
+668 verbose url resolved https://registry.npmjs.org/os-name
+669 info trying registry request attempt 1 at 15:24:57
+670 http GET https://registry.npmjs.org/os-name
+671 silly addNameRange { name: 'semver', range: '>=5.3.0-0 <6.0.0-0', hasData: false }
+672 silly addNameRange { name: 'tslib', range: '>=1.8.0-0 <2.0.0-0', hasData: false }
+673 verbose url raw tslib
+674 verbose url resolving [ 'https://registry.npmjs.org/', './tslib' ]
+675 verbose url resolved https://registry.npmjs.org/tslib
+676 info trying registry request attempt 1 at 15:24:57
+677 http GET https://registry.npmjs.org/tslib
+678 verbose url raw ionic/cli-framework/0.0.2
+679 verbose url resolving [ 'https://registry.npmjs.org/', './ionic/cli-framework/0.0.2' ]
+680 verbose url resolved https://registry.npmjs.org/ionic/cli-framework/0.0.2
+681 info trying registry request attempt 1 at 15:24:57
+682 http GET https://registry.npmjs.org/ionic/cli-framework/0.0.2
+683 verbose url raw rimraf
+684 verbose url resolving [ 'https://registry.npmjs.org/', './rimraf' ]
+685 verbose url resolved https://registry.npmjs.org/rimraf
+686 info trying registry request attempt 1 at 15:24:57
+687 verbose etag "DQDTWFNCQ2ICIOV2HL8RRB221"
+688 http GET https://registry.npmjs.org/rimraf
+689 verbose url raw semver
+690 verbose url resolving [ 'https://registry.npmjs.org/', './semver' ]
+691 verbose url resolved https://registry.npmjs.org/semver
+692 info trying registry request attempt 1 at 15:24:57
+693 verbose etag "4QDP6A12OE0SZLX0BABW4W0CW"
+694 http GET https://registry.npmjs.org/semver
+695 http 200 https://registry.npmjs.org/os-name
+696 silly registry.get cb [ 200,
+696 silly registry.get   { server: 'nginx/1.10.3',
+696 silly registry.get     'content-type': 'application/json',
+696 silly registry.get     'last-modified': 'Mon, 20 Jun 2016 00:31:25 GMT',
+696 silly registry.get     etag: '"5767395d-3595"',
+696 silly registry.get     'cache-control': 'max-age=300',
+696 silly registry.get     'content-length': '13717',
+696 silly registry.get     'accept-ranges': 'bytes',
+696 silly registry.get     date: 'Tue, 31 Oct 2017 15:24:58 GMT',
+696 silly registry.get     via: '1.1 varnish',
+696 silly registry.get     age: '0',
+696 silly registry.get     connection: 'keep-alive',
+696 silly registry.get     'x-served-by': 'cache-gru17133-GRU',
+696 silly registry.get     'x-cache': 'MISS',
+696 silly registry.get     'x-cache-hits': '0',
+696 silly registry.get     'x-timer': 'S1509463498.180191,VS0,VE186',
+696 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+697 silly addNameRange number 2 { name: 'os-name', range: '>=2.0.1-0 <3.0.0-0', hasData: true }
+698 silly addNameRange versions [ 'os-name',
+698 silly addNameRange   [ '0.1.0',
+698 silly addNameRange     '0.1.1',
+698 silly addNameRange     '0.1.2',
+698 silly addNameRange     '1.0.0',
+698 silly addNameRange     '1.0.1',
+698 silly addNameRange     '1.0.2',
+698 silly addNameRange     '1.0.3',
+698 silly addNameRange     '2.0.0',
+698 silly addNameRange     '2.0.1' ] ]
+699 verbose addNamed [ 'os-name', '2.0.1' ]
+700 verbose addNamed [ '2.0.1', '2.0.1' ]
+701 silly lockFile 228c8c28-os-name-2-0-1 os-name@2.0.1
+702 verbose lock os-name@2.0.1 /root/.npm/228c8c28-os-name-2-0-1.lock
+703 silly lockFile f1634118-js-org-os-name-os-name-2-0-1-tgz https://registry.npmjs.org/os-name/-/os-name-2.0.1.tgz
+704 verbose lock https://registry.npmjs.org/os-name/-/os-name-2.0.1.tgz /root/.npm/f1634118-js-org-os-name-os-name-2-0-1-tgz.lock
+705 verbose addRemoteTarball [ 'https://registry.npmjs.org/os-name/-/os-name-2.0.1.tgz',
+705 verbose addRemoteTarball   'b9a386361c17ae3a21736ef0599405c9a8c5dc5e' ]
+706 info retry fetch attempt 1 at 15:24:58
+707 verbose fetch to= /root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/tmp.tgz
+708 http GET https://registry.npmjs.org/os-name/-/os-name-2.0.1.tgz
+709 http 200 https://registry.npmjs.org/chalk
+710 silly registry.get cb [ 200,
+710 silly registry.get   { server: 'nginx/1.10.1',
+710 silly registry.get     'content-type': 'application/json',
+710 silly registry.get     'last-modified': 'Tue, 31 Oct 2017 03:15:14 GMT',
+710 silly registry.get     etag: '"59f7eac2-cfde"',
+710 silly registry.get     'cache-control': 'max-age=300',
+710 silly registry.get     'content-length': '53214',
+710 silly registry.get     'accept-ranges': 'bytes',
+710 silly registry.get     date: 'Tue, 31 Oct 2017 15:24:58 GMT',
+710 silly registry.get     via: '1.1 varnish',
+710 silly registry.get     age: '0',
+710 silly registry.get     connection: 'keep-alive',
+710 silly registry.get     'x-served-by': 'cache-gru17124-GRU',
+710 silly registry.get     'x-cache': 'HIT',
+710 silly registry.get     'x-cache-hits': '1',
+710 silly registry.get     'x-timer': 'S1509463498.146247,VS0,VE194',
+710 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+711 silly addNameRange number 2 { name: 'chalk', range: '>=2.3.0-0 <3.0.0-0', hasData: true }
+712 silly addNameRange versions [ 'chalk',
+712 silly addNameRange   [ '0.1.0',
+712 silly addNameRange     '0.1.1',
+712 silly addNameRange     '0.2.0',
+712 silly addNameRange     '0.2.1',
+712 silly addNameRange     '0.3.0',
+712 silly addNameRange     '0.4.0',
+712 silly addNameRange     '0.5.0',
+712 silly addNameRange     '0.5.1',
+712 silly addNameRange     '1.0.0',
+712 silly addNameRange     '1.1.0',
+712 silly addNameRange     '1.1.1',
+712 silly addNameRange     '1.1.2',
+712 silly addNameRange     '1.1.3',
+712 silly addNameRange     '2.0.0',
+712 silly addNameRange     '2.0.1',
+712 silly addNameRange     '2.1.0',
+712 silly addNameRange     '2.2.0',
+712 silly addNameRange     '2.2.2',
+712 silly addNameRange     '2.3.0' ] ]
+713 verbose addNamed [ 'chalk', '2.3.0' ]
+714 verbose addNamed [ '2.3.0', '2.3.0' ]
+715 silly lockFile 9c6dedee-chalk-2-3-0 chalk@2.3.0
+716 verbose lock chalk@2.3.0 /root/.npm/9c6dedee-chalk-2-3-0.lock
+717 silly lockFile 96dd5876--npmjs-org-chalk-chalk-2-3-0-tgz https://registry.npmjs.org/chalk/-/chalk-2.3.0.tgz
+718 verbose lock https://registry.npmjs.org/chalk/-/chalk-2.3.0.tgz /root/.npm/96dd5876--npmjs-org-chalk-chalk-2-3-0-tgz.lock
+719 verbose addRemoteTarball [ 'https://registry.npmjs.org/chalk/-/chalk-2.3.0.tgz',
+719 verbose addRemoteTarball   'b5ea48efc9c1793dccc9b4767c93914d3f2d52ba' ]
+720 info retry fetch attempt 1 at 15:24:58
+721 verbose fetch to= /root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/tmp.tgz
+722 http GET https://registry.npmjs.org/chalk/-/chalk-2.3.0.tgz
+723 http 200 https://registry.npmjs.org/tslib
+724 silly registry.get cb [ 200,
+724 silly registry.get   { server: 'nginx/1.10.1',
+724 silly registry.get     'content-type': 'application/json',
+724 silly registry.get     'last-modified': 'Wed, 11 Oct 2017 04:34:53 GMT',
+724 silly registry.get     etag: '"59dd9f6d-4c68"',
+724 silly registry.get     'cache-control': 'max-age=300',
+724 silly registry.get     'content-length': '19560',
+724 silly registry.get     'accept-ranges': 'bytes',
+724 silly registry.get     date: 'Tue, 31 Oct 2017 15:24:58 GMT',
+724 silly registry.get     via: '1.1 varnish',
+724 silly registry.get     age: '0',
+724 silly registry.get     connection: 'keep-alive',
+724 silly registry.get     'x-served-by': 'cache-gru17128-GRU',
+724 silly registry.get     'x-cache': 'MISS',
+724 silly registry.get     'x-cache-hits': '0',
+724 silly registry.get     'x-timer': 'S1509463498.099209,VS0,VE378',
+724 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+725 silly addNameRange number 2 { name: 'tslib', range: '>=1.8.0-0 <2.0.0-0', hasData: true }
+726 silly addNameRange versions [ 'tslib',
+726 silly addNameRange   [ '0.0.1-security',
+726 silly addNameRange     '1.0.0',
+726 silly addNameRange     '1.1.0',
+726 silly addNameRange     '1.2.0',
+726 silly addNameRange     '1.3.0',
+726 silly addNameRange     '1.4.0',
+726 silly addNameRange     '1.5.0',
+726 silly addNameRange     '1.6.0',
+726 silly addNameRange     '1.6.1',
+726 silly addNameRange     '1.7.0',
+726 silly addNameRange     '1.7.1',
+726 silly addNameRange     '1.8.0' ] ]
+727 verbose addNamed [ 'tslib', '1.8.0' ]
+728 verbose addNamed [ '1.8.0', '1.8.0' ]
+729 silly lockFile 972ee95f-tslib-1-8-0 tslib@1.8.0
+730 verbose lock tslib@1.8.0 /root/.npm/972ee95f-tslib-1-8-0.lock
+731 http 200 https://registry.npmjs.org/opn
+732 silly registry.get cb [ 200,
+732 silly registry.get   { server: 'nginx/1.10.1',
+732 silly registry.get     'content-type': 'application/json',
+732 silly registry.get     'last-modified': 'Sat, 28 Oct 2017 01:51:50 GMT',
+732 silly registry.get     etag: '"59f3e2b6-6978"',
+732 silly registry.get     'cache-control': 'max-age=300',
+732 silly registry.get     'content-length': '27000',
+732 silly registry.get     'accept-ranges': 'bytes',
+732 silly registry.get     date: 'Tue, 31 Oct 2017 15:24:58 GMT',
+732 silly registry.get     via: '1.1 varnish',
+732 silly registry.get     age: '0',
+732 silly registry.get     connection: 'keep-alive',
+732 silly registry.get     'x-served-by': 'cache-gru17132-GRU',
+732 silly registry.get     'x-cache': 'MISS',
+732 silly registry.get     'x-cache-hits': '0',
+732 silly registry.get     'x-timer': 'S1509463498.095938,VS0,VE378',
+732 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+733 silly lockFile b144dd7a--npmjs-org-tslib-tslib-1-8-0-tgz https://registry.npmjs.org/tslib/-/tslib-1.8.0.tgz
+734 verbose lock https://registry.npmjs.org/tslib/-/tslib-1.8.0.tgz /root/.npm/b144dd7a--npmjs-org-tslib-tslib-1-8-0-tgz.lock
+735 verbose addRemoteTarball [ 'https://registry.npmjs.org/tslib/-/tslib-1.8.0.tgz',
+735 verbose addRemoteTarball   'dc604ebad64bcbf696d613da6c954aa0e7ea1eb6' ]
+736 info retry fetch attempt 1 at 15:24:58
+737 verbose fetch to= /root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/tmp.tgz
+738 silly addNameRange number 2 { name: 'opn', range: '>=5.1.0-0 <6.0.0-0', hasData: true }
+739 silly addNameRange versions [ 'opn',
+739 silly addNameRange   [ '0.1.0',
+739 silly addNameRange     '0.1.1',
+739 silly addNameRange     '0.1.2',
+739 silly addNameRange     '1.0.0',
+739 silly addNameRange     '1.0.1',
+739 silly addNameRange     '1.0.2',
+739 silly addNameRange     '2.0.0',
+739 silly addNameRange     '2.0.1',
+739 silly addNameRange     '3.0.0',
+739 silly addNameRange     '3.0.1',
+739 silly addNameRange     '3.0.2',
+739 silly addNameRange     '3.0.3',
+739 silly addNameRange     '4.0.0',
+739 silly addNameRange     '4.0.1',
+739 silly addNameRange     '4.0.2',
+739 silly addNameRange     '5.0.0',
+739 silly addNameRange     '5.1.0' ] ]
+740 verbose addNamed [ 'opn', '5.1.0' ]
+741 verbose addNamed [ '5.1.0', '5.1.0' ]
+742 silly lockFile aa196063-opn-5-1-0 opn@5.1.0
+743 verbose lock opn@5.1.0 /root/.npm/aa196063-opn-5-1-0.lock
+744 http GET https://registry.npmjs.org/tslib/-/tslib-1.8.0.tgz
+745 silly lockFile 9e58145b-stry-npmjs-org-opn-opn-5-1-0-tgz https://registry.npmjs.org/opn/-/opn-5.1.0.tgz
+746 verbose lock https://registry.npmjs.org/opn/-/opn-5.1.0.tgz /root/.npm/9e58145b-stry-npmjs-org-opn-opn-5-1-0-tgz.lock
+747 verbose addRemoteTarball [ 'https://registry.npmjs.org/opn/-/opn-5.1.0.tgz',
+747 verbose addRemoteTarball   '72ce2306a17dbea58ff1041853352b4a8fc77519' ]
+748 info retry fetch attempt 1 at 15:24:58
+749 verbose fetch to= /root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/tmp.tgz
+750 http GET https://registry.npmjs.org/opn/-/opn-5.1.0.tgz
+751 http 200 https://registry.npmjs.org/rimraf
+752 silly registry.get cb [ 200,
+752 silly registry.get   { server: 'nginx/1.10.1',
+752 silly registry.get     'content-type': 'application/json',
+752 silly registry.get     'last-modified': 'Tue, 31 Oct 2017 11:19:20 GMT',
+752 silly registry.get     etag: '"59f85c38-ec65"',
+752 silly registry.get     'cache-control': 'max-age=300',
+752 silly registry.get     'content-length': '60517',
+752 silly registry.get     'accept-ranges': 'bytes',
+752 silly registry.get     date: 'Tue, 31 Oct 2017 15:24:58 GMT',
+752 silly registry.get     via: '1.1 varnish',
+752 silly registry.get     age: '0',
+752 silly registry.get     connection: 'keep-alive',
+752 silly registry.get     'x-served-by': 'cache-gru17124-GRU',
+752 silly registry.get     'x-cache': 'HIT',
+752 silly registry.get     'x-cache-hits': '1',
+752 silly registry.get     'x-timer': 'S1509463499.571613,VS0,VE201',
+752 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+753 http 200 https://registry.npmjs.org/tslib/-/tslib-1.8.0.tgz
+754 silly addNameRange number 2 { name: 'rimraf', range: '>=2.6.2-0 <3.0.0-0', hasData: true }
+755 silly addNameRange versions [ 'rimraf',
+755 silly addNameRange   [ '1.0.0',
+755 silly addNameRange     '1.0.1',
+755 silly addNameRange     '1.0.2',
+755 silly addNameRange     '1.0.4',
+755 silly addNameRange     '1.0.5',
+755 silly addNameRange     '1.0.6',
+755 silly addNameRange     '1.0.7',
+755 silly addNameRange     '1.0.8',
+755 silly addNameRange     '1.0.9',
+755 silly addNameRange     '2.0.0',
+755 silly addNameRange     '2.0.1',
+755 silly addNameRange     '2.0.2',
+755 silly addNameRange     '2.0.3',
+755 silly addNameRange     '2.1.0',
+755 silly addNameRange     '2.1.1',
+755 silly addNameRange     '2.1.2',
+755 silly addNameRange     '2.1.3',
+755 silly addNameRange     '2.1.4',
+755 silly addNameRange     '2.2.0',
+755 silly addNameRange     '2.2.1',
+755 silly addNameRange     '2.2.2',
+755 silly addNameRange     '2.2.3',
+755 silly addNameRange     '2.2.4',
+755 silly addNameRange     '2.2.5',
+755 silly addNameRange     '2.2.6',
+755 silly addNameRange     '2.2.8',
+755 silly addNameRange     '2.3.0',
+755 silly addNameRange     '2.3.1',
+755 silly addNameRange     '2.3.2',
+755 silly addNameRange     '2.3.3',
+755 silly addNameRange     '2.3.4',
+755 silly addNameRange     '2.4.0',
+755 silly addNameRange     '2.4.1',
+755 silly addNameRange     '2.4.2',
+755 silly addNameRange     '2.4.3',
+755 silly addNameRange     '2.4.4',
+755 silly addNameRange     '2.4.5',
+755 silly addNameRange     '2.5.0',
+755 silly addNameRange     '2.5.1',
+755 silly addNameRange     '2.5.2',
+755 silly addNameRange     '2.5.3',
+755 silly addNameRange     '2.5.4',
+755 silly addNameRange     '2.6.0',
+755 silly addNameRange     '2.6.1',
+755 silly addNameRange     '2.6.2' ] ]
+756 verbose addNamed [ 'rimraf', '2.6.2' ]
+757 verbose addNamed [ '2.6.2', '2.6.2' ]
+758 silly lockFile ad92b07c-rimraf-2-6-2 rimraf@2.6.2
+759 verbose lock rimraf@2.6.2 /root/.npm/ad92b07c-rimraf-2-6-2.lock
+760 silly lockFile 32521b98-pmjs-org-rimraf-rimraf-2-6-2-tgz https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+761 verbose lock https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz /root/.npm/32521b98-pmjs-org-rimraf-rimraf-2-6-2-tgz.lock
+762 verbose addRemoteTarball [ 'https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz',
+762 verbose addRemoteTarball   '2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36' ]
+763 info retry fetch attempt 1 at 15:24:58
+764 verbose fetch to= /root/tmp/npm-54-9LOfOQhh/1509463498863-0.027246303157880902/tmp.tgz
+765 http GET https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+766 http 200 https://registry.npmjs.org/os-name/-/os-name-2.0.1.tgz
+767 verbose tar unpack /root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/tmp.tgz
+768 silly lockFile 932f7ff9-98493-0-6892638891004026-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package
+769 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package /root/.npm/932f7ff9-98493-0-6892638891004026-package.lock
+770 silly lockFile 20b3ebdd-98493-0-6892638891004026-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/tmp.tgz
+771 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/tmp.tgz /root/.npm/20b3ebdd-98493-0-6892638891004026-tmp-tgz.lock
+772 silly gunzTarPerm modes [ '755', '644' ]
+773 silly gunzTarPerm extractEntry package.json
+774 silly gunzTarPerm extractEntry index.js
+775 silly gunzTarPerm extractEntry license
+776 silly gunzTarPerm extractEntry readme.md
+777 silly lockFile 932f7ff9-98493-0-6892638891004026-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package
+778 silly lockFile 932f7ff9-98493-0-6892638891004026-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package
+779 silly lockFile 20b3ebdd-98493-0-6892638891004026-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/tmp.tgz
+780 silly lockFile 20b3ebdd-98493-0-6892638891004026-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/tmp.tgz
+781 verbose tar pack [ '/root/.npm/os-name/2.0.1/package.tgz',
+781 verbose tar pack   '/root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package' ]
+782 verbose tarball /root/.npm/os-name/2.0.1/package.tgz
+783 verbose folder /root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package
+784 silly lockFile 932f7ff9-98493-0-6892638891004026-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package
+785 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package /root/.npm/932f7ff9-98493-0-6892638891004026-package.lock
+786 silly lockFile 314f9c49-ot-npm-os-name-2-0-1-package-tgz tar:///root/.npm/os-name/2.0.1/package.tgz
+787 verbose lock tar:///root/.npm/os-name/2.0.1/package.tgz /root/.npm/314f9c49-ot-npm-os-name-2-0-1-package-tgz.lock
+788 http 200 https://registry.npmjs.org/chalk/-/chalk-2.3.0.tgz
+789 verbose tar unpack /root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/tmp.tgz
+790 silly lockFile 5d761e4a-8547-0-13869056082330644-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package
+791 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package /root/.npm/5d761e4a-8547-0-13869056082330644-package.lock
+792 silly lockFile 72521b92-8547-0-13869056082330644-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/tmp.tgz
+793 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/tmp.tgz /root/.npm/72521b92-8547-0-13869056082330644-tmp-tgz.lock
+794 silly gunzTarPerm modes [ '755', '644' ]
+795 silly gunzTarPerm extractEntry package.json
+796 silly lockFile 932f7ff9-98493-0-6892638891004026-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package
+797 silly lockFile 932f7ff9-98493-0-6892638891004026-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498493-0.6892638891004026/package
+798 silly lockFile 314f9c49-ot-npm-os-name-2-0-1-package-tgz tar:///root/.npm/os-name/2.0.1/package.tgz
+799 silly lockFile 314f9c49-ot-npm-os-name-2-0-1-package-tgz tar:///root/.npm/os-name/2.0.1/package.tgz
+800 silly gunzTarPerm extractEntry index.js
+801 silly gunzTarPerm extractEntry license
+802 silly lockFile 07aeab4b-root-npm-os-name-2-0-1-package /root/.npm/os-name/2.0.1/package
+803 verbose lock /root/.npm/os-name/2.0.1/package /root/.npm/07aeab4b-root-npm-os-name-2-0-1-package.lock
+804 silly lockFile 07aeab4b-root-npm-os-name-2-0-1-package /root/.npm/os-name/2.0.1/package
+805 silly lockFile 07aeab4b-root-npm-os-name-2-0-1-package /root/.npm/os-name/2.0.1/package
+806 verbose tar unpack /root/.npm/os-name/2.0.1/package.tgz
+807 silly lockFile 0cff07e6-r-root-npm-os-name-2-0-1-package tar:///root/.npm/os-name/2.0.1/package
+808 verbose lock tar:///root/.npm/os-name/2.0.1/package /root/.npm/0cff07e6-r-root-npm-os-name-2-0-1-package.lock
+809 silly lockFile 314f9c49-ot-npm-os-name-2-0-1-package-tgz tar:///root/.npm/os-name/2.0.1/package.tgz
+810 verbose lock tar:///root/.npm/os-name/2.0.1/package.tgz /root/.npm/314f9c49-ot-npm-os-name-2-0-1-package-tgz.lock
+811 silly gunzTarPerm extractEntry readme.md
+812 silly gunzTarPerm extractEntry templates.js
+813 silly gunzTarPerm extractEntry types/index.d.ts
+814 silly gunzTarPerm modes [ '755', '644' ]
+815 silly gunzTarPerm extractEntry package.json
+816 silly gunzTarPerm extractEntry index.js
+817 silly gunzTarPerm extractEntry readme.md
+818 silly lockFile 0cff07e6-r-root-npm-os-name-2-0-1-package tar:///root/.npm/os-name/2.0.1/package
+819 silly lockFile 0cff07e6-r-root-npm-os-name-2-0-1-package tar:///root/.npm/os-name/2.0.1/package
+820 silly lockFile 314f9c49-ot-npm-os-name-2-0-1-package-tgz tar:///root/.npm/os-name/2.0.1/package.tgz
+821 silly lockFile 314f9c49-ot-npm-os-name-2-0-1-package-tgz tar:///root/.npm/os-name/2.0.1/package.tgz
+822 verbose chmod /root/.npm/os-name/2.0.1/package.tgz 644
+823 verbose chown /root/.npm/os-name/2.0.1/package.tgz [ 0, 0 ]
+824 silly lockFile f1634118-js-org-os-name-os-name-2-0-1-tgz https://registry.npmjs.org/os-name/-/os-name-2.0.1.tgz
+825 silly lockFile f1634118-js-org-os-name-os-name-2-0-1-tgz https://registry.npmjs.org/os-name/-/os-name-2.0.1.tgz
+826 silly lockFile 228c8c28-os-name-2-0-1 os-name@2.0.1
+827 silly lockFile 228c8c28-os-name-2-0-1 os-name@2.0.1
+828 silly lockFile 46a9326c-os-name-2-0-1 os-name@^2.0.1
+829 silly lockFile 46a9326c-os-name-2-0-1 os-name@^2.0.1
+830 silly lockFile 5d761e4a-8547-0-13869056082330644-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package
+831 silly lockFile 5d761e4a-8547-0-13869056082330644-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package
+832 silly lockFile 72521b92-8547-0-13869056082330644-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/tmp.tgz
+833 silly lockFile 72521b92-8547-0-13869056082330644-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/tmp.tgz
+834 verbose tar pack [ '/root/.npm/chalk/2.3.0/package.tgz',
+834 verbose tar pack   '/root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package' ]
+835 verbose tarball /root/.npm/chalk/2.3.0/package.tgz
+836 verbose folder /root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package
+837 silly lockFile 5d761e4a-8547-0-13869056082330644-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package
+838 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package /root/.npm/5d761e4a-8547-0-13869056082330644-package.lock
+839 silly lockFile 532838d0-root-npm-chalk-2-3-0-package-tgz tar:///root/.npm/chalk/2.3.0/package.tgz
+840 verbose lock tar:///root/.npm/chalk/2.3.0/package.tgz /root/.npm/532838d0-root-npm-chalk-2-3-0-package-tgz.lock
+841 verbose tar unpack /root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/tmp.tgz
+842 silly lockFile 733aaeb9-8587-0-28280754550360143-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/package
+843 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/package /root/.npm/733aaeb9-8587-0-28280754550360143-package.lock
+844 silly lockFile 67600811-8587-0-28280754550360143-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/tmp.tgz
+845 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/tmp.tgz /root/.npm/67600811-8587-0-28280754550360143-tmp-tgz.lock
+846 silly gunzTarPerm modes [ '755', '644' ]
+847 silly gunzTarPerm extractEntry package.json
+848 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+849 silly gunzTarPerm extractEntry .npmignore
+850 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+851 silly gunzTarPerm extractEntry README.md
+852 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+853 silly gunzTarPerm extractEntry tslib.js
+854 silly gunzTarPerm modified mode [ 'tslib.js', 438, 420 ]
+855 silly gunzTarPerm extractEntry tslib.es6.js
+856 silly gunzTarPerm modified mode [ 'tslib.es6.js', 438, 420 ]
+857 silly gunzTarPerm extractEntry bower.json
+858 silly gunzTarPerm modified mode [ 'bower.json', 438, 420 ]
+859 silly gunzTarPerm extractEntry .gitattributes
+860 silly gunzTarPerm modified mode [ '.gitattributes', 438, 420 ]
+861 silly gunzTarPerm extractEntry tslib.html
+862 silly gunzTarPerm modified mode [ 'tslib.html', 438, 420 ]
+863 silly gunzTarPerm extractEntry CopyrightNotice.txt
+864 silly gunzTarPerm modified mode [ 'CopyrightNotice.txt', 438, 420 ]
+865 silly gunzTarPerm extractEntry tslib.d.ts
+866 silly gunzTarPerm modified mode [ 'tslib.d.ts', 438, 420 ]
+867 silly gunzTarPerm extractEntry tslib.es6.html
+868 silly gunzTarPerm modified mode [ 'tslib.es6.html', 438, 420 ]
+869 silly gunzTarPerm extractEntry LICENSE.txt
+870 silly gunzTarPerm modified mode [ 'LICENSE.txt', 438, 420 ]
+871 silly gunzTarPerm extractEntry docs/generator.md
+872 silly gunzTarPerm modified mode [ 'docs/generator.md', 438, 420 ]
+873 silly lockFile 5d761e4a-8547-0-13869056082330644-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package
+874 silly lockFile 5d761e4a-8547-0-13869056082330644-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498547-0.13869056082330644/package
+875 silly lockFile 532838d0-root-npm-chalk-2-3-0-package-tgz tar:///root/.npm/chalk/2.3.0/package.tgz
+876 silly lockFile 532838d0-root-npm-chalk-2-3-0-package-tgz tar:///root/.npm/chalk/2.3.0/package.tgz
+877 silly lockFile 1ca126ce-root-npm-chalk-2-3-0-package /root/.npm/chalk/2.3.0/package
+878 verbose lock /root/.npm/chalk/2.3.0/package /root/.npm/1ca126ce-root-npm-chalk-2-3-0-package.lock
+879 silly lockFile 1ca126ce-root-npm-chalk-2-3-0-package /root/.npm/chalk/2.3.0/package
+880 silly lockFile 1ca126ce-root-npm-chalk-2-3-0-package /root/.npm/chalk/2.3.0/package
+881 verbose tar unpack /root/.npm/chalk/2.3.0/package.tgz
+882 silly lockFile 6d8ec35b-tar-root-npm-chalk-2-3-0-package tar:///root/.npm/chalk/2.3.0/package
+883 verbose lock tar:///root/.npm/chalk/2.3.0/package /root/.npm/6d8ec35b-tar-root-npm-chalk-2-3-0-package.lock
+884 silly lockFile 532838d0-root-npm-chalk-2-3-0-package-tgz tar:///root/.npm/chalk/2.3.0/package.tgz
+885 verbose lock tar:///root/.npm/chalk/2.3.0/package.tgz /root/.npm/532838d0-root-npm-chalk-2-3-0-package-tgz.lock
+886 silly gunzTarPerm modes [ '755', '644' ]
+887 http 200 https://registry.npmjs.org/opn/-/opn-5.1.0.tgz
+888 silly gunzTarPerm extractEntry package.json
+889 silly gunzTarPerm extractEntry index.js
+890 silly gunzTarPerm extractEntry templates.js
+891 verbose tar unpack /root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/tmp.tgz
+892 silly lockFile cb490828-98591-0-6735415789298713-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package
+893 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package /root/.npm/cb490828-98591-0-6735415789298713-package.lock
+894 silly lockFile 067795dd-98591-0-6735415789298713-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/tmp.tgz
+895 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/tmp.tgz /root/.npm/067795dd-98591-0-6735415789298713-tmp-tgz.lock
+896 silly gunzTarPerm modes [ '755', '644' ]
+897 silly gunzTarPerm extractEntry readme.md
+898 silly gunzTarPerm extractEntry types/index.d.ts
+899 silly gunzTarPerm extractEntry package.json
+900 silly gunzTarPerm extractEntry index.js
+901 silly gunzTarPerm extractEntry license
+902 silly gunzTarPerm extractEntry readme.md
+903 silly gunzTarPerm extractEntry xdg-open
+904 silly lockFile 6d8ec35b-tar-root-npm-chalk-2-3-0-package tar:///root/.npm/chalk/2.3.0/package
+905 silly lockFile 6d8ec35b-tar-root-npm-chalk-2-3-0-package tar:///root/.npm/chalk/2.3.0/package
+906 silly lockFile 532838d0-root-npm-chalk-2-3-0-package-tgz tar:///root/.npm/chalk/2.3.0/package.tgz
+907 silly lockFile 532838d0-root-npm-chalk-2-3-0-package-tgz tar:///root/.npm/chalk/2.3.0/package.tgz
+908 verbose chmod /root/.npm/chalk/2.3.0/package.tgz 644
+909 verbose chown /root/.npm/chalk/2.3.0/package.tgz [ 0, 0 ]
+910 silly lockFile 96dd5876--npmjs-org-chalk-chalk-2-3-0-tgz https://registry.npmjs.org/chalk/-/chalk-2.3.0.tgz
+911 silly lockFile 96dd5876--npmjs-org-chalk-chalk-2-3-0-tgz https://registry.npmjs.org/chalk/-/chalk-2.3.0.tgz
+912 silly lockFile 9c6dedee-chalk-2-3-0 chalk@2.3.0
+913 silly lockFile 9c6dedee-chalk-2-3-0 chalk@2.3.0
+914 silly lockFile f30e5a95-chalk-2-3-0 chalk@^2.3.0
+915 silly lockFile f30e5a95-chalk-2-3-0 chalk@^2.3.0
+916 silly lockFile cb490828-98591-0-6735415789298713-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package
+917 silly lockFile cb490828-98591-0-6735415789298713-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package
+918 silly lockFile 067795dd-98591-0-6735415789298713-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/tmp.tgz
+919 silly lockFile 067795dd-98591-0-6735415789298713-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/tmp.tgz
+920 verbose tar pack [ '/root/.npm/opn/5.1.0/package.tgz',
+920 verbose tar pack   '/root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package' ]
+921 verbose tarball /root/.npm/opn/5.1.0/package.tgz
+922 verbose folder /root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package
+923 silly lockFile cb490828-98591-0-6735415789298713-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package
+924 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package /root/.npm/cb490828-98591-0-6735415789298713-package.lock
+925 silly lockFile 84011a51-r-root-npm-opn-5-1-0-package-tgz tar:///root/.npm/opn/5.1.0/package.tgz
+926 verbose lock tar:///root/.npm/opn/5.1.0/package.tgz /root/.npm/84011a51-r-root-npm-opn-5-1-0-package-tgz.lock
+927 silly lockFile 733aaeb9-8587-0-28280754550360143-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/package
+928 silly lockFile 733aaeb9-8587-0-28280754550360143-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/package
+929 silly lockFile 67600811-8587-0-28280754550360143-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/tmp.tgz
+930 silly lockFile 67600811-8587-0-28280754550360143-tmp-tgz tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/tmp.tgz
+931 verbose tar pack [ '/root/.npm/tslib/1.8.0/package.tgz',
+931 verbose tar pack   '/root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/package' ]
+932 verbose tarball /root/.npm/tslib/1.8.0/package.tgz
+933 verbose folder /root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/package
+934 silly lockFile 733aaeb9-8587-0-28280754550360143-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/package
+935 verbose lock tar:///root/tmp/npm-54-9LOfOQhh/1509463498587-0.28280754550360143/package /root/.npm/733aaeb9-8587-0-28280754550360143-package.lock
+936 silly lockFile cd83b2c3-root-npm-tslib-1-8-0-package-tgz tar:///root/.npm/tslib/1.8.0/package.tgz
+937 verbose lock tar:///root/.npm/tslib/1.8.0/package.tgz /root/.npm/cd83b2c3-root-npm-tslib-1-8-0-package-tgz.lock
+938 http 200 https://registry.npmjs.org/semver
+939 silly registry.get cb [ 200,
+939 silly registry.get   { server: 'nginx/1.10.3',
+939 silly registry.get     'content-type': 'application/json',
+939 silly registry.get     'last-modified': 'Mon, 23 Oct 2017 07:43:17 GMT',
+939 silly registry.get     etag: '"59ed9d95-12782"',
+939 silly registry.get     'cache-control': 'max-age=300',
+939 silly registry.get     'content-length': '75650',
+939 silly registry.get     'accept-ranges': 'bytes',
+939 silly registry.get     date: 'Tue, 31 Oct 2017 15:24:58 GMT',
+939 silly registry.get     via: '1.1 varnish',
+939 silly registry.get     age: '0',
+939 silly registry.get     connection: 'keep-alive',
+939 silly registry.get     'x-served-by': 'cache-gru17128-GRU',
+939 silly registry.get     'x-cache': 'HIT',
+939 silly registry.get     'x-cache-hits': '1',
+939 silly registry.get     'x-timer': 'S1509463499.610267,VS0,VE196',
+939 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+940 silly addNameRange number 2 { name: 'semver', range: '>=5.3.0-0 <6.0.0-0', hasData: true }
+941 silly addNameRange versions [ 'semver',
+941 silly addNameRange   [ '1.0.0',
+941 silly addNameRange     '1.0.1',
+941 silly addNameRange     '1.0.2',
+941 silly addNameRange     '1.0.3',
+941 silly addNameRange     '1.0.4',
+941 silly addNameRange     '1.0.5',
+941 silly addNameRange     '1.0.6',
+941 silly addNameRange     '1.0.7',
+941 silly addNameRange     '1.0.8',
+941 silly addNameRange     '1.0.9',
+941 silly addNameRange     '1.0.10',
+941 silly addNameRange     '1.0.11',
+941 silly addNameRange     '1.0.12',
+941 silly addNameRange     '1.0.13',
+941 silly addNameRange     '1.0.14',
+941 silly addNameRange     '1.1.0',
+941 silly addNameRange     '1.1.1',
+941 silly addNameRange     '1.1.2',
+941 silly addNameRange     '1.1.3',
+941 silly addNameRange     '1.1.4',
+941 silly addNameRange     '2.0.0-alpha',
+941 silly addNameRange     '2.0.0-beta',
+941 silly addNameRange     '2.0.1',
+941 silly addNameRange     '2.0.2',
+941 silly addNameRange     '2.0.3',
+941 silly addNameRange     '2.0.4',
+941 silly addNameRange     '2.0.5',
+941 silly addNameRange     '2.0.6',
+941 silly addNameRange     '2.0.7',
+941 silly addNameRange     '2.0.8',
+941 silly addNameRange     '2.0.9',
+941 silly addNameRange     '2.0.10',
+941 silly addNameRange     '2.0.11',
+941 silly addNameRange     '2.1.0',
+941 silly addNameRange     '2.2.0',
+941 silly addNameRange     '2.2.1',
+941 silly addNameRange     '2.3.0',
+941 silly addNameRange     '2.3.1',
+941 silly addNameRange     '2.3.2',
+941 silly addNameRange     '3.0.0',
+941 silly addNameRange     '3.0.1',
+941 silly addNameRange     '4.0.0',
+941 silly addNameRange     '4.0.2',
+941 silly addNameRange     '4.0.3',
+941 silly addNameRange     '4.1.0',
+941 silly addNameRange     '4.1.1',
+941 silly addNameRange     '4.2.0',
+941 silly addNameRange     '4.2.1',
+941 silly addNameRange     '4.2.2',
+941 silly addNameRange     '4.3.0',
+941 silly addNameRange     '4.3.1',
+941 silly addNameRange     '4.3.2',
+941 silly addNameRange     '4.3.3',
+941 silly addNameRange     '4.3.4',
+941 silly addNameRange     '4.3.5',
+941 silly addNameRange     '4.3.6',
+941 silly addNameRange     '5.0.0',
+941 silly addNameRange     '5.0.1',
+941 silly addNameRange     '5.0.2',
+941 silly addNameRange     '5.0.3',
+941 silly addNameRange     '5.1.0',
+941 silly addNameRange     '5.1.1',
+941 silly addNameRange     '5.2.0',
+941 silly addNameRange     '5.3.0',
+941 silly addNameRange     '5.4.0',
+941 silly addNameRange     '5.4.1' ] ]
+942 verbose addNamed [ 'semver', '5.4.1' ]
+943 verbose addNamed [ '5.4.1', '5.4.1' ]
+944 silly lockFile 33950a85-semver-5-4-1 semver@5.4.1
+945 verbose lock semver@5.4.1 /root/.npm/33950a85-semver-5-4-1.lock
+946 silly lockFile a0812923-pmjs-org-semver-semver-5-4-1-tgz https://registry.npmjs.org/semver/-/semver-5.4.1.tgz
+947 verbose lock https://registry.npmjs.org/semver/-/semver-5.4.1.tgz /root/.npm/a0812923-pmjs-org-semver-semver-5-4-1-tgz.lock
+948 verbose addRemoteTarball [ 'https://registry.npmjs.org/semver/-/semver-5.4.1.tgz',
+948 verbose addRemoteTarball   'e059c09d8571f0540823733433505d3a2f00b18e' ]
+949 info retry fetch attempt 1 at 15:24:58
+950 verbose fetch to= /root/tmp/npm-54-9LOfOQhh/1509463498992-0.03068439941853285/tmp.tgz
+951 http GET https://registry.npmjs.org/semver/-/semver-5.4.1.tgz
+952 silly lockFile cb490828-98591-0-6735415789298713-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package
+953 silly lockFile cb490828-98591-0-6735415789298713-package tar:///root/tmp/npm-54-9LOfOQhh/1509463498591-0.6735415789298713/package
+954 silly lockFile 84011a51-r-root-npm-opn-5-1-0-package-tgz tar:///root/.npm/opn/5.1.0/package.tgz
+955 silly lockFile 84011a51-r-root-npm-opn-5-1-0-package-tgz tar:///root/.npm/opn/5.1.0/package.tgz
+956 silly lockFile 68e785d5-root-npm-opn-5-1-0-package /root/.npm/opn/5.1.0/package
+957 verbose lock /root/.npm/opn/5.1.0/package /root/.npm/68e785d5-root-npm-opn-5-1-0-package.lock
+958 silly lockFile 68e785d5-root-npm-opn-5-1-0-package /root/.npm/opn/5.1.0/package
+959 silly lockFile 68e785d5-root-npm-opn-5-1-0-package /root/.npm/opn/5.1.0/package
+960 verbose tar unpack /root/.npm/opn/5.1.0/package.tgz
+961 silly lockFile 036c9387-tar-root-npm-opn-5-1-0-package tar:///root/.npm/opn/5.1.0/package
+962 verbose lock tar:///root/.npm/opn/5.1.0/package /root/.npm/036c9387-tar-root-npm-opn-5-1-0-package.lock
+963 silly lockFile 84011a51-r-root-npm-opn-5-1-0-package-tgz tar:///root/.npm/opn/5.1.0/package.tgz
+964 verbose lock tar:///root/.npm/opn/5.1.0/package.tgz /root/.npm/84011a51-r-root-npm-opn-5-1-0-package-tgz.lock
+965 silly gunzTarPerm modes [ '755', '644' ]
+966 silly gunzTarPerm extractEntry package.json
+967 silly gunzTarPerm extractEntry index.js
+968 silly gunzTarPerm extractEntry readme.md
+969 silly gunzTarPerm extractEntry xdg-open
+970 http 404 https://registry.npmjs.org/ionic/cli-utils/1.15.2
+971 silly registry.get cb [ 404,
+971 silly registry.get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+971 silly registry.get     'content-type': 'application/json',
+971 silly registry.get     'cache-control': 'max-age=0',
+971 silly registry.get     'content-length': '40',
+971 silly registry.get     'accept-ranges': 'bytes',
+971 silly registry.get     date: 'Tue, 31 Oct 2017 15:24:58 GMT',
+971 silly registry.get     via: '1.1 varnish',
+971 silly registry.get     age: '0',
+971 silly registry.get     connection: 'keep-alive',
+971 silly registry.get     'x-served-by': 'cache-gru17133-GRU',
+971 silly registry.get     'x-cache': 'MISS',
+971 silly registry.get     'x-cache-hits': '0',
+971 silly registry.get     'x-timer': 'S1509463498.157349,VS0,VE797' } ]
+972 silly lockFile bd94caab-ionic-cli-utils-1-15-2 ionic/cli-utils@1.15.2
+973 silly lockFile bd94caab-ionic-cli-utils-1-15-2 ionic/cli-utils@1.15.2
+974 verbose about to build /usr/local/lib/node_modules/ionic
+975 info /usr/local/lib/node_modules/ionic unbuild
+976 info preuninstall ionic@3.15.2
+977 info uninstall ionic@3.15.2
+978 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild ionic@3.15.2
+979 verbose /usr/local/bin,[object Object] binRoot
+980 info postuninstall ionic@3.15.2
+981 error 404 'ionic' is not in the npm registry.
+981 error 404 You should bug the author to publish it
+981 error 404
+981 error 404 Note that you can also install from a
+981 error 404 tarball, folder, or http url, or git url.
+982 error System Linux 4.9.0-deepin12-amd64
+983 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "ionic"
+984 error cwd /myApp
+985 error node -v v0.10.25
+986 error npm -v 1.3.10
+987 error code E404
+988 verbose exit [ 1, true ]

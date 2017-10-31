@@ -1,5 +1,6 @@
 <ion-view view-title="Conteúdos">
   <ion-content ng-class="{expanded:isExpanded}">
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
     <ion-list>
       <div ng-repeat="conteudo in conteudos">
         <div class="card stable-light ink ink-dark" ng-click="chamaVideos(conteudo._id)">

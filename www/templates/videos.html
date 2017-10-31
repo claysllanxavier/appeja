@@ -1,17 +1,27 @@
 <ion-view view-title="Vídeos" >
   <ion-content ng-class="{expanded:$scope.isExpanded}">
-    </ion-nav-buttons>
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <div id="search-bar">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper" id="search-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="Search" ng-model="query">
+        </label>
+      </div>
+    </div>
     <div class="list padding">
-      <div ng-repeat="video in videos">
-        <divclass="card light-bg">
-        <div class="item">
-          <iframe width="320" height="215" ng-src="{{trustSrc(video.url)}}" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="item item-body">
-          <strong><h2>{{video.nome}}</h2></strong>
+      <div ng-repeat="video in videos | filter:query">
+        <div class="card light-bg">
+          <div class="item">
+            <div class="video-container">
+              <iframe width="560" height="315" ng-src="{{trustSrc(video.url)}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="item item-body">
+            <strong><h2>{{video.nome}}</h2></strong>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</ion-content>
+  </ion-content>
 </ion-view>

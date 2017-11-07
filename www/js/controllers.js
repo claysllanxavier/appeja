@@ -104,8 +104,8 @@ angular.module('starter.controllers', [])
     $http.post(Hostname.url+'/api/login',{data : usuario},{headers: {'Content-Type': 'application/json'}})
     .success(function(data) {
       AuthService.setToken(data.token)
+      AuthService.setUser(data)
       $location.path("/app/inicio");
-      $rootScope.usuario = data;
     })
     .error(function() {
       $ionicPopup.alert({
@@ -164,7 +164,7 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('VideosCtrl', function($scope, $http, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk,  $sce, Hostname) {
+.controller('VideosCtrl', function($scope, $http, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk,  $sce, Hostname, $ionicLoading, $ionicPopup) {
   // Set Header
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
@@ -188,6 +188,16 @@ angular.module('starter.controllers', [])
   // Set Ink
   ionicMaterialInk.displayEffect();
 
+  $scope.show = function() {
+    $ionicLoading.show({
+      template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+    });
+  };
+
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
+
   var idconteudo = $stateParams.id;
 
   $scope.trustSrc = function(src) {
@@ -196,10 +206,24 @@ angular.module('starter.controllers', [])
 
   $scope.videos = [];
 
-  $http.get(Hostname.url+"/api/conteudo/"+idconteudo+"/video")
-  .then(function(response) {
-    $scope.videos = response.data.videos;
-  });
+  $scope.getAll = function (){
+    $scope.show($ionicLoading);
+    $http.get(Hostname.url+"/api/conteudo/"+idconteudo+"/video")
+    .success(function(data) {
+      $scope.videos = data.videos;
+    })
+    .error(function() {
+      $ionicPopup.alert({
+        title: 'ERRO',
+        template: 'Alguma coisa está errada. Refaça a operação!'
+      });
+    })
+    .finally(function($ionicLoading) {
+      // On both cases hide the loading
+      $scope.hide($ionicLoading);
+    });
+  }
+
   $scope.doRefresh = function() {
     $http.get(Hostname.url+"/api/conteudo/"+idconteudo+"/video")
     .then(function(response) {
@@ -234,7 +258,7 @@ angular.module('starter.controllers', [])
   ionicMaterialInk.displayEffect();
 })
 
-.controller('QuizCtrl', function($scope, $http, $rootScope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicPopup, $location, Hostname) {
+.controller('QuizCtrl', function($scope, $http, $rootScope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicPopup, $location, Hostname, AuthService, $ionicLoading) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = true;
@@ -251,79 +275,104 @@ angular.module('starter.controllers', [])
   ionicMaterialInk.displayEffect();
 
   var idconteudo = $stateParams.id;
-  var idusuario = $rootScope.usuario._id;
+  var idusuario = AuthService.getUser()._id;
+
+  $scope.show = function() {
+    $ionicLoading.show({
+      template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+    });
+  };
+
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
 
   $scope.pergunta ={
     qtdacertos:0,
     qtdperguntas:0
   }
-  buscaPergunta();
   $scope.data = {
     respostaUsuario: 'ng'
   };
 
-  function buscaPergunta(){
+  $scope.buscaPergunta = function (){
+    $scope.show($ionicLoading);
     $http.get(Hostname.url+"/api/usuario/"+idusuario+"/conteudo/"+ idconteudo)
-    .then(function(response) {
-      $scope.pergunta = response.data;
+    .success(function(data) {
+      $scope.pergunta = data;
+    })
+    .error(function() {
+      $ionicPopup.alert({
+        title: 'ERRO',
+        template: 'Alguma coisa está errada. Refaça a operação!'
+      });
+    })
+    .finally(function($ionicLoading) {
+      // On both cases hide the loading
+      $scope.hide($ionicLoading);
     });
   }
 
   $scope.envia = function (result){
+    $scope.show($ionicLoading);
     $scope.data.idpergunta = $scope.pergunta._id;
     $scope.data.idconteudo =  idconteudo;
     $scope.data.acertou = $scope.pergunta.respostaCerta == $scope.data.respostaUsuario;
     $scope.data.idusuario = idusuario;
     var dados = $scope.data;
     $http.post(Hostname.url+'/api/resposta',{data : dados},{headers: {'Content-Type': 'application/json'}})
-    .then(function mySuccess(response) {
+    .success(function() {
       if($scope.pergunta.respostaCerta == $scope.data.respostaUsuario){
         $ionicPopup.alert({
           title: 'SUCESSO',
           template: 'Parabéns. Resposta Certa.'
         });
-        $timeout(function() {
-          ionicMaterialInk.displayEffect();
-        }, 0);
-        buscaPergunta();
+        $scope.buscaPergunta();
       }
       else{
         $ionicPopup.alert({
           title: 'ERRADA',
           template: 'Desta vez você errou. Tente Novamente.'
         });
-        $timeout(function() {
-          ionicMaterialInk.displayEffect();
-        }, 0);
-        buscaPergunta();
+        $scope.buscaPergunta();
       }
-    }, function myError(response) {
+    })
+    .error(function() {
       $ionicPopup.alert({
         title: 'ERRO',
-        template: 'Problema de Conexão. Tente mais tarde.'
+        template: 'Alguma coisa está errada. Refaça a operação!'
       });
-      $timeout(function() {
-        ionicMaterialInk.displayEffect();
-      }, 0);
+    })
+    .finally(function($ionicLoading) {
+      // On both cases hide the loading
+      $scope.hide($ionicLoading);
     });
   }
   $scope.refazer = function (){
+    $scope.show($ionicLoading);
     $http.delete(Hostname.url + '/api/usuario/' + idusuario + "/conteudo/" + idconteudo)
-    .then(function mySuccess() {
+    .success(function() {
       $ionicPopup.alert({
         title: 'SUCESSO',
         template: 'Vocẽ irá começar o quiz novamente!'
       });
-      $timeout(function() {
-        ionicMaterialInk.displayEffect();
-      }, 0);
       $location.path("/app/conteudosquiz");
+    })
+    .error(function() {
+      $ionicPopup.alert({
+        title: 'ERRO',
+        template: 'Alguma coisa está errada. Refaça a operação!'
+      });
+    })
+    .finally(function($ionicLoading) {
+      // On both cases hide the loading
+      $scope.hide($ionicLoading);
     })
   }
 
 })
 
-.controller('ConteudoCtrl', function($scope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, Hostname) {
+.controller('ConteudoCtrl', function($scope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, Hostname, $ionicLoading, $ionicPopup) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = true;
@@ -340,13 +389,35 @@ angular.module('starter.controllers', [])
     selector: '.animate-fade-slide-in .item'
   });
 
+  $scope.show = function() {
+    $ionicLoading.show({
+      template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+    });
+  };
+
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
+
   $scope.conteudos = [];
 
-
-  $http.get(Hostname.url+"/api/conteudo")
-  .then(function(response) {
-    $scope.conteudos = response.data;
-  });
+  $scope.getAll = function (){
+    $scope.show($ionicLoading);
+    $http.get(Hostname.url+"/api/conteudo")
+    .success(function(data) {
+      $scope.conteudos = data;
+    })
+    .error(function() {
+      $ionicPopup.alert({
+        title: 'ERRO',
+        template: 'Alguma coisa está errada. Refaça a operação!'
+      });
+    })
+    .finally(function($ionicLoading) {
+      // On both cases hide the loading
+      $scope.hide($ionicLoading);
+    });
+  }
 
   $scope.chamaVideos = function (id){
     $location.path("/app/videos/" + id);
@@ -360,7 +431,7 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('ConteudoQuizCtrl', function($scope, $rootScope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, Hostname) {
+.controller('ConteudoQuizCtrl', function($scope, $rootScope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, Hostname, AuthService, $ionicLoading, $ionicPopup) {
   $scope.$parent.showHeader();
   $scope.$parent.clearFabs();
   $scope.isExpanded = true;
@@ -377,14 +448,38 @@ angular.module('starter.controllers', [])
     selector: '.animate-fade-slide-in .item'
   });
 
+  $scope.show = function() {
+    $ionicLoading.show({
+      template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+    });
+  };
+
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
+
   $scope.conteudos = [];
 
-  var idusuario = $rootScope.usuario._id;
+  var idusuario = AuthService.getUser()._id;
 
-  $http.get(Hostname.url+"/api/conteudo-usuario/"+idusuario)
-  .then(function(response) {
-    $scope.conteudos = response.data;
-  });
+  $scope.getAll = function () {
+    $scope.show($ionicLoading);
+    $http.get(Hostname.url+"/api/conteudo-usuario/"+idusuario)
+    .success(function(data) {
+      $scope.conteudos = data;
+    })
+    .error(function() {
+      $ionicPopup.alert({
+        title: 'ERRO',
+        template: 'Alguma coisa está errada. Refaça a operação!'
+      });
+    })
+    .finally(function($ionicLoading) {
+      // On both cases hide the loading
+      $scope.hide($ionicLoading);
+    });
+  }
+
 
   $scope.chamaQuiz = function (id){
     $location.path("/app/quiz/"+id);
@@ -434,12 +529,12 @@ angular.module('starter.controllers', [])
   logout();
 
   function logout () {
-    delete window.localStorage.token
+    window.localStorage.clear()
     $location.path("/login");
   }
 })
 .service('Hostname', function() {
-  return {url : 'https://apieja.azurewebsites.net'};
+  return {url : 'http://172.19.0.2:8000'};
 })
 .factory('AuthService', function ($q) {
   return {
@@ -455,7 +550,14 @@ angular.module('starter.controllers', [])
     },
     isLoggedIn: function () {
       return window.localStorage.token ? true : false;
+    },
+    getUser: function () {
+      return JSON.parse(window.localStorage.user)
+    },
+    setUser: function (user) {
+      window.localStorage.user = JSON.stringify(user)
     }
+
   }
 })
 .config(function ($httpProvider) {

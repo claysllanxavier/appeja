@@ -1,4 +1,4 @@
-<ion-view view-title="Vídeos" >
+<ion-view view-title="Vídeos" ng-init="getAll()">
   <ion-content ng-class="{expanded:$scope.isExpanded}">
     <ion-refresher on-refresh="doRefresh()"></ion-refresher>
     <div id="search-bar">

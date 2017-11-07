@@ -38,7 +38,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
   // Turn off caching for demo simplicity's sake
-  $ionicConfigProvider.views.maxCache(5);
+  $ionicConfigProvider.views.maxCache(0);
 
   // Enable Native Scrolling on Android
   $ionicConfigProvider.platform.android.scrolling.jsScrolling(false);

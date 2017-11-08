@@ -4,7 +4,7 @@
 
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout, AuthService) {
   // Form data for the login modal
   $scope.loginData = {};
   $scope.isExpanded = false;
@@ -86,6 +86,8 @@ angular.module('starter.controllers', [])
       fabs[0].remove();
     }
   };
+
+  $scope.nomeusuario = AuthService.getUser().nome
 })
 
 .controller('LoginCtrl', function($scope, $http, $rootScope, $timeout, $location, $stateParams, ionicMaterialInk, $ionicPopup, Hostname, $ionicLoading, AuthService) {
@@ -99,7 +101,17 @@ angular.module('starter.controllers', [])
     $ionicLoading.hide();
   };
 
-  $scope.login = function (usuario){
+  $scope.usuario = {}
+
+  $scope.login = function (){
+    if(!angular.isDefined($scope.usuario.email) || !angular.isDefined($scope.usuario.senha) || $scope.usuario.email.trim() == "" || $scope.usuario.senha.trim() == ""){
+      $ionicPopup.alert({
+        title: 'Falha no Login',
+        template: 'Favor informar o email e senha.'
+      });
+      return;
+    }
+    var usuario = $scope.usuario
     $scope.show($ionicLoading);
     $http.post(Hostname.url+'/api/login',{data : usuario},{headers: {'Content-Type': 'application/json'}})
     .success(function(data) {
@@ -130,7 +142,6 @@ angular.module('starter.controllers', [])
   $scope.hide = function(){
     $ionicLoading.hide();
   };
-
 
   $scope.salvaUsuario = function (usuario){
     $scope.show($ionicLoading);
@@ -165,26 +176,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('VideosCtrl', function($scope, $http, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk,  $sce, Hostname, $ionicLoading, $ionicPopup) {
-  // Set Header
-  $scope.$parent.showHeader();
-  $scope.$parent.clearFabs();
-  $scope.isExpanded = false;
-  $scope.$parent.setExpanded(false);
-  $scope.$parent.setHeaderFab(false);
-
-  // Set Motion
-  $timeout(function() {
-    ionicMaterialMotion.slideUp({
-      selector: '.slide-up'
-    });
-  }, 300);
-
-  $timeout(function() {
-    ionicMaterialMotion.fadeSlideInRight({
-      startVelocity: 3000
-    });
-  }, 700);
-
   // Set Ink
   ionicMaterialInk.displayEffect();
 
@@ -235,42 +226,31 @@ angular.module('starter.controllers', [])
 
 .controller('InicioCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, AuthService) {
   // Set Header
-  $scope.$parent.showHeader();
-  $scope.$parent.clearFabs();
-  $scope.isExpanded = false;
-  $scope.$parent.setExpanded(false);
-  $scope.$parent.setHeaderFab(false);
+    $scope.$parent.showHeader();
+    $scope.$parent.clearFabs();
+    $scope.isExpanded = false;
+    $scope.$parent.setExpanded(false);
+    $scope.$parent.setHeaderFab(false);
 
-  // Set Motion
-  $timeout(function() {
-    ionicMaterialMotion.slideUp({
-      selector: '.slide-up'
-    });
-  }, 300);
+    // Set Motion
+    $timeout(function() {
+      ionicMaterialMotion.slideUp({
+        selector: '.slide-up'
+      });
+    }, 300);
 
-  $timeout(function() {
-    ionicMaterialMotion.fadeSlideInRight({
-      startVelocity: 3000
-    });
-  }, 700);
+    $timeout(function() {
+      ionicMaterialMotion.fadeSlideInRight({
+        startVelocity: 3000
+      });
+    }, 700);
+
 
   // Set Ink
   ionicMaterialInk.displayEffect();
 })
 
 .controller('QuizCtrl', function($scope, $http, $rootScope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicPopup, $location, Hostname, AuthService, $ionicLoading) {
-  $scope.$parent.showHeader();
-  $scope.$parent.clearFabs();
-  $scope.isExpanded = true;
-  $scope.$parent.setExpanded(true);
-  $scope.$parent.setHeaderFab('right');
-
-  $timeout(function() {
-    ionicMaterialMotion.fadeSlideIn({
-      selector: '.animate-fade-slide-in .item'
-    });
-  }, 200);
-
   // Activate ink for controller
   ionicMaterialInk.displayEffect();
 
@@ -373,12 +353,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ConteudoCtrl', function($scope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, Hostname, $ionicLoading, $ionicPopup) {
-  $scope.$parent.showHeader();
-  $scope.$parent.clearFabs();
-  $scope.isExpanded = true;
-  $scope.$parent.setExpanded(true);
-  $scope.$parent.setHeaderFab(false);
-
   // Activate ink for controller
   ionicMaterialInk.displayEffect();
 
@@ -432,11 +406,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ConteudoQuizCtrl', function($scope, $rootScope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion, Hostname, AuthService, $ionicLoading, $ionicPopup) {
-  $scope.$parent.showHeader();
-  $scope.$parent.clearFabs();
-  $scope.isExpanded = true;
-  $scope.$parent.setExpanded(true);
-  $scope.$parent.setHeaderFab(false);
 
   // Activate ink for controller
   ionicMaterialInk.displayEffect();
@@ -494,12 +463,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('SobreCtrl', function($scope, $http, $location, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
-  $scope.$parent.showHeader();
-  $scope.$parent.clearFabs();
-  $scope.isExpanded = true;
-  $scope.$parent.setExpanded(true);
-  $scope.$parent.setHeaderFab(false);
-
   // Activate ink for controller
   ionicMaterialInk.displayEffect();
 
@@ -531,51 +494,5 @@ angular.module('starter.controllers', [])
   function logout () {
     window.localStorage.clear()
     $location.path("/login");
-  }
-})
-.service('Hostname', function() {
-  return {url : 'http://172.19.0.2:8000'};
-})
-.factory('AuthService', function ($q) {
-  return {
-    getToken: function () {
-      return window.localStorage.token
-    },
-    setToken: function (token) {
-      window.localStorage.token = token
-    },
-    logout: function () {
-      delete window.localStorage.token
-      $q.when()
-    },
-    isLoggedIn: function () {
-      return window.localStorage.token ? true : false;
-    },
-    getUser: function () {
-      return JSON.parse(window.localStorage.user)
-    },
-    setUser: function (user) {
-      window.localStorage.user = JSON.stringify(user)
-    }
-
-  }
-})
-.config(function ($httpProvider) {
-  $httpProvider.interceptors.push('AuthInterceptor')
-})
-.factory('AuthInterceptor', function ($location, AuthService, $q, $window) {
-  return {
-    request: function (config) {
-      config.headers = config.headers || {}
-
-      if (AuthService.getToken()) {
-        config.headers['x-access-token'] = AuthService.getToken()
-      }
-
-      return config
-    },
-    responseError: function (response) {
-      return $q.reject(response)
-    }
   }
 })

@@ -16,7 +16,7 @@
   transform: translate3d(0, -30px, 0) scale(1);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  color: #fff;
+  color: #000;
   opacity: 0.5;
   filter: alpha(opacity=50);
   -webkit-transform-origin: 0;
@@ -24,9 +24,9 @@
   transform-origin: 0; }
 
 .item-md-label input {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   bottom: 0;
-  color: #fff;
+  color: #000;
   letter-spacing: 0.25rem;
   padding: 20px 10px;
   position: relative;
@@ -1515,7 +1515,7 @@
 /* Uncomment if you want images to fade in after the card
 
   .animate-ripple .in .item-bg-image img:last-child,
-  .animate-ripple .in .item-bg-image img:last-child { 
+  .animate-ripple .in .item-bg-image img:last-child {
     opacity: 0;
   }
 
@@ -1537,7 +1537,7 @@
     transform: scale3d(1, 1, 1);
   }
   .animate-ripple .in .item-bg-image img:last-child,
-  .animate-ripple .in .item-bg-image img:last-child { 
+  .animate-ripple .in .item-bg-image img:last-child {
     opacity: 0;
   }
 
@@ -1800,13 +1800,13 @@
 
 /*!
  * Waves v0.5.4
- * http://fian.my.id/Waves 
- * 
- * Copyright 2014 Alfiana E. Sibuea and other contributors 
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
  * Forked by Zach Fitzgerald and other contributors for Ionic Material
  *
- * Released under the MIT license 
- * https://github.com/fians/Waves/blob/master/LICENSE 
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
  *
  */
 .ink, .button-fab, .button-flat, .button-raised, .button-clear, .popup .button {

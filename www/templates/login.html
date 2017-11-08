@@ -1,6 +1,6 @@
 <ion-view view-title="Login" align-title="left">
   <ion-content style="background: url(img/back.jpg) center; background-size: cover;">
-    <form ng-cloak name="loginForm">
+    <form ng-cloak name="loginForm" ng-submit="login()">>
       <div class="hero no-header flat">
         <div class="content">
           <div class="app-icon"></div>
@@ -8,17 +8,18 @@
         </div>
       </div>
       <div class="list">
-        <ion-md-input placeholder="Email" highlight-color="balanced" type="email" ng-model="usuario.email" required></ion-md-input>
+        <ion-md-input placeholder="Email" highlight-color="energized" type="email" ng-model="usuario.email" required></ion-md-input>
         <ion-md-input placeholder="Senha" highlight-color="energized" type="password" ng-model="usuario.senha" required></ion-md-input>
       </div>
       <div class="padding">
-        <button class="button button-full button-assertive ink"  ng-click="login(usuario)" ng-disabled="loginForm.$invalid">Login</button>
+        <button type="submit" class="button button-full button-assertive ink">Login</button>
         <center>
-          <p>OU</p>
+          <p></p>
           <button ui-sref="cadastro" class="button  button-dark">
             Criar uma conta
           </button>
         </center>
       </div>
-    </ion-content>
-  </ion-view>
+    </form>
+  </ion-content>
+</ion-view>

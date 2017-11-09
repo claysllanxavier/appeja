@@ -5,7 +5,7 @@ angular.module('starter.services', [])
 
 
 .factory('Hostname', function() {
-  return {url : 'http://172.19.0.3:8000'};
+  return {url : 'https://apieja.azurewebsites.net'};
 })
 .factory('AuthService', function ($q) {
   return {

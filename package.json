@@ -3,17 +3,10 @@
   "version": "1.1.1",
   "description": "Quiz4Math: An Ionic project",
   "devDependencies": {
-    "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2"
   },
-  "cordovaPlugins": [
-    "cordova-plugin-whitelist",
-    "cordova-plugin-console",
-    "cordova-plugin-statusbar",
-    "cordova-plugin-device",
-    "cordova-plugin-splashscreen",
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],
